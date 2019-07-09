@@ -1,0 +1,18125 @@
+cscope 15 $HOME/shreyas/esp32_file_sharing/esp-idf/examples/protocols/http_server/file_serving               0000126253
+	@CMakeLists.txt
+
+1 #Thê
+fﬁlowög
+ 
+löes
+ 
+of
+ 
+boûî∂©e
+ 
+have
+ 
+to
+ 
+be
+ 
+ö
+ 
+your
+ 
+¥oje˘
+'s CMakeLists
+
+2 #ö 
+this
+ 
+exa˘
+ 
+‹dî
+ 
+cmake
+ 
+to
+ 
+w‹k
+ 
+c‹ª˘ly
+
+
+3 
+	$cmake_möimum_ªquúed
+(
+VERSION
+ 3.5)
+
+5 #(
+NŸ
+ 
+∑π
+ 
+of
+ 
+the
+ 
+boûî∂©e
+)
+
+6 #Thi†
+exam∂e
+ 
+u£s
+ 
+™
+ 
+exåa
+ 
+comp⁄ít
+ 
+comm⁄
+ 
+fun˘i⁄s
+ 
+such
+ 
+as
+ 
+Wi
+-
+Fi
+ 
+™d
+ 
+Ethî√t
+ 
+c⁄√˘i⁄
+.
+
+7 
+	`£t
+(
+EXTRA_COMPONENT_DIRS
+ 
+$ENV
+{
+IDF_PATH
+}/exam∂es/comm⁄_comp⁄íts/¥Ÿocﬁ_exam∂es_comm⁄)
+
+9 
+ö˛ude
+(
+$ENV
+{
+IDF_PATH
+}/
+toﬁs
+/
+cmake
+/
+¥oje˘
+.cmake)
+
+10 
+¥oje˘
+(
+fûe_£rvî
+)
+
+	@Makefile
+
+1 #
+#Thi†
+is
+ 
+a
+ 
+¥oje˘
+ 
+Makefûe
+. 
+It
+ i†
+assumed
+ 
+the
+ 
+dúe˘‹y
+ 
+this
+ Makefûê
+ªsides
+ 
+ö
+ isá
+
+3 #¥oje˘ 
+subdúe˘‹y
+.
+
+6 
+	gPROJECT_NAME
+ :
+fûe_£rvî
+
+
+8 
+EXTRA_COMPONENT_DIRS
+ = 
+$
+(
+IDF_PATH
+)/
+exam∂es
+/
+comm⁄_comp⁄íts
+/
+¥Ÿocﬁ_exam∂es_comm⁄
+
+
+10 
+ö˛ude
+ 
+$
+(
+IDF_PATH
+)/
+make
+/
+¥oje˘
+.
+mk
+
+
+	@README.md
+
+1 #Sim∂ê
+HTTP
+ 
+Fûe
+ 
+Sîvî
+ 
+Exam∂e
+
+
+3 (
+Sì
+ 
+the
+ 
+	gREADME
+.
+md
+ 
+fûe
+ 
+ö
+Åhê
+uµî
+ 
+	gÀvñ
+ 'exam∂es' 
+dúe˘‹y
+ 
+m‹e
+ 
+öf‹m©i⁄
+ 
+about
+ 
+	gexam∂es
+.)
+
+5 
+HTTP
+ 
+fûe
+ 
+£rvî
+ 
+exam∂e
+ 
+dem⁄°øãs
+ fûê
+£rvög
+ 
+wôh
+ 
+bŸh
+ 
+u∂ﬂd
+ 
+™d
+ 
+dow∆ﬂd
+ 
+	gˇ∑bûôy
+, 
+usög
+ 
+	gthe
+ `
+	ge•_hâp_£rvî
+` 
+comp⁄ít
+ 
+of
+ 
+	gESP
+-
+	gIDF
+. 
+The
+ 
+fﬁlowög
+ 
+URIs
+ 
+¨e
+ 
+¥ovided
+ 
+by
+ 
+the
+ 
+	g£rvî
+:
+
+7 | 
+URI
+ | 
+Mëhod
+ | 
+Des¸ùti⁄
+ |
+
+9 |`
+ödex
+.
+html
+` | 
+GET
+ | 
+Redúe˘s
+ 
+to
+ `/` |
+
+10 |`
+Ávic⁄
+.
+ico
+` | 
+GET
+ | 
+Brow£rs
+ 
+u£
+ 
+this
+ 
+∑th
+ 
+to
+ 
+ªåõve
+ 
+∑ge
+ 
+ic⁄
+ 
+which
+ 
+is
+ 
+embedded
+ 
+ö
+ 
+Êash
+ |
+
+11 |`/` | 
+GET
+ | 
+Re•⁄ds
+ 
+wôh
+ 
+web∑ge
+ 
+di•œyög
+ 
+li°
+ 
+of
+ 
+fûes
+ 
+⁄
+ 
+SPIFFS
+ 
+™d
+ 
+f‹m
+ 
+u∂ﬂdög
+ 
+√w
+ files |
+
+12 |`/<
+fûe
+ 
+∑th
+>` | 
+GET
+ | 
+F‹
+ 
+dow∆ﬂdög
+ 
+fûes
+ 
+°‹ed
+ 
+⁄
+ 
+SPIFFS
+ |
+
+13 |`/
+u∂ﬂd
+/<
+fûe
+ 
+∑th
+>` | 
+POST
+ | 
+F‹
+ 
+u∂ﬂdög
+ 
+fûes
+ 
+⁄
+ 
+to
+ 
+SPIFFS
+. 
+Fûes
+ 
+¨e
+ 
+£¡
+ 
+as
+ 
+body
+ 
+of
+ 
+HTTP
+ 
+po°
+ 
+ªque°s
+ |
+
+14 |`/
+dñëe
+/<
+fûe
+ 
+∑th
+>` | 
+POST
+ | 
+Comm™d
+ 
+dñëög
+ 
+a
+ fûê
+‰om
+ 
+SPIFFS
+ |
+
+16 
+Fûe
+ 
+£rvî
+ 
+im∂emíèti⁄
+ 
+ˇn
+ 
+be
+ 
+found
+ 
+undî
+ `
+maö
+/
+fûe_£rvî
+.
+c
+` 
+which
+ 
+u£s
+ 
+SPIFFS
+ 
+fûe
+ 
+°‹age
+. `maö/
+u∂ﬂd_s¸ùt
+.
+html
+` 
+has
+ 
+some
+ 
+HTML
+, 
+JavaS¸ùt
+ 
+™d
+ 
+Ajax
+ 
+c⁄ã¡
+ 
+u£d
+ fûê
+	gu∂ﬂdög
+, which 
+is
+ 
+embedded
+ 
+ö
+ 
+the
+ 
+Êash
+ 
+image
+ánd u£d 
+as
+ 
+ô
+ i†
+whí
+ 
+gíî©ög
+Åhê
+home
+ 
+∑ge
+ 
+of
+Åhêfûê
+	g£rvî
+.
+
+18 ## 
+NŸe
+
+
+20 `/
+	gödex
+.
+	ghtml
+` 
+	g™d
+ `/
+	gÁvic⁄
+.
+	gico
+` 
+ˇn
+ 
+be
+ 
+ovîriddí
+ 
+by
+ 
+u∂ﬂdög
+ 
+fûes
+ 
+wôh
+ 
+ßme
+ 
+∑th«me
+ 
+to
+ 
+	gSPIFFS
+.
+
+22 ## 
+Ußge
+
+
+24 * 
+C⁄figuª
+ 
+the
+ 
+¥oje˘
+ 
+	gusög
+ `
+make
+ 
+	gmíuc⁄fig
+` 
+™d
+ `
+Exam∂e
+ 
+	gC⁄figuøti⁄
+` ->
+
+25 1. 
+WIFI
+ 
+	gSSID
+: WIFI 
+√tw‹k
+ 
+to
+ 
+which
+ 
+your
+ 
+PC
+ 
+is
+ 
+Æso
+ 
+c⁄√˘ed
+Åo.
+
+26 2. 
+WIFI
+ 
+Passw‹d
+: WIFI 
+∑ssw‹d
+
+
+28 * 
+In
+ 
+‹dî
+ 
+to
+ 
+ã°
+ 
+the
+ 
+fûe
+ 
+£rvî
+ 
+demo
+ :
+
+29 1. 
+compûe
+ 
+™d
+ 
+bu∫
+ 
+the
+ 
+fúmw¨e
+ `
+make
+ 
+Êash
+`
+
+30 2. 
+run
+ `
+make
+ 
+m⁄ô‹
+` 
+™d
+ 
+nŸe
+ 
+down
+ 
+the
+ 
+IP
+ 
+assig√d
+ 
+to
+ 
+your
+ 
+ESP
+ 
+moduÀ
+. 
+The
+  
+p‹t
+ 
+is
+ 80
+
+31 3. 
+ã°
+ 
+the
+ 
+exam∂e
+ 
+öãø˘ivñy
+ 
+⁄
+ 
+a
+ 
+web
+ 
+	$brow£r
+ (
+assumög
+ 
+IP
+ 
+is
+ 192.168.43.130):
+
+32 1. 
+›í
+ 
+∑th
+ `
+hâp
+:
+
+33 2. 
+u£
+ 
+the
+ 
+fûe
+ 
+u∂ﬂd
+ 
+f‹m
+ 
+⁄
+Åhê
+web∑ge
+ 
+to
+ 
+£À˘
+ 
+™d
+ u∂ﬂd 
+a
+ fûêtÿthê
+£rvî
+
+
+34 3. 
+˛ick
+ 
+a
+ 
+fûe
+ 
+lök
+ 
+to
+ 
+dow∆ﬂd
+ / 
+›í
+ 
+the
+ fûê
+⁄
+ 
+	`brow£r
+ (
+suµ‹ãd
+)
+
+35 4. 
+˛ick
+ 
+the
+ 
+dñëe
+ 
+lök
+ 
+visibÀ
+ 
+√xt
+ 
+to
+ 
+óch
+ 
+fûe
+ 
+íåy
+Åÿdñëê
+them
+
+
+36 4. 
+ã°
+ 
+the
+ 
+exam∂e
+ 
+usög
+ 
+	$cuæ
+ (
+assumög
+ 
+IP
+ 
+is
+ 192.168.43.130):
+
+37 1. `
+myfûe
+.
+html
+` 
+is
+ 
+u∂ﬂded
+ 
+to
+ `/
+∑th
+/
+⁄
+/
+devi˚
+/
+myfûe_c›y
+.html` 
+usög
+ `
+cuæ
+ -
+X
+ 
+POST
+ --
+d©a
+-
+bö¨y
+ @myfûe.htm»192.168.43.130:80/
+u∂ﬂd
+/path/on/device/myfile_copy.html`
+
+38 2. 
+dow∆ﬂd
+ 
+the
+ 
+u∂ﬂded
+ 
+c›y
+ 
+back
+ : `
+cuæ
+ 192.168.43.130:80/
+∑th
+/
+⁄
+/
+devi˚
+/
+myfûe_c›y
+.
+html
+ > myfile_copy.html`
+
+39 3. 
+com∑ª
+ 
+the
+ 
+c›y
+ 
+wôh
+Åhê
+‹igöÆ
+ 
+usög
+ `
+cmp
+ 
+myfûe
+.
+html
+ 
+myfûe_c›y
+.html`
+
+41 ## 
+NŸe
+
+
+43 
+Brow£rs
+ 
+o·í
+ 
+£nd
+ 
+œrge
+ 
+hódî
+ 
+fõlds
+ 
+whí
+ 
+™
+ 
+HTML
+ 
+f‹m
+ 
+is
+ 
+submô
+. 
+Thîef‹e
+, 
+the
+ 
+puΩo£
+ 
+of
+ 
+this
+ 
+exam∂e
+, `
+HTTPD_MAX_REQ_HDR_LEN
+` 
+has
+ 
+bìn
+ 
+ö¸ó£d
+ 
+to
+ 1024 
+ö
+ `
+sdkc⁄fig
+.
+deÁu…s
+`. 
+U£r
+ 
+ˇn
+ 
+adju°
+Åhi†
+vÆue
+ 
+as
+ 
+≥r
+ 
+theú
+ 
+ªquúemít
+, 
+kìpög
+ i¿
+möd
+Åhê
+mem‹y
+ 
+c⁄°øöt
+ o‡thê
+h¨dw¨e
+ i¿
+u£
+.
+
+	@partitions_example.csv
+
+1 #Name, 
+Ty≥
+, 
+SubTy≥
+, 
+Off£t
+, 
+Size
+, 
+Fœgs
+
+
+2 #NŸe: 
+you
+ 
+ch™ge
+ 
+the
+ 
+phy_öô
+ 
+‹
+ 
+≠p
+ 
+∑πôi⁄
+ 
+off£t
+, 
+make
+ 
+suª
+ 
+to
+ ch™gêthêoff£à
+ö
+ 
+Kc⁄fig
+.
+¥ojbuûd
+
+
+3 
+	gnvs
+, 
+	gd©a
+,Çvs, 0x9000, 0x6000,
+
+4 
+	gphy_öô
+, 
+	gd©a
+, 
+	gphy
+, 0xf000, 0x1000,
+
+5 
+	gÁ˘‹y
+, 
+	g≠p
+, fa˘‹y, 0x10000, 1
+	gM
+,
+
+6 
+	g°‹age
+, 
+	gd©a
+, 
+	g•iffs
+, , 0xF0000,
+
+	@sdkconfig
+
+1 #
+#Autom©iˇŒy 
+gíî©ed
+ 
+fûe
+. 
+DO
+ 
+NOT
+ 
+EDIT
+.
+
+3 #E•ªssi‡
+IoT
+ 
+Devñ›mít
+ 
+Fømew‹k
+ (
+ESP
+-
+IDF
+Ë
+Proje˘
+ 
+C⁄figuøti⁄
+
+
+4 #
+_IDF_TARGET_ESP32=y
+
+6 
+	gCONFIG_IDF_TARGET
+="esp32"
+
+8 #
+#SDK 
+toﬁ
+ 
+c⁄figuøti⁄
+
+
+10 #
+_SDK_TOOLPREFIX="xãnß-e•32-ñf-"
+
+12 
+CONFIG_SDK_PYTHON
+="python"
+
+13 
+CONFIG_SDK_MAKE_WARN_UNDEFINED_VARIABLES
+=
+y
+
+
+14 
+CONFIG_APP_COMPILE_TIME_DATE
+=
+y
+
+
+15 #CONFIG_APP_EXCLUDE_PROJECT_VER_VAR 
+is
+ 
+nŸ
+ 
+£t
+
+
+16 #CONFIG_APP_EXCLUDE_PROJECT_NAME_VAR 
+is
+ 
+nŸ
+ 
+£t
+
+
+17 #CONFIG_BOOTLOADER_LOG_LEVEL_NONE 
+is
+ 
+nŸ
+ 
+£t
+
+
+18 #CONFIG_BOOTLOADER_LOG_LEVEL_ERROR 
+is
+ 
+nŸ
+ 
+£t
+
+
+19 #CONFIG_BOOTLOADER_LOG_LEVEL_WARN 
+is
+ 
+nŸ
+ 
+£t
+
+
+20 
+CONFIG_BOOTLOADER_LOG_LEVEL_INFO
+=
+y
+
+
+21 #CONFIG_BOOTLOADER_LOG_LEVEL_DEBUG 
+is
+ 
+nŸ
+ 
+£t
+
+
+22 #CONFIG_BOOTLOADER_LOG_LEVEL_VERBOSE 
+is
+ 
+nŸ
+ 
+£t
+
+
+23 
+CONFIG_BOOTLOADER_LOG_LEVEL
+=3
+
+24 #CONFIG_BOOTLOADER_VDDSDIO_BOOST_1_8V 
+is
+ 
+nŸ
+ 
+£t
+
+
+25 
+CONFIG_BOOTLOADER_VDDSDIO_BOOST_1_9V
+=
+y
+
+
+26 #CONFIG_BOOTLOADER_FACTORY_RESET 
+is
+ 
+nŸ
+ 
+£t
+
+
+27 #CONFIG_BOOTLOADER_APP_TEST 
+is
+ 
+nŸ
+ 
+£t
+
+
+28 
+CONFIG_BOOTLOADER_WDT_ENABLE
+=
+y
+
+
+29 #CONFIG_BOOTLOADER_WDT_DISABLE_IN_USER_CODE 
+is
+ 
+nŸ
+ 
+£t
+
+
+30 
+CONFIG_BOOTLOADER_WDT_TIME_MS
+=9000
+
+31 #CONFIG_BOOTLOADER_APP_ROLLBACK_ENABLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+32 #CONFIG_SECURE_SIGNED_APPS_NO_SECURE_BOOT 
+is
+ 
+nŸ
+ 
+£t
+
+
+33 #CONFIG_SECURE_BOOT_ENABLED 
+is
+ 
+nŸ
+ 
+£t
+
+
+34 #CONFIG_SECURE_FLASH_ENC_ENABLED 
+is
+ 
+nŸ
+ 
+£t
+
+
+35 
+CONFIG_ESPTOOLPY_PORT
+="/dev/ttyUSB0"
+
+36 
+CONFIG_ESPTOOLPY_BAUD_115200B
+=
+y
+
+
+37 #CONFIG_ESPTOOLPY_BAUD_230400B 
+is
+ 
+nŸ
+ 
+£t
+
+
+38 #CONFIG_ESPTOOLPY_BAUD_921600B 
+is
+ 
+nŸ
+ 
+£t
+
+
+39 #CONFIG_ESPTOOLPY_BAUD_2MB 
+is
+ 
+nŸ
+ 
+£t
+
+
+40 #CONFIG_ESPTOOLPY_BAUD_OTHER 
+is
+ 
+nŸ
+ 
+£t
+
+
+41 
+CONFIG_ESPTOOLPY_BAUD_OTHER_VAL
+=115200
+
+42 
+CONFIG_ESPTOOLPY_BAUD
+=115200
+
+43 
+CONFIG_ESPTOOLPY_COMPRESSED
+=
+y
+
+
+44 #CONFIG_ESPTOOLPY_FLASHMODE_QIO 
+is
+ 
+nŸ
+ 
+£t
+
+
+45 #CONFIG_ESPTOOLPY_FLASHMODE_QOUT 
+is
+ 
+nŸ
+ 
+£t
+
+
+46 
+CONFIG_ESPTOOLPY_FLASHMODE_DIO
+=
+y
+
+
+47 #CONFIG_ESPTOOLPY_FLASHMODE_DOUT 
+is
+ 
+nŸ
+ 
+£t
+
+
+48 
+CONFIG_ESPTOOLPY_FLASHMODE
+="dio"
+
+49 #CONFIG_ESPTOOLPY_FLASHFREQ_80M 
+is
+ 
+nŸ
+ 
+£t
+
+
+50 
+CONFIG_ESPTOOLPY_FLASHFREQ_40M
+=
+y
+
+
+51 #CONFIG_ESPTOOLPY_FLASHFREQ_26M 
+is
+ 
+nŸ
+ 
+£t
+
+
+52 #CONFIG_ESPTOOLPY_FLASHFREQ_20M 
+is
+ 
+nŸ
+ 
+£t
+
+
+53 
+CONFIG_ESPTOOLPY_FLASHFREQ
+="40m"
+
+54 #CONFIG_ESPTOOLPY_FLASHSIZE_1MB 
+is
+ 
+nŸ
+ 
+£t
+
+
+55 
+CONFIG_ESPTOOLPY_FLASHSIZE_2MB
+=
+y
+
+
+56 #CONFIG_ESPTOOLPY_FLASHSIZE_4MB 
+is
+ 
+nŸ
+ 
+£t
+
+
+57 #CONFIG_ESPTOOLPY_FLASHSIZE_8MB 
+is
+ 
+nŸ
+ 
+£t
+
+
+58 #CONFIG_ESPTOOLPY_FLASHSIZE_16MB 
+is
+ 
+nŸ
+ 
+£t
+
+
+59 
+CONFIG_ESPTOOLPY_FLASHSIZE
+="2MB"
+
+60 
+CONFIG_ESPTOOLPY_FLASHSIZE_DETECT
+=
+y
+
+
+61 
+CONFIG_ESPTOOLPY_BEFORE_RESET
+=
+y
+
+
+62 #CONFIG_ESPTOOLPY_BEFORE_NORESET 
+is
+ 
+nŸ
+ 
+£t
+
+
+63 
+CONFIG_ESPTOOLPY_BEFORE
+="default_reset"
+
+64 
+CONFIG_ESPTOOLPY_AFTER_RESET
+=
+y
+
+
+65 #CONFIG_ESPTOOLPY_AFTER_NORESET 
+is
+ 
+nŸ
+ 
+£t
+
+
+66 
+CONFIG_ESPTOOLPY_AFTER
+="hard_reset"
+
+67 #CONFIG_ESPTOOLPY_MONITOR_BAUD_9600B 
+is
+ 
+nŸ
+ 
+£t
+
+
+68 #CONFIG_ESPTOOLPY_MONITOR_BAUD_57600B 
+is
+ 
+nŸ
+ 
+£t
+
+
+69 
+CONFIG_ESPTOOLPY_MONITOR_BAUD_115200B
+=
+y
+
+
+70 #CONFIG_ESPTOOLPY_MONITOR_BAUD_230400B 
+is
+ 
+nŸ
+ 
+£t
+
+
+71 #CONFIG_ESPTOOLPY_MONITOR_BAUD_921600B 
+is
+ 
+nŸ
+ 
+£t
+
+
+72 #CONFIG_ESPTOOLPY_MONITOR_BAUD_2MB 
+is
+ 
+nŸ
+ 
+£t
+
+
+73 #CONFIG_ESPTOOLPY_MONITOR_BAUD_OTHER 
+is
+ 
+nŸ
+ 
+£t
+
+
+74 
+CONFIG_ESPTOOLPY_MONITOR_BAUD_OTHER_VAL
+=115200
+
+75 
+CONFIG_ESPTOOLPY_MONITOR_BAUD
+=115200
+
+76 #CONFIG_PARTITION_TABLE_SINGLE_APP 
+is
+ 
+nŸ
+ 
+£t
+
+
+77 #CONFIG_PARTITION_TABLE_TWO_OTA 
+is
+ 
+nŸ
+ 
+£t
+
+
+78 
+CONFIG_PARTITION_TABLE_CUSTOM
+=
+y
+
+
+79 
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME
+="partitions_example.csv"
+
+80 
+CONFIG_PARTITION_TABLE_FILENAME
+="partitions_example.csv"
+
+81 
+CONFIG_PARTITION_TABLE_OFFSET
+=0x8000
+
+82 
+CONFIG_PARTITION_TABLE_MD5
+=
+y
+
+
+83 
+CONFIG_EXAMPLE_CONNECT_WIFI
+=
+y
+
+
+84 #CONFIG_EXAMPLE_CONNECT_ETHERNET 
+is
+ 
+nŸ
+ 
+£t
+
+
+85 
+CONFIG_EXAMPLE_WIFI_SSID
+="MCShah"
+
+86 
+CONFIG_EXAMPLE_WIFI_PASSWORD
+="mcshah123"
+
+87 
+CONFIG_EXAMPLE_CONNECT_IPV6
+=
+y
+
+
+88 
+CONFIG_COMPILER_OPTIMIZATION_LEVEL_DEBUG
+=
+y
+
+
+89 #CONFIG_COMPILER_OPTIMIZATION_LEVEL_RELEASE 
+is
+ 
+nŸ
+ 
+£t
+
+
+90 
+CONFIG_COMPILER_OPTIMIZATION_ASSERTIONS_ENABLE
+=
+y
+
+
+91 #CONFIG_COMPILER_OPTIMIZATION_ASSERTIONS_SILENT 
+is
+ 
+nŸ
+ 
+£t
+
+
+92 #CONFIG_COMPILER_OPTIMIZATION_ASSERTIONS_DISABLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+93 #CONFIG_COMPILER_CXX_EXCEPTIONS 
+is
+ 
+nŸ
+ 
+£t
+
+
+94 
+CONFIG_COMPILER_STACK_CHECK_MODE_NONE
+=
+y
+
+
+95 #CONFIG_COMPILER_STACK_CHECK_MODE_NORM 
+is
+ 
+nŸ
+ 
+£t
+
+
+96 #CONFIG_COMPILER_STACK_CHECK_MODE_STRONG 
+is
+ 
+nŸ
+ 
+£t
+
+
+97 #CONFIG_COMPILER_STACK_CHECK_MODE_ALL 
+is
+ 
+nŸ
+ 
+£t
+
+
+98 #CONFIG_COMPILER_STACK_CHECK 
+is
+ 
+nŸ
+ 
+£t
+
+
+99 #CONFIG_COMPILER_WARN_WRITE_STRINGS 
+is
+ 
+nŸ
+ 
+£t
+
+
+100 #CONFIG_COMPILER_DISABLE_GCC8_WARNINGS 
+is
+ 
+nŸ
+ 
+£t
+
+
+101 #CONFIG_ESP32_APPTRACE_DEST_TRAX 
+is
+ 
+nŸ
+ 
+£t
+
+
+102 
+CONFIG_ESP32_APPTRACE_DEST_NONE
+=
+y
+
+
+103 #CONFIG_ESP32_APPTRACE_ENABLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+104 
+CONFIG_ESP32_APPTRACE_LOCK_ENABLE
+=
+y
+
+
+105 #CONFIG_BT_ENABLED 
+is
+ 
+nŸ
+ 
+£t
+
+
+106 
+CONFIG_BTDM_CTRL_BR_EDR_SCO_DATA_PATH_EFF
+=0
+
+107 
+CONFIG_BTDM_CTRL_BLE_MAX_CONN_EFF
+=0
+
+108 
+CONFIG_BTDM_CTRL_BR_EDR_MAX_ACL_CONN_EFF
+=0
+
+109 
+CONFIG_BTDM_CTRL_BR_EDR_MAX_SYNC_CONN_EFF
+=0
+
+110 
+CONFIG_BTDM_CTRL_PINNED_TO_CORE
+=0
+
+111 
+CONFIG_BTDM_BLE_SLEEP_CLOCK_ACCURACY_INDEX_EFF
+=1
+
+112 
+CONFIG_BT_RESERVE_DRAM
+=0
+
+113 #CONFIG_ADC_FORCE_XPD_FSM 
+is
+ 
+nŸ
+ 
+£t
+
+
+114 
+CONFIG_ADC_DISABLE_DAC
+=
+y
+
+
+115 #CONFIG_SPI_MASTER_IN_IRAM 
+is
+ 
+nŸ
+ 
+£t
+
+
+116 
+CONFIG_SPI_MASTER_ISR_IN_IRAM
+=
+y
+
+
+117 #CONFIG_SPI_SLAVE_IN_IRAM 
+is
+ 
+nŸ
+ 
+£t
+
+
+118 
+CONFIG_SPI_SLAVE_ISR_IN_IRAM
+=
+y
+
+
+119 #CONFIG_EFUSE_CUSTOM_TABLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+120 #CONFIG_EFUSE_VIRTUAL 
+is
+ 
+nŸ
+ 
+£t
+
+
+121 #CONFIG_EFUSE_CODE_SCHEME_COMPAT_NONE 
+is
+ 
+nŸ
+ 
+£t
+
+
+122 
+CONFIG_EFUSE_CODE_SCHEME_COMPAT_3_4
+=
+y
+
+
+123 #CONFIG_EFUSE_CODE_SCHEME_COMPAT_REPEAT 
+is
+ 
+nŸ
+ 
+£t
+
+
+124 
+CONFIG_EFUSE_MAX_BLK_LEN
+=192
+
+125 #CONFIG_ESP_TLS_SERVER 
+is
+ 
+nŸ
+ 
+£t
+
+
+126 #CONFIG_ESP32_DEFAULT_CPU_FREQ_80 
+is
+ 
+nŸ
+ 
+£t
+
+
+127 
+CONFIG_ESP32_DEFAULT_CPU_FREQ_160
+=
+y
+
+
+128 #CONFIG_ESP32_DEFAULT_CPU_FREQ_240 
+is
+ 
+nŸ
+ 
+£t
+
+
+129 
+CONFIG_ESP32_DEFAULT_CPU_FREQ_MHZ
+=160
+
+130 #CONFIG_ESP32_SPIRAM_SUPPORT 
+is
+ 
+nŸ
+ 
+£t
+
+
+131 #CONFIG_ESP32_MEMMAP_TRACEMEM 
+is
+ 
+nŸ
+ 
+£t
+
+
+132 #CONFIG_ESP32_MEMMAP_TRACEMEM_TWOBANKS 
+is
+ 
+nŸ
+ 
+£t
+
+
+133 #CONFIG_ESP32_TRAX 
+is
+ 
+nŸ
+ 
+£t
+
+
+134 
+CONFIG_ESP32_TRACEMEM_RESERVE_DRAM
+=0x0
+
+135 #CONFIG_ESP32_UNIVERSAL_MAC_ADDRESSES_TWO 
+is
+ 
+nŸ
+ 
+£t
+
+
+136 
+CONFIG_ESP32_UNIVERSAL_MAC_ADDRESSES_FOUR
+=
+y
+
+
+137 
+CONFIG_ESP32_UNIVERSAL_MAC_ADDRESSES
+=4
+
+138 #CONFIG_ESP32_ULP_COPROC_ENABLED 
+is
+ 
+nŸ
+ 
+£t
+
+
+139 
+CONFIG_ESP32_ULP_COPROC_RESERVE_MEM
+=0
+
+140 #CONFIG_ESP32_PANIC_PRINT_HALT 
+is
+ 
+nŸ
+ 
+£t
+
+
+141 
+CONFIG_ESP32_PANIC_PRINT_REBOOT
+=
+y
+
+
+142 #CONFIG_ESP32_PANIC_SILENT_REBOOT 
+is
+ 
+nŸ
+ 
+£t
+
+
+143 #CONFIG_ESP32_PANIC_GDBSTUB 
+is
+ 
+nŸ
+ 
+£t
+
+
+144 
+CONFIG_ESP32_DEBUG_OCDAWARE
+=
+y
+
+
+145 
+CONFIG_ESP32_DEBUG_STUBS_ENABLE
+=
+y
+
+
+146 
+CONFIG_ESP32_BROWNOUT_DET
+=
+y
+
+
+147 
+CONFIG_ESP32_BROWNOUT_DET_LVL_SEL_0
+=
+y
+
+
+148 #CONFIG_ESP32_BROWNOUT_DET_LVL_SEL_1 
+is
+ 
+nŸ
+ 
+£t
+
+
+149 #CONFIG_ESP32_BROWNOUT_DET_LVL_SEL_2 
+is
+ 
+nŸ
+ 
+£t
+
+
+150 #CONFIG_ESP32_BROWNOUT_DET_LVL_SEL_3 
+is
+ 
+nŸ
+ 
+£t
+
+
+151 #CONFIG_ESP32_BROWNOUT_DET_LVL_SEL_4 
+is
+ 
+nŸ
+ 
+£t
+
+
+152 #CONFIG_ESP32_BROWNOUT_DET_LVL_SEL_5 
+is
+ 
+nŸ
+ 
+£t
+
+
+153 #CONFIG_ESP32_BROWNOUT_DET_LVL_SEL_6 
+is
+ 
+nŸ
+ 
+£t
+
+
+154 #CONFIG_ESP32_BROWNOUT_DET_LVL_SEL_7 
+is
+ 
+nŸ
+ 
+£t
+
+
+155 
+CONFIG_ESP32_BROWNOUT_DET_LVL
+=0
+
+156 
+CONFIG_ESP32_REDUCE_PHY_TX_POWER
+=
+y
+
+
+157 
+CONFIG_ESP32_TIME_SYSCALL_USE_RTC_FRC1
+=
+y
+
+
+158 #CONFIG_ESP32_TIME_SYSCALL_USE_RTC 
+is
+ 
+nŸ
+ 
+£t
+
+
+159 #CONFIG_ESP32_TIME_SYSCALL_USE_FRC1 
+is
+ 
+nŸ
+ 
+£t
+
+
+160 #CONFIG_ESP32_TIME_SYSCALL_USE_NONE 
+is
+ 
+nŸ
+ 
+£t
+
+
+161 
+CONFIG_ESP32_RTC_CLK_SRC_INT_RC
+=
+y
+
+
+162 #CONFIG_ESP32_RTC_CLK_SRC_EXT_CRYS 
+is
+ 
+nŸ
+ 
+£t
+
+
+163 #CONFIG_ESP32_RTC_CLK_SRC_EXT_OSC 
+is
+ 
+nŸ
+ 
+£t
+
+
+164 #CONFIG_ESP32_RTC_CLK_SRC_INT_8MD256 
+is
+ 
+nŸ
+ 
+£t
+
+
+165 
+CONFIG_ESP32_RTC_CLK_CAL_CYCLES
+=1024
+
+166 
+CONFIG_ESP32_DEEP_SLEEP_WAKEUP_DELAY
+=2000
+
+167 
+CONFIG_ESP32_XTAL_FREQ_40
+=
+y
+
+
+168 #CONFIG_ESP32_XTAL_FREQ_26 
+is
+ 
+nŸ
+ 
+£t
+
+
+169 #CONFIG_ESP32_XTAL_FREQ_AUTO 
+is
+ 
+nŸ
+ 
+£t
+
+
+170 
+CONFIG_ESP32_XTAL_FREQ
+=40
+
+171 #CONFIG_ESP32_DISABLE_BASIC_ROM_CONSOLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+172 #CONFIG_ESP32_NO_BLOBS 
+is
+ 
+nŸ
+ 
+£t
+
+
+173 #CONFIG_ESP32_COMPATIBLE_PRE_V2_1_BOOTLOADERS 
+is
+ 
+nŸ
+ 
+£t
+
+
+174 #CONFIG_ESP32_USE_FIXED_STATIC_RAM_SIZE 
+is
+ 
+nŸ
+ 
+£t
+
+
+175 #CONFIG_PM_ENABLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+176 
+CONFIG_ADC_CAL_EFUSE_TP_ENABLE
+=
+y
+
+
+177 
+CONFIG_ADC_CAL_EFUSE_VREF_ENABLE
+=
+y
+
+
+178 
+CONFIG_ADC_CAL_LUT_ENABLE
+=
+y
+
+
+179 #CONFIG_ESP_TIMER_PROFILING 
+is
+ 
+nŸ
+ 
+£t
+
+
+180 
+CONFIG_ESP_ERR_TO_NAME_LOOKUP
+=
+y
+
+
+181 
+CONFIG_ESP_SYSTEM_EVENT_QUEUE_SIZE
+=32
+
+182 
+CONFIG_ESP_SYSTEM_EVENT_TASK_STACK_SIZE
+=2304
+
+183 
+CONFIG_ESP_MAIN_TASK_STACK_SIZE
+=3584
+
+184 
+CONFIG_ESP_IPC_TASK_STACK_SIZE
+=1024
+
+185 
+CONFIG_ESP_TIMER_TASK_STACK_SIZE
+=3584
+
+186 
+CONFIG_ESP_CONSOLE_UART_DEFAULT
+=
+y
+
+
+187 #CONFIG_ESP_CONSOLE_UART_CUSTOM 
+is
+ 
+nŸ
+ 
+£t
+
+
+188 #CONFIG_ESP_CONSOLE_UART_NONE 
+is
+ 
+nŸ
+ 
+£t
+
+
+189 
+CONFIG_ESP_CONSOLE_UART_NUM
+=0
+
+190 
+CONFIG_ESP_CONSOLE_UART_BAUDRATE
+=115200
+
+191 
+CONFIG_ESP_INT_WDT
+=
+y
+
+
+192 
+CONFIG_ESP_INT_WDT_TIMEOUT_MS
+=300
+
+193 
+CONFIG_ESP_INT_WDT_CHECK_CPU1
+=
+y
+
+
+194 
+CONFIG_ESP_TASK_WDT
+=
+y
+
+
+195 #CONFIG_ESP_TASK_WDT_PANIC 
+is
+ 
+nŸ
+ 
+£t
+
+
+196 
+CONFIG_ESP_TASK_WDT_TIMEOUT_S
+=5
+
+197 
+CONFIG_ESP_TASK_WDT_CHECK_IDLE_TASK_CPU0
+=
+y
+
+
+198 
+CONFIG_ESP_TASK_WDT_CHECK_IDLE_TASK_CPU1
+=
+y
+
+
+199 #CONFIG_ESP_EVENT_LOOP_PROFILING 
+is
+ 
+nŸ
+ 
+£t
+
+
+200 
+CONFIG_ESP_EVENT_POST_FROM_ISR
+=
+y
+
+
+201 
+CONFIG_ESP_EVENT_POST_FROM_IRAM_ISR
+=
+y
+
+
+202 
+CONFIG_ESP_HTTP_CLIENT_ENABLE_HTTPS
+=
+y
+
+
+203 #CONFIG_ESP_HTTP_CLIENT_ENABLE_BASIC_AUTH 
+is
+ 
+nŸ
+ 
+£t
+
+
+204 
+CONFIG_HTTPD_MAX_REQ_HDR_LEN
+=1024
+
+205 
+CONFIG_HTTPD_MAX_URI_LEN
+=512
+
+206 
+CONFIG_HTTPD_ERR_RESP_NO_DELAY
+=
+y
+
+
+207 
+CONFIG_HTTPD_PURGE_BUF_LEN
+=32
+
+208 #CONFIG_HTTPD_LOG_PURGE_DATA 
+is
+ 
+nŸ
+ 
+£t
+
+
+209 #CONFIG_OTA_ALLOW_HTTP 
+is
+ 
+nŸ
+ 
+£t
+
+
+210 #CONFIG_ESP_HTTPS_SERVER_ENABLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+211 
+CONFIG_ESP32_WIFI_STATIC_RX_BUFFER_NUM
+=10
+
+212 
+CONFIG_ESP32_WIFI_DYNAMIC_RX_BUFFER_NUM
+=32
+
+213 #CONFIG_ESP32_WIFI_STATIC_TX_BUFFER 
+is
+ 
+nŸ
+ 
+£t
+
+
+214 
+CONFIG_ESP32_WIFI_DYNAMIC_TX_BUFFER
+=
+y
+
+
+215 
+CONFIG_ESP32_WIFI_TX_BUFFER_TYPE
+=1
+
+216 
+CONFIG_ESP32_WIFI_DYNAMIC_TX_BUFFER_NUM
+=32
+
+217 #CONFIG_ESP32_WIFI_CSI_ENABLED 
+is
+ 
+nŸ
+ 
+£t
+
+
+218 
+CONFIG_ESP32_WIFI_AMPDU_TX_ENABLED
+=
+y
+
+
+219 
+CONFIG_ESP32_WIFI_TX_BA_WIN
+=6
+
+220 
+CONFIG_ESP32_WIFI_AMPDU_RX_ENABLED
+=
+y
+
+
+221 
+CONFIG_ESP32_WIFI_RX_BA_WIN
+=6
+
+222 
+CONFIG_ESP32_WIFI_NVS_ENABLED
+=
+y
+
+
+223 
+CONFIG_ESP32_WIFI_TASK_PINNED_TO_CORE_0
+=
+y
+
+
+224 #CONFIG_ESP32_WIFI_TASK_PINNED_TO_CORE_1 
+is
+ 
+nŸ
+ 
+£t
+
+
+225 
+CONFIG_ESP32_WIFI_SOFTAP_BEACON_MAX_LEN
+=752
+
+226 
+CONFIG_ESP32_WIFI_MGMT_SBUF_NUM
+=32
+
+227 #CONFIG_ESP32_WIFI_DEBUG_LOG_ENABLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+228 
+CONFIG_ESP32_WIFI_IRAM_OPT
+=
+y
+
+
+229 
+CONFIG_ESP32_PHY_CALIBRATION_AND_DATA_STORAGE
+=
+y
+
+
+230 #CONFIG_ESP32_PHY_INIT_DATA_IN_PARTITION 
+is
+ 
+nŸ
+ 
+£t
+
+
+231 
+CONFIG_ESP32_PHY_MAX_WIFI_TX_POWER
+=20
+
+232 
+CONFIG_ESP32_PHY_MAX_TX_POWER
+=20
+
+233 #CONFIG_ESP32_ENABLE_COREDUMP_TO_FLASH 
+is
+ 
+nŸ
+ 
+£t
+
+
+234 #CONFIG_ESP32_ENABLE_COREDUMP_TO_UART 
+is
+ 
+nŸ
+ 
+£t
+
+
+235 
+CONFIG_ESP32_ENABLE_COREDUMP_TO_NONE
+=
+y
+
+
+236 #CONFIG_ESP32_ENABLE_COREDUMP 
+is
+ 
+nŸ
+ 
+£t
+
+
+237 
+CONFIG_ETH_DMA_RX_BUF_NUM
+=10
+
+238 
+CONFIG_ETH_DMA_TX_BUF_NUM
+=10
+
+239 
+CONFIG_ETH_EMAC_L2_TO_L3_RX_BUF_MODE
+=
+y
+
+
+240 
+CONFIG_ETH_CHECK_LINK_STATUS_PERIOD_MS
+=2000
+
+241 
+CONFIG_ETH_EMAC_TASK_PRIORITY
+=20
+
+242 
+CONFIG_ETH_EMAC_TASK_STACK_SIZE
+=3072
+
+243 #CONFIG_FATFS_CODEPAGE_DYNAMIC 
+is
+ 
+nŸ
+ 
+£t
+
+
+244 
+CONFIG_FATFS_CODEPAGE_437
+=
+y
+
+
+245 #CONFIG_FATFS_CODEPAGE_720 
+is
+ 
+nŸ
+ 
+£t
+
+
+246 #CONFIG_FATFS_CODEPAGE_737 
+is
+ 
+nŸ
+ 
+£t
+
+
+247 #CONFIG_FATFS_CODEPAGE_771 
+is
+ 
+nŸ
+ 
+£t
+
+
+248 #CONFIG_FATFS_CODEPAGE_775 
+is
+ 
+nŸ
+ 
+£t
+
+
+249 #CONFIG_FATFS_CODEPAGE_850 
+is
+ 
+nŸ
+ 
+£t
+
+
+250 #CONFIG_FATFS_CODEPAGE_852 
+is
+ 
+nŸ
+ 
+£t
+
+
+251 #CONFIG_FATFS_CODEPAGE_855 
+is
+ 
+nŸ
+ 
+£t
+
+
+252 #CONFIG_FATFS_CODEPAGE_857 
+is
+ 
+nŸ
+ 
+£t
+
+
+253 #CONFIG_FATFS_CODEPAGE_860 
+is
+ 
+nŸ
+ 
+£t
+
+
+254 #CONFIG_FATFS_CODEPAGE_861 
+is
+ 
+nŸ
+ 
+£t
+
+
+255 #CONFIG_FATFS_CODEPAGE_862 
+is
+ 
+nŸ
+ 
+£t
+
+
+256 #CONFIG_FATFS_CODEPAGE_863 
+is
+ 
+nŸ
+ 
+£t
+
+
+257 #CONFIG_FATFS_CODEPAGE_864 
+is
+ 
+nŸ
+ 
+£t
+
+
+258 #CONFIG_FATFS_CODEPAGE_865 
+is
+ 
+nŸ
+ 
+£t
+
+
+259 #CONFIG_FATFS_CODEPAGE_866 
+is
+ 
+nŸ
+ 
+£t
+
+
+260 #CONFIG_FATFS_CODEPAGE_869 
+is
+ 
+nŸ
+ 
+£t
+
+
+261 #CONFIG_FATFS_CODEPAGE_932 
+is
+ 
+nŸ
+ 
+£t
+
+
+262 #CONFIG_FATFS_CODEPAGE_936 
+is
+ 
+nŸ
+ 
+£t
+
+
+263 #CONFIG_FATFS_CODEPAGE_949 
+is
+ 
+nŸ
+ 
+£t
+
+
+264 #CONFIG_FATFS_CODEPAGE_950 
+is
+ 
+nŸ
+ 
+£t
+
+
+265 
+CONFIG_FATFS_CODEPAGE
+=437
+
+266 
+CONFIG_FATFS_LFN_NONE
+=
+y
+
+
+267 #CONFIG_FATFS_LFN_HEAP 
+is
+ 
+nŸ
+ 
+£t
+
+
+268 #CONFIG_FATFS_LFN_STACK 
+is
+ 
+nŸ
+ 
+£t
+
+
+269 
+CONFIG_FATFS_FS_LOCK
+=0
+
+270 
+CONFIG_FATFS_TIMEOUT_MS
+=10000
+
+271 
+CONFIG_FATFS_PER_FILE_CACHE
+=
+y
+
+
+272 
+CONFIG_FMB_MASTER_TIMEOUT_MS_RESPOND
+=150
+
+273 
+CONFIG_FMB_MASTER_DELAY_MS_CONVERT
+=200
+
+274 
+CONFIG_FMB_QUEUE_LENGTH
+=20
+
+275 
+CONFIG_FMB_SERIAL_TASK_STACK_SIZE
+=2048
+
+276 
+CONFIG_FMB_SERIAL_BUF_SIZE
+=256
+
+277 
+CONFIG_FMB_SERIAL_TASK_PRIO
+=10
+
+278 #CONFIG_FMB_CONTROLLER_SLAVE_ID_SUPPORT 
+is
+ 
+nŸ
+ 
+£t
+
+
+279 
+CONFIG_FMB_CONTROLLER_NOTIFY_TIMEOUT
+=20
+
+280 
+CONFIG_FMB_CONTROLLER_NOTIFY_QUEUE_SIZE
+=20
+
+281 
+CONFIG_FMB_CONTROLLER_STACK_SIZE
+=4096
+
+282 
+CONFIG_FMB_EVENT_QUEUE_TIMEOUT
+=20
+
+283 
+CONFIG_FMB_TIMER_PORT_ENABLED
+=
+y
+
+
+284 
+CONFIG_FMB_TIMER_GROUP
+=0
+
+285 
+CONFIG_FMB_TIMER_INDEX
+=0
+
+286 #CONFIG_FREERTOS_UNICORE 
+is
+ 
+nŸ
+ 
+£t
+
+
+287 
+CONFIG_FREERTOS_NO_AFFINITY
+=0x7FFFFFFF
+
+288 
+CONFIG_FREERTOS_CORETIMER_0
+=
+y
+
+
+289 #CONFIG_FREERTOS_CORETIMER_1 
+is
+ 
+nŸ
+ 
+£t
+
+
+290 
+CONFIG_FREERTOS_HZ
+=100
+
+291 
+CONFIG_FREERTOS_ASSERT_ON_UNTESTED_FUNCTION
+=
+y
+
+
+292 #CONFIG_FREERTOS_CHECK_STACKOVERFLOW_NONE 
+is
+ 
+nŸ
+ 
+£t
+
+
+293 #CONFIG_FREERTOS_CHECK_STACKOVERFLOW_PTRVAL 
+is
+ 
+nŸ
+ 
+£t
+
+
+294 
+CONFIG_FREERTOS_CHECK_STACKOVERFLOW_CANARY
+=
+y
+
+
+295 #CONFIG_FREERTOS_WATCHPOINT_END_OF_STACK 
+is
+ 
+nŸ
+ 
+£t
+
+
+296 
+CONFIG_FREERTOS_INTERRUPT_BACKTRACE
+=
+y
+
+
+297 
+CONFIG_FREERTOS_THREAD_LOCAL_STORAGE_POINTERS
+=1
+
+298 
+CONFIG_FREERTOS_ASSERT_FAIL_ABORT
+=
+y
+
+
+299 #CONFIG_FREERTOS_ASSERT_FAIL_PRINT_CONTINUE 
+is
+ 
+nŸ
+ 
+£t
+
+
+300 #CONFIG_FREERTOS_ASSERT_DISABLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+301 
+CONFIG_FREERTOS_IDLE_TASK_STACKSIZE
+=1536
+
+302 
+CONFIG_FREERTOS_ISR_STACKSIZE
+=1536
+
+303 #CONFIG_FREERTOS_LEGACY_HOOKS 
+is
+ 
+nŸ
+ 
+£t
+
+
+304 
+CONFIG_FREERTOS_MAX_TASK_NAME_LEN
+=16
+
+305 #CONFIG_FREERTOS_SUPPORT_STATIC_ALLOCATION 
+is
+ 
+nŸ
+ 
+£t
+
+
+306 
+CONFIG_FREERTOS_TIMER_TASK_PRIORITY
+=1
+
+307 
+CONFIG_FREERTOS_TIMER_TASK_STACK_DEPTH
+=2048
+
+308 
+CONFIG_FREERTOS_TIMER_QUEUE_LENGTH
+=10
+
+309 
+CONFIG_FREERTOS_QUEUE_REGISTRY_SIZE
+=0
+
+310 #CONFIG_FREERTOS_USE_TRACE_FACILITY 
+is
+ 
+nŸ
+ 
+£t
+
+
+311 #CONFIG_FREERTOS_GENERATE_RUN_TIME_STATS 
+is
+ 
+nŸ
+ 
+£t
+
+
+312 #CONFIG_FREERTOS_DEBUG_INTERNALS 
+is
+ 
+nŸ
+ 
+£t
+
+
+313 
+CONFIG_FREERTOS_TASK_FUNCTION_WRAPPER
+=
+y
+
+
+314 
+CONFIG_FREERTOS_CHECK_MUTEX_GIVEN_BY_OWNER
+=
+y
+
+
+315 #CONFIG_FREERTOS_CHECK_PORT_CRITICAL_COMPLIANCE 
+is
+ 
+nŸ
+ 
+£t
+
+
+316 
+CONFIG_HEAP_POISONING_DISABLED
+=
+y
+
+
+317 #CONFIG_HEAP_POISONING_LIGHT 
+is
+ 
+nŸ
+ 
+£t
+
+
+318 #CONFIG_HEAP_POISONING_COMPREHENSIVE 
+is
+ 
+nŸ
+ 
+£t
+
+
+319 
+CONFIG_HEAP_TRACING_OFF
+=
+y
+
+
+320 #CONFIG_HEAP_TRACING_STANDALONE 
+is
+ 
+nŸ
+ 
+£t
+
+
+321 #CONFIG_HEAP_TRACING_TOHOST 
+is
+ 
+nŸ
+ 
+£t
+
+
+322 #CONFIG_HEAP_TRACING 
+is
+ 
+nŸ
+ 
+£t
+
+
+323 
+CONFIG_LIBSODIUM_USE_MBEDTLS_SHA
+=
+y
+
+
+324 #CONFIG_LOG_DEFAULT_LEVEL_NONE 
+is
+ 
+nŸ
+ 
+£t
+
+
+325 #CONFIG_LOG_DEFAULT_LEVEL_ERROR 
+is
+ 
+nŸ
+ 
+£t
+
+
+326 #CONFIG_LOG_DEFAULT_LEVEL_WARN 
+is
+ 
+nŸ
+ 
+£t
+
+
+327 
+CONFIG_LOG_DEFAULT_LEVEL_INFO
+=
+y
+
+
+328 #CONFIG_LOG_DEFAULT_LEVEL_DEBUG 
+is
+ 
+nŸ
+ 
+£t
+
+
+329 #CONFIG_LOG_DEFAULT_LEVEL_VERBOSE 
+is
+ 
+nŸ
+ 
+£t
+
+
+330 
+CONFIG_LOG_DEFAULT_LEVEL
+=3
+
+331 
+CONFIG_LOG_COLORS
+=
+y
+
+
+332 
+CONFIG_LWIP_LOCAL_HOSTNAME
+="espressif"
+
+333 #CONFIG_LWIP_L2_TO_L3_COPY 
+is
+ 
+nŸ
+ 
+£t
+
+
+334 #CONFIG_LWIP_IRAM_OPTIMIZATION 
+is
+ 
+nŸ
+ 
+£t
+
+
+335 
+CONFIG_LWIP_TIMERS_ONDEMAND
+=
+y
+
+
+336 
+CONFIG_LWIP_MAX_SOCKETS
+=10
+
+337 #CONFIG_LWIP_USE_ONLY_LWIP_SELECT 
+is
+ 
+nŸ
+ 
+£t
+
+
+338 
+CONFIG_LWIP_SO_REUSE
+=
+y
+
+
+339 
+CONFIG_LWIP_SO_REUSE_RXTOALL
+=
+y
+
+
+340 #CONFIG_LWIP_SO_RCVBUF 
+is
+ 
+nŸ
+ 
+£t
+
+
+341 #CONFIG_LWIP_IP_FRAG 
+is
+ 
+nŸ
+ 
+£t
+
+
+342 #CONFIG_LWIP_IP_REASSEMBLY 
+is
+ 
+nŸ
+ 
+£t
+
+
+343 #CONFIG_LWIP_STATS 
+is
+ 
+nŸ
+ 
+£t
+
+
+344 #CONFIG_LWIP_ETHARP_TRUST_IP_MAC 
+is
+ 
+nŸ
+ 
+£t
+
+
+345 
+CONFIG_LWIP_ESP_GRATUITOUS_ARP
+=
+y
+
+
+346 
+CONFIG_LWIP_GARP_TMR_INTERVAL
+=60
+
+347 
+CONFIG_LWIP_TCPIP_RECVMBOX_SIZE
+=32
+
+348 
+CONFIG_LWIP_DHCP_DOES_ARP_CHECK
+=
+y
+
+
+349 #CONFIG_LWIP_DHCP_RESTORE_LAST_IP 
+is
+ 
+nŸ
+ 
+£t
+
+
+350 
+CONFIG_LWIP_DHCPS_LEASE_UNIT
+=60
+
+351 
+CONFIG_LWIP_DHCPS_MAX_STATION_NUM
+=8
+
+352 #CONFIG_LWIP_AUTOIP 
+is
+ 
+nŸ
+ 
+£t
+
+
+353 
+CONFIG_LWIP_NETIF_LOOPBACK
+=
+y
+
+
+354 
+CONFIG_LWIP_LOOPBACK_MAX_PBUFS
+=8
+
+355 
+CONFIG_LWIP_MAX_ACTIVE_TCP
+=16
+
+356 
+CONFIG_LWIP_MAX_LISTENING_TCP
+=16
+
+357 
+CONFIG_LWIP_TCP_MAXRTX
+=12
+
+358 
+CONFIG_LWIP_TCP_SYNMAXRTX
+=6
+
+359 
+CONFIG_LWIP_TCP_MSS
+=1440
+
+360 
+CONFIG_LWIP_TCP_MSL
+=60000
+
+361 
+CONFIG_LWIP_TCP_SND_BUF_DEFAULT
+=5744
+
+362 
+CONFIG_LWIP_TCP_WND_DEFAULT
+=5744
+
+363 
+CONFIG_LWIP_TCP_RECVMBOX_SIZE
+=6
+
+364 
+CONFIG_LWIP_TCP_QUEUE_OOSEQ
+=
+y
+
+
+365 #CONFIG_LWIP_TCP_KEEP_CONNECTION_WHEN_IP_CHANGES 
+is
+ 
+nŸ
+ 
+£t
+
+
+366 
+CONFIG_LWIP_TCP_OVERSIZE_MSS
+=
+y
+
+
+367 #CONFIG_LWIP_TCP_OVERSIZE_QUARTER_MSS 
+is
+ 
+nŸ
+ 
+£t
+
+
+368 #CONFIG_LWIP_TCP_OVERSIZE_DISABLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+369 
+CONFIG_LWIP_MAX_UDP_PCBS
+=16
+
+370 
+CONFIG_LWIP_UDP_RECVMBOX_SIZE
+=6
+
+371 
+CONFIG_LWIP_TCPIP_TASK_STACK_SIZE
+=3072
+
+372 
+CONFIG_LWIP_TCPIP_TASK_AFFINITY_NO_AFFINITY
+=
+y
+
+
+373 #CONFIG_LWIP_TCPIP_TASK_AFFINITY_CPU0 
+is
+ 
+nŸ
+ 
+£t
+
+
+374 #CONFIG_LWIP_TCPIP_TASK_AFFINITY_CPU1 
+is
+ 
+nŸ
+ 
+£t
+
+
+375 
+CONFIG_LWIP_TCPIP_TASK_AFFINITY
+=0x7FFFFFFF
+
+376 #CONFIG_LWIP_PPP_SUPPORT 
+is
+ 
+nŸ
+ 
+£t
+
+
+377 #CONFIG_LWIP_MULTICAST_PING 
+is
+ 
+nŸ
+ 
+£t
+
+
+378 #CONFIG_LWIP_BROADCAST_PING 
+is
+ 
+nŸ
+ 
+£t
+
+
+379 
+CONFIG_LWIP_MAX_RAW_PCBS
+=16
+
+380 
+CONFIG_LWIP_DHCP_MAX_NTP_SERVERS
+=1
+
+381 
+CONFIG_LWIP_SNTP_UPDATE_DELAY
+=3600000
+
+382 
+CONFIG_MBEDTLS_INTERNAL_MEM_ALLOC
+=
+y
+
+
+383 #CONFIG_MBEDTLS_DEFAULT_MEM_ALLOC 
+is
+ 
+nŸ
+ 
+£t
+
+
+384 #CONFIG_MBEDTLS_CUSTOM_MEM_ALLOC 
+is
+ 
+nŸ
+ 
+£t
+
+
+385 
+CONFIG_MBEDTLS_SSL_MAX_CONTENT_LEN
+=16384
+
+386 #CONFIG_MBEDTLS_ASYMMETRIC_CONTENT_LEN 
+is
+ 
+nŸ
+ 
+£t
+
+
+387 #CONFIG_MBEDTLS_DEBUG 
+is
+ 
+nŸ
+ 
+£t
+
+
+388 
+CONFIG_MBEDTLS_HARDWARE_AES
+=
+y
+
+
+389 #CONFIG_MBEDTLS_HARDWARE_MPI 
+is
+ 
+nŸ
+ 
+£t
+
+
+390 #CONFIG_MBEDTLS_HARDWARE_SHA 
+is
+ 
+nŸ
+ 
+£t
+
+
+391 
+CONFIG_MBEDTLS_HAVE_TIME
+=
+y
+
+
+392 #CONFIG_MBEDTLS_HAVE_TIME_DATE 
+is
+ 
+nŸ
+ 
+£t
+
+
+393 
+CONFIG_MBEDTLS_TLS_SERVER_AND_CLIENT
+=
+y
+
+
+394 #CONFIG_MBEDTLS_TLS_SERVER_ONLY 
+is
+ 
+nŸ
+ 
+£t
+
+
+395 #CONFIG_MBEDTLS_TLS_CLIENT_ONLY 
+is
+ 
+nŸ
+ 
+£t
+
+
+396 #CONFIG_MBEDTLS_TLS_DISABLED 
+is
+ 
+nŸ
+ 
+£t
+
+
+397 
+CONFIG_MBEDTLS_TLS_SERVER
+=
+y
+
+
+398 
+CONFIG_MBEDTLS_TLS_CLIENT
+=
+y
+
+
+399 
+CONFIG_MBEDTLS_TLS_ENABLED
+=
+y
+
+
+400 #CONFIG_MBEDTLS_PSK_MODES 
+is
+ 
+nŸ
+ 
+£t
+
+
+401 
+CONFIG_MBEDTLS_KEY_EXCHANGE_RSA
+=
+y
+
+
+402 
+CONFIG_MBEDTLS_KEY_EXCHANGE_DHE_RSA
+=
+y
+
+
+403 
+CONFIG_MBEDTLS_KEY_EXCHANGE_ELLIPTIC_CURVE
+=
+y
+
+
+404 
+CONFIG_MBEDTLS_KEY_EXCHANGE_ECDHE_RSA
+=
+y
+
+
+405 
+CONFIG_MBEDTLS_KEY_EXCHANGE_ECDHE_ECDSA
+=
+y
+
+
+406 
+CONFIG_MBEDTLS_KEY_EXCHANGE_ECDH_ECDSA
+=
+y
+
+
+407 
+CONFIG_MBEDTLS_KEY_EXCHANGE_ECDH_RSA
+=
+y
+
+
+408 
+CONFIG_MBEDTLS_SSL_RENEGOTIATION
+=
+y
+
+
+409 #CONFIG_MBEDTLS_SSL_PROTO_SSL3 
+is
+ 
+nŸ
+ 
+£t
+
+
+410 
+CONFIG_MBEDTLS_SSL_PROTO_TLS1
+=
+y
+
+
+411 
+CONFIG_MBEDTLS_SSL_PROTO_TLS1_1
+=
+y
+
+
+412 
+CONFIG_MBEDTLS_SSL_PROTO_TLS1_2
+=
+y
+
+
+413 #CONFIG_MBEDTLS_SSL_PROTO_DTLS 
+is
+ 
+nŸ
+ 
+£t
+
+
+414 
+CONFIG_MBEDTLS_SSL_ALPN
+=
+y
+
+
+415 
+CONFIG_MBEDTLS_CLIENT_SSL_SESSION_TICKETS
+=
+y
+
+
+416 
+CONFIG_MBEDTLS_SERVER_SSL_SESSION_TICKETS
+=
+y
+
+
+417 
+CONFIG_MBEDTLS_AES_C
+=
+y
+
+
+418 #CONFIG_MBEDTLS_CAMELLIA_C 
+is
+ 
+nŸ
+ 
+£t
+
+
+419 #CONFIG_MBEDTLS_DES_C 
+is
+ 
+nŸ
+ 
+£t
+
+
+420 
+CONFIG_MBEDTLS_RC4_DISABLED
+=
+y
+
+
+421 #CONFIG_MBEDTLS_RC4_ENABLED_NO_DEFAULT 
+is
+ 
+nŸ
+ 
+£t
+
+
+422 #CONFIG_MBEDTLS_RC4_ENABLED 
+is
+ 
+nŸ
+ 
+£t
+
+
+423 #CONFIG_MBEDTLS_BLOWFISH_C 
+is
+ 
+nŸ
+ 
+£t
+
+
+424 #CONFIG_MBEDTLS_XTEA_C 
+is
+ 
+nŸ
+ 
+£t
+
+
+425 
+CONFIG_MBEDTLS_CCM_C
+=
+y
+
+
+426 
+CONFIG_MBEDTLS_GCM_C
+=
+y
+
+
+427 #CONFIG_MBEDTLS_RIPEMD160_C 
+is
+ 
+nŸ
+ 
+£t
+
+
+428 
+CONFIG_MBEDTLS_PEM_PARSE_C
+=
+y
+
+
+429 
+CONFIG_MBEDTLS_PEM_WRITE_C
+=
+y
+
+
+430 
+CONFIG_MBEDTLS_X509_CRL_PARSE_C
+=
+y
+
+
+431 
+CONFIG_MBEDTLS_X509_CSR_PARSE_C
+=
+y
+
+
+432 
+CONFIG_MBEDTLS_ECP_C
+=
+y
+
+
+433 
+CONFIG_MBEDTLS_ECDH_C
+=
+y
+
+
+434 
+CONFIG_MBEDTLS_ECDSA_C
+=
+y
+
+
+435 
+CONFIG_MBEDTLS_ECP_DP_SECP192R1_ENABLED
+=
+y
+
+
+436 
+CONFIG_MBEDTLS_ECP_DP_SECP224R1_ENABLED
+=
+y
+
+
+437 
+CONFIG_MBEDTLS_ECP_DP_SECP256R1_ENABLED
+=
+y
+
+
+438 
+CONFIG_MBEDTLS_ECP_DP_SECP384R1_ENABLED
+=
+y
+
+
+439 
+CONFIG_MBEDTLS_ECP_DP_SECP521R1_ENABLED
+=
+y
+
+
+440 
+CONFIG_MBEDTLS_ECP_DP_SECP192K1_ENABLED
+=
+y
+
+
+441 
+CONFIG_MBEDTLS_ECP_DP_SECP224K1_ENABLED
+=
+y
+
+
+442 
+CONFIG_MBEDTLS_ECP_DP_SECP256K1_ENABLED
+=
+y
+
+
+443 
+CONFIG_MBEDTLS_ECP_DP_BP256R1_ENABLED
+=
+y
+
+
+444 
+CONFIG_MBEDTLS_ECP_DP_BP384R1_ENABLED
+=
+y
+
+
+445 
+CONFIG_MBEDTLS_ECP_DP_BP512R1_ENABLED
+=
+y
+
+
+446 
+CONFIG_MBEDTLS_ECP_DP_CURVE25519_ENABLED
+=
+y
+
+
+447 
+CONFIG_MBEDTLS_ECP_NIST_OPTIM
+=
+y
+
+
+448 
+CONFIG_MDNS_MAX_SERVICES
+=10
+
+449 
+CONFIG_MQTT_PROTOCOL_311
+=
+y
+
+
+450 
+CONFIG_MQTT_TRANSPORT_SSL
+=
+y
+
+
+451 
+CONFIG_MQTT_TRANSPORT_WEBSOCKET
+=
+y
+
+
+452 
+CONFIG_MQTT_TRANSPORT_WEBSOCKET_SECURE
+=
+y
+
+
+453 #CONFIG_MQTT_USE_CUSTOM_CONFIG 
+is
+ 
+nŸ
+ 
+£t
+
+
+454 #CONFIG_MQTT_TASK_CORE_SELECTION_ENABLED 
+is
+ 
+nŸ
+ 
+£t
+
+
+455 #CONFIG_MQTT_CUSTOM_OUTBOX 
+is
+ 
+nŸ
+ 
+£t
+
+
+456 
+CONFIG_NEWLIB_STDOUT_LINE_ENDING_CRLF
+=
+y
+
+
+457 #CONFIG_NEWLIB_STDOUT_LINE_ENDING_LF 
+is
+ 
+nŸ
+ 
+£t
+
+
+458 #CONFIG_NEWLIB_STDOUT_LINE_ENDING_CR 
+is
+ 
+nŸ
+ 
+£t
+
+
+459 #CONFIG_NEWLIB_STDIN_LINE_ENDING_CRLF 
+is
+ 
+nŸ
+ 
+£t
+
+
+460 #CONFIG_NEWLIB_STDIN_LINE_ENDING_LF 
+is
+ 
+nŸ
+ 
+£t
+
+
+461 
+CONFIG_NEWLIB_STDIN_LINE_ENDING_CR
+=
+y
+
+
+462 #CONFIG_NEWLIB_NANO_FORMAT 
+is
+ 
+nŸ
+ 
+£t
+
+
+463 #CONFIG_OPENSSL_DEBUG 
+is
+ 
+nŸ
+ 
+£t
+
+
+464 
+CONFIG_OPENSSL_ASSERT_DO_NOTHING
+=
+y
+
+
+465 #CONFIG_OPENSSL_ASSERT_EXIT 
+is
+ 
+nŸ
+ 
+£t
+
+
+466 
+CONFIG_ESP32_PTHREAD_TASK_PRIO_DEFAULT
+=5
+
+467 
+CONFIG_ESP32_PTHREAD_TASK_STACK_SIZE_DEFAULT
+=3072
+
+468 
+CONFIG_ESP32_PTHREAD_STACK_MIN
+=768
+
+469 
+CONFIG_ESP32_DEFAULT_PTHREAD_CORE_NO_AFFINITY
+=
+y
+
+
+470 #CONFIG_ESP32_DEFAULT_PTHREAD_CORE_0 
+is
+ 
+nŸ
+ 
+£t
+
+
+471 #CONFIG_ESP32_DEFAULT_PTHREAD_CORE_1 
+is
+ 
+nŸ
+ 
+£t
+
+
+472 
+CONFIG_ESP32_PTHREAD_TASK_CORE_DEFAULT
+=-1
+
+473 
+CONFIG_ESP32_PTHREAD_TASK_NAME_DEFAULT
+="pthread"
+
+474 #CONFIG_SPI_FLASH_VERIFY_WRITE 
+is
+ 
+nŸ
+ 
+£t
+
+
+475 #CONFIG_SPI_FLASH_ENABLE_COUNTERS 
+is
+ 
+nŸ
+ 
+£t
+
+
+476 
+CONFIG_SPI_FLASH_ROM_DRIVER_PATCH
+=
+y
+
+
+477 
+CONFIG_SPI_FLASH_DANGEROUS_WRITE_ABORTS
+=
+y
+
+
+478 #CONFIG_SPI_FLASH_DANGEROUS_WRITE_FAILS 
+is
+ 
+nŸ
+ 
+£t
+
+
+479 #CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED 
+is
+ 
+nŸ
+ 
+£t
+
+
+480 #CONFIG_SPI_FLASH_USE_LEGACY_IMPL 
+is
+ 
+nŸ
+ 
+£t
+
+
+481 
+CONFIG_SPI_FLASH_SUPPORT_ISSI_CHIP
+=
+y
+
+
+482 
+CONFIG_SPIFFS_MAX_PARTITIONS
+=3
+
+483 
+CONFIG_SPIFFS_CACHE
+=
+y
+
+
+484 
+CONFIG_SPIFFS_CACHE_WR
+=
+y
+
+
+485 #CONFIG_SPIFFS_CACHE_STATS 
+is
+ 
+nŸ
+ 
+£t
+
+
+486 
+CONFIG_SPIFFS_PAGE_CHECK
+=
+y
+
+
+487 
+CONFIG_SPIFFS_GC_MAX_RUNS
+=10
+
+488 #CONFIG_SPIFFS_GC_STATS 
+is
+ 
+nŸ
+ 
+£t
+
+
+489 
+CONFIG_SPIFFS_PAGE_SIZE
+=256
+
+490 
+CONFIG_SPIFFS_OBJ_NAME_LEN
+=32
+
+491 
+CONFIG_SPIFFS_USE_MAGIC
+=
+y
+
+
+492 
+CONFIG_SPIFFS_USE_MAGIC_LENGTH
+=
+y
+
+
+493 
+CONFIG_SPIFFS_META_LENGTH
+=4
+
+494 
+CONFIG_SPIFFS_USE_MTIME
+=
+y
+
+
+495 #CONFIG_SPIFFS_DBG 
+is
+ 
+nŸ
+ 
+£t
+
+
+496 #CONFIG_SPIFFS_API_DBG 
+is
+ 
+nŸ
+ 
+£t
+
+
+497 #CONFIG_SPIFFS_GC_DBG 
+is
+ 
+nŸ
+ 
+£t
+
+
+498 #CONFIG_SPIFFS_CACHE_DBG 
+is
+ 
+nŸ
+ 
+£t
+
+
+499 #CONFIG_SPIFFS_CHECK_DBG 
+is
+ 
+nŸ
+ 
+£t
+
+
+500 #CONFIG_SPIFFS_TEST_VISUALISATION 
+is
+ 
+nŸ
+ 
+£t
+
+
+501 
+CONFIG_NETIF_IP_LOST_TIMER_INTERVAL
+=120
+
+502 
+CONFIG_TCPIP_LWIP
+=
+y
+
+
+503 
+CONFIG_UNITY_ENABLE_FLOAT
+=
+y
+
+
+504 
+CONFIG_UNITY_ENABLE_DOUBLE
+=
+y
+
+
+505 #CONFIG_UNITY_ENABLE_COLOR 
+is
+ 
+nŸ
+ 
+£t
+
+
+506 
+CONFIG_UNITY_ENABLE_IDF_TEST_RUNNER
+=
+y
+
+
+507 #CONFIG_UNITY_ENABLE_FIXTURE 
+is
+ 
+nŸ
+ 
+£t
+
+
+508 #CONFIG_UNITY_ENABLE_BACKTRACE_ON_FAIL 
+is
+ 
+nŸ
+ 
+£t
+
+
+509 
+CONFIG_SUPPRESS_SELECT_DEBUG_OUTPUT
+=
+y
+
+
+510 
+CONFIG_SUPPORT_TERMIOS
+=
+y
+
+
+511 
+CONFIG_SEMIHOSTFS_MAX_MOUNT_POINTS
+=1
+
+512 
+CONFIG_SEMIHOSTFS_HOST_PATH_MAX_LEN
+=128
+
+513 #CONFIG_WL_SECTOR_SIZE_512 
+is
+ 
+nŸ
+ 
+£t
+
+
+514 
+CONFIG_WL_SECTOR_SIZE_4096
+=
+y
+
+
+515 
+CONFIG_WL_SECTOR_SIZE
+=4096
+
+516 
+CONFIG_WIFI_PROV_SCAN_MAX_ENTRIES
+=16
+
+517 #CONFIG_LEGACY_INCLUDE_COMMON_HEADERS 
+is
+ 
+nŸ
+ 
+£t
+
+
+519 #Dïªˇãd 
+›ti⁄s
+ 
+backw¨d
+ 
+com∑tibûôy
+
+
+520 
+CONFIG_TOOLPREFIX
+="xtensa-esp32-elf-"
+
+521 
+CONFIG_PYTHON
+="python"
+
+522 
+CONFIG_MAKE_WARN_UNDEFINED_VARIABLES
+=
+y
+
+
+523 #CONFIG_LOG_BOOTLOADER_LEVEL_NONE 
+is
+ 
+nŸ
+ 
+£t
+
+
+524 #CONFIG_LOG_BOOTLOADER_LEVEL_ERROR 
+is
+ 
+nŸ
+ 
+£t
+
+
+525 #CONFIG_LOG_BOOTLOADER_LEVEL_WARN 
+is
+ 
+nŸ
+ 
+£t
+
+
+526 
+CONFIG_LOG_BOOTLOADER_LEVEL_INFO
+=
+y
+
+
+527 #CONFIG_LOG_BOOTLOADER_LEVEL_DEBUG 
+is
+ 
+nŸ
+ 
+£t
+
+
+528 #CONFIG_LOG_BOOTLOADER_LEVEL_VERBOSE 
+is
+ 
+nŸ
+ 
+£t
+
+
+529 
+CONFIG_LOG_BOOTLOADER_LEVEL
+=3
+
+530 #CONFIG_APP_ROLLBACK_ENABLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+531 #CONFIG_FLASH_ENCRYPTION_ENABLED 
+is
+ 
+nŸ
+ 
+£t
+
+
+532 #CONFIG_FLASHMODE_QIO 
+is
+ 
+nŸ
+ 
+£t
+
+
+533 #CONFIG_FLASHMODE_QOUT 
+is
+ 
+nŸ
+ 
+£t
+
+
+534 
+CONFIG_FLASHMODE_DIO
+=
+y
+
+
+535 #CONFIG_FLASHMODE_DOUT 
+is
+ 
+nŸ
+ 
+£t
+
+
+536 #CONFIG_MONITOR_BAUD_9600B 
+is
+ 
+nŸ
+ 
+£t
+
+
+537 #CONFIG_MONITOR_BAUD_57600B 
+is
+ 
+nŸ
+ 
+£t
+
+
+538 
+CONFIG_MONITOR_BAUD_115200B
+=
+y
+
+
+539 #CONFIG_MONITOR_BAUD_230400B 
+is
+ 
+nŸ
+ 
+£t
+
+
+540 #CONFIG_MONITOR_BAUD_921600B 
+is
+ 
+nŸ
+ 
+£t
+
+
+541 #CONFIG_MONITOR_BAUD_2MB 
+is
+ 
+nŸ
+ 
+£t
+
+
+542 #CONFIG_MONITOR_BAUD_OTHER 
+is
+ 
+nŸ
+ 
+£t
+
+
+543 
+CONFIG_MONITOR_BAUD_OTHER_VAL
+=115200
+
+544 
+CONFIG_MONITOR_BAUD
+=115200
+
+545 
+CONFIG_OPTIMIZATION_LEVEL_DEBUG
+=
+y
+
+
+546 #CONFIG_OPTIMIZATION_LEVEL_RELEASE 
+is
+ 
+nŸ
+ 
+£t
+
+
+547 
+CONFIG_OPTIMIZATION_ASSERTIONS_ENABLED
+=
+y
+
+
+548 #CONFIG_OPTIMIZATION_ASSERTIONS_SILENT 
+is
+ 
+nŸ
+ 
+£t
+
+
+549 #CONFIG_OPTIMIZATION_ASSERTIONS_DISABLED 
+is
+ 
+nŸ
+ 
+£t
+
+
+550 #CONFIG_CXX_EXCEPTIONS 
+is
+ 
+nŸ
+ 
+£t
+
+
+551 
+CONFIG_STACK_CHECK_NONE
+=
+y
+
+
+552 #CONFIG_STACK_CHECK_NORM 
+is
+ 
+nŸ
+ 
+£t
+
+
+553 #CONFIG_STACK_CHECK_STRONG 
+is
+ 
+nŸ
+ 
+£t
+
+
+554 #CONFIG_STACK_CHECK_ALL 
+is
+ 
+nŸ
+ 
+£t
+
+
+555 #CONFIG_STACK_CHECK 
+is
+ 
+nŸ
+ 
+£t
+
+
+556 #CONFIG_WARN_WRITE_STRINGS 
+is
+ 
+nŸ
+ 
+£t
+
+
+557 #CONFIG_DISABLE_GCC8_WARNINGS 
+is
+ 
+nŸ
+ 
+£t
+
+
+558 
+CONFIG_BTDM_CONTROLLER_BLE_MAX_CONN_EFF
+=0
+
+559 
+CONFIG_BTDM_CONTROLLER_BR_EDR_MAX_ACL_CONN_EFF
+=0
+
+560 
+CONFIG_BTDM_CONTROLLER_BR_EDR_MAX_SYNC_CONN_EFF
+=0
+
+561 
+CONFIG_BTDM_CONTROLLER_PINNED_TO_CORE
+=0
+
+562 
+CONFIG_ADC2_DISABLE_DAC
+=
+y
+
+
+563 #CONFIG_SPIRAM_SUPPORT 
+is
+ 
+nŸ
+ 
+£t
+
+
+564 #CONFIG_MEMMAP_TRACEMEM 
+is
+ 
+nŸ
+ 
+£t
+
+
+565 #CONFIG_MEMMAP_TRACEMEM_TWOBANKS 
+is
+ 
+nŸ
+ 
+£t
+
+
+566 
+CONFIG_TRACEMEM_RESERVE_DRAM
+=0x0
+
+567 #CONFIG_TWO_UNIVERSAL_MAC_ADDRESS 
+is
+ 
+nŸ
+ 
+£t
+
+
+568 
+CONFIG_FOUR_UNIVERSAL_MAC_ADDRESS
+=
+y
+
+
+569 
+CONFIG_NUMBER_OF_UNIVERSAL_MAC_ADDRESS
+=4
+
+570 #CONFIG_ULP_COPROC_ENABLED 
+is
+ 
+nŸ
+ 
+£t
+
+
+571 
+CONFIG_ULP_COPROC_RESERVE_MEM
+=0
+
+572 
+CONFIG_BROWNOUT_DET
+=
+y
+
+
+573 
+CONFIG_BROWNOUT_DET_LVL_SEL_0
+=
+y
+
+
+574 #CONFIG_BROWNOUT_DET_LVL_SEL_1 
+is
+ 
+nŸ
+ 
+£t
+
+
+575 #CONFIG_BROWNOUT_DET_LVL_SEL_2 
+is
+ 
+nŸ
+ 
+£t
+
+
+576 #CONFIG_BROWNOUT_DET_LVL_SEL_3 
+is
+ 
+nŸ
+ 
+£t
+
+
+577 #CONFIG_BROWNOUT_DET_LVL_SEL_4 
+is
+ 
+nŸ
+ 
+£t
+
+
+578 #CONFIG_BROWNOUT_DET_LVL_SEL_5 
+is
+ 
+nŸ
+ 
+£t
+
+
+579 #CONFIG_BROWNOUT_DET_LVL_SEL_6 
+is
+ 
+nŸ
+ 
+£t
+
+
+580 #CONFIG_BROWNOUT_DET_LVL_SEL_7 
+is
+ 
+nŸ
+ 
+£t
+
+
+581 
+CONFIG_BROWNOUT_DET_LVL
+=0
+
+582 
+CONFIG_REDUCE_PHY_TX_POWER
+=
+y
+
+
+583 
+CONFIG_ESP32_RTC_CLOCK_SOURCE_INTERNAL_RC
+=
+y
+
+
+584 #CONFIG_ESP32_RTC_CLOCK_SOURCE_EXTERNAL_CRYSTAL 
+is
+ 
+nŸ
+ 
+£t
+
+
+585 #CONFIG_ESP32_RTC_CLOCK_SOURCE_EXTERNAL_OSC 
+is
+ 
+nŸ
+ 
+£t
+
+
+586 #CONFIG_ESP32_RTC_CLOCK_SOURCE_INTERNAL_8MD256 
+is
+ 
+nŸ
+ 
+£t
+
+
+587 #CONFIG_DISABLE_BASIC_ROM_CONSOLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+588 #CONFIG_NO_BLOBS 
+is
+ 
+nŸ
+ 
+£t
+
+
+589 #CONFIG_COMPATIBLE_PRE_V2_1_BOOTLOADERS 
+is
+ 
+nŸ
+ 
+£t
+
+
+590 
+CONFIG_SYSTEM_EVENT_QUEUE_SIZE
+=32
+
+591 
+CONFIG_SYSTEM_EVENT_TASK_STACK_SIZE
+=2304
+
+592 
+CONFIG_MAIN_TASK_STACK_SIZE
+=3584
+
+593 
+CONFIG_IPC_TASK_STACK_SIZE
+=1024
+
+594 
+CONFIG_TIMER_TASK_STACK_SIZE
+=3584
+
+595 
+CONFIG_CONSOLE_UART_DEFAULT
+=
+y
+
+
+596 #CONFIG_CONSOLE_UART_CUSTOM 
+is
+ 
+nŸ
+ 
+£t
+
+
+597 #CONFIG_CONSOLE_UART_NONE 
+is
+ 
+nŸ
+ 
+£t
+
+
+598 
+CONFIG_CONSOLE_UART_NUM
+=0
+
+599 
+CONFIG_CONSOLE_UART_BAUDRATE
+=115200
+
+600 
+CONFIG_INT_WDT
+=
+y
+
+
+601 
+CONFIG_INT_WDT_TIMEOUT_MS
+=300
+
+602 
+CONFIG_INT_WDT_CHECK_CPU1
+=
+y
+
+
+603 
+CONFIG_TASK_WDT
+=
+y
+
+
+604 #CONFIG_TASK_WDT_PANIC 
+is
+ 
+nŸ
+ 
+£t
+
+
+605 
+CONFIG_TASK_WDT_TIMEOUT_S
+=5
+
+606 
+CONFIG_TASK_WDT_CHECK_IDLE_TASK_CPU0
+=
+y
+
+
+607 
+CONFIG_TASK_WDT_CHECK_IDLE_TASK_CPU1
+=
+y
+
+
+608 #CONFIG_EVENT_LOOP_PROFILING 
+is
+ 
+nŸ
+ 
+£t
+
+
+609 
+CONFIG_POST_EVENTS_FROM_ISR
+=
+y
+
+
+610 
+CONFIG_POST_EVENTS_FROM_IRAM_ISR
+=
+y
+
+
+611 
+CONFIG_DMA_RX_BUF_NUM
+=10
+
+612 
+CONFIG_DMA_TX_BUF_NUM
+=10
+
+613 
+CONFIG_EMAC_L2_TO_L3_RX_BUF_MODE
+=
+y
+
+
+614 
+CONFIG_EMAC_CHECK_LINK_PERIOD_MS
+=2000
+
+615 
+CONFIG_EMAC_TASK_PRIORITY
+=20
+
+616 
+CONFIG_EMAC_TASK_STACK_SIZE
+=3072
+
+617 
+CONFIG_MB_MASTER_TIMEOUT_MS_RESPOND
+=150
+
+618 
+CONFIG_MB_MASTER_DELAY_MS_CONVERT
+=200
+
+619 
+CONFIG_MB_QUEUE_LENGTH
+=20
+
+620 
+CONFIG_MB_SERIAL_TASK_STACK_SIZE
+=2048
+
+621 
+CONFIG_MB_SERIAL_BUF_SIZE
+=256
+
+622 
+CONFIG_MB_SERIAL_TASK_PRIO
+=10
+
+623 #CONFIG_MB_CONTROLLER_SLAVE_ID_SUPPORT 
+is
+ 
+nŸ
+ 
+£t
+
+
+624 
+CONFIG_MB_CONTROLLER_NOTIFY_TIMEOUT
+=20
+
+625 
+CONFIG_MB_CONTROLLER_NOTIFY_QUEUE_SIZE
+=20
+
+626 
+CONFIG_MB_CONTROLLER_STACK_SIZE
+=4096
+
+627 
+CONFIG_MB_EVENT_QUEUE_TIMEOUT
+=20
+
+628 
+CONFIG_MB_TIMER_PORT_ENABLED
+=
+y
+
+
+629 
+CONFIG_MB_TIMER_GROUP
+=0
+
+630 
+CONFIG_MB_TIMER_INDEX
+=0
+
+631 #CONFIG_SUPPORT_STATIC_ALLOCATION 
+is
+ 
+nŸ
+ 
+£t
+
+
+632 
+CONFIG_TIMER_TASK_PRIORITY
+=1
+
+633 
+CONFIG_TIMER_TASK_STACK_DEPTH
+=2048
+
+634 
+CONFIG_TIMER_QUEUE_LENGTH
+=10
+
+635 #CONFIG_L2_TO_L3_COPY 
+is
+ 
+nŸ
+ 
+£t
+
+
+636 #CONFIG_USE_ONLY_LWIP_SELECT 
+is
+ 
+nŸ
+ 
+£t
+
+
+637 
+CONFIG_ESP_GRATUITOUS_ARP
+=
+y
+
+
+638 
+CONFIG_GARP_TMR_INTERVAL
+=60
+
+639 
+CONFIG_TCPIP_RECVMBOX_SIZE
+=32
+
+640 
+CONFIG_TCP_MAXRTX
+=12
+
+641 
+CONFIG_TCP_SYNMAXRTX
+=6
+
+642 
+CONFIG_TCP_MSS
+=1440
+
+643 
+CONFIG_TCP_MSL
+=60000
+
+644 
+CONFIG_TCP_SND_BUF_DEFAULT
+=5744
+
+645 
+CONFIG_TCP_WND_DEFAULT
+=5744
+
+646 
+CONFIG_TCP_RECVMBOX_SIZE
+=6
+
+647 
+CONFIG_TCP_QUEUE_OOSEQ
+=
+y
+
+
+648 #CONFIG_ESP_TCP_KEEP_CONNECTION_WHEN_IP_CHANGES 
+is
+ 
+nŸ
+ 
+£t
+
+
+649 
+CONFIG_TCP_OVERSIZE_MSS
+=
+y
+
+
+650 #CONFIG_TCP_OVERSIZE_QUARTER_MSS 
+is
+ 
+nŸ
+ 
+£t
+
+
+651 #CONFIG_TCP_OVERSIZE_DISABLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+652 
+CONFIG_UDP_RECVMBOX_SIZE
+=6
+
+653 
+CONFIG_TCPIP_TASK_STACK_SIZE
+=3072
+
+654 
+CONFIG_TCPIP_TASK_AFFINITY_NO_AFFINITY
+=
+y
+
+
+655 #CONFIG_TCPIP_TASK_AFFINITY_CPU0 
+is
+ 
+nŸ
+ 
+£t
+
+
+656 #CONFIG_TCPIP_TASK_AFFINITY_CPU1 
+is
+ 
+nŸ
+ 
+£t
+
+
+657 
+CONFIG_TCPIP_TASK_AFFINITY
+=0x7FFFFFFF
+
+658 #CONFIG_PPP_SUPPORT 
+is
+ 
+nŸ
+ 
+£t
+
+
+659 
+CONFIG_PTHREAD_STACK_MIN
+=768
+
+660 
+CONFIG_SPI_FLASH_WRITING_DANGEROUS_REGIONS_ABORTS
+=
+y
+
+
+661 #CONFIG_SPI_FLASH_WRITING_DANGEROUS_REGIONS_FAILS 
+is
+ 
+nŸ
+ 
+£t
+
+
+662 #CONFIG_SPI_FLASH_WRITING_DANGEROUS_REGIONS_ALLOWED 
+is
+ 
+nŸ
+ 
+£t
+
+
+663 
+CONFIG_IP_LOST_TIMER_INTERVAL
+=120
+
+664 #End 
+of
+ 
+dïªˇãd
+ 
+›ti⁄s
+
+
+	@sdkconfig.defaults
+
+1 
+	gCONFIG_PARTITION_TABLE_CUSTOM
+=
+y
+
+
+2 
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME
+="partitions_example.csv"
+
+3 
+CONFIG_PARTITION_TABLE_CUSTOM_APP_BIN_OFFSET
+=0x10000
+
+4 
+CONFIG_PARTITION_TABLE_FILENAME
+="partitions_example.csv"
+
+5 
+CONFIG_APP_OFFSET
+=0x10000
+
+6 
+CONFIG_HTTPD_MAX_REQ_HDR_LEN
+=1024
+
+	@sdkconfig.old
+
+1 #
+#Autom©iˇŒy 
+gíî©ed
+ 
+fûe
+. 
+DO
+ 
+NOT
+ 
+EDIT
+.
+
+3 #E•ªssi‡
+IoT
+ 
+Devñ›mít
+ 
+Fømew‹k
+ (
+ESP
+-
+IDF
+Ë
+Proje˘
+ 
+C⁄figuøti⁄
+
+
+4 #
+_IDF_TARGET_ESP32=y
+
+6 
+	gCONFIG_IDF_TARGET
+="esp32"
+
+8 #
+#SDK 
+toﬁ
+ 
+c⁄figuøti⁄
+
+
+10 #
+_SDK_TOOLPREFIX="xãnß-e•32-ñf-"
+
+12 
+CONFIG_SDK_PYTHON
+="python"
+
+13 
+CONFIG_SDK_MAKE_WARN_UNDEFINED_VARIABLES
+=
+y
+
+
+14 
+CONFIG_APP_COMPILE_TIME_DATE
+=
+y
+
+
+15 #CONFIG_APP_EXCLUDE_PROJECT_VER_VAR 
+is
+ 
+nŸ
+ 
+£t
+
+
+16 #CONFIG_APP_EXCLUDE_PROJECT_NAME_VAR 
+is
+ 
+nŸ
+ 
+£t
+
+
+17 #CONFIG_BOOTLOADER_LOG_LEVEL_NONE 
+is
+ 
+nŸ
+ 
+£t
+
+
+18 #CONFIG_BOOTLOADER_LOG_LEVEL_ERROR 
+is
+ 
+nŸ
+ 
+£t
+
+
+19 #CONFIG_BOOTLOADER_LOG_LEVEL_WARN 
+is
+ 
+nŸ
+ 
+£t
+
+
+20 
+CONFIG_BOOTLOADER_LOG_LEVEL_INFO
+=
+y
+
+
+21 #CONFIG_BOOTLOADER_LOG_LEVEL_DEBUG 
+is
+ 
+nŸ
+ 
+£t
+
+
+22 #CONFIG_BOOTLOADER_LOG_LEVEL_VERBOSE 
+is
+ 
+nŸ
+ 
+£t
+
+
+23 
+CONFIG_BOOTLOADER_LOG_LEVEL
+=3
+
+24 #CONFIG_BOOTLOADER_VDDSDIO_BOOST_1_8V 
+is
+ 
+nŸ
+ 
+£t
+
+
+25 
+CONFIG_BOOTLOADER_VDDSDIO_BOOST_1_9V
+=
+y
+
+
+26 #CONFIG_BOOTLOADER_FACTORY_RESET 
+is
+ 
+nŸ
+ 
+£t
+
+
+27 #CONFIG_BOOTLOADER_APP_TEST 
+is
+ 
+nŸ
+ 
+£t
+
+
+28 
+CONFIG_BOOTLOADER_WDT_ENABLE
+=
+y
+
+
+29 #CONFIG_BOOTLOADER_WDT_DISABLE_IN_USER_CODE 
+is
+ 
+nŸ
+ 
+£t
+
+
+30 
+CONFIG_BOOTLOADER_WDT_TIME_MS
+=9000
+
+31 #CONFIG_BOOTLOADER_APP_ROLLBACK_ENABLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+32 #CONFIG_SECURE_SIGNED_APPS_NO_SECURE_BOOT 
+is
+ 
+nŸ
+ 
+£t
+
+
+33 #CONFIG_SECURE_BOOT_ENABLED 
+is
+ 
+nŸ
+ 
+£t
+
+
+34 #CONFIG_SECURE_FLASH_ENC_ENABLED 
+is
+ 
+nŸ
+ 
+£t
+
+
+35 
+CONFIG_ESPTOOLPY_PORT
+="/dev/ttyUSB0"
+
+36 
+CONFIG_ESPTOOLPY_BAUD_115200B
+=
+y
+
+
+37 #CONFIG_ESPTOOLPY_BAUD_230400B 
+is
+ 
+nŸ
+ 
+£t
+
+
+38 #CONFIG_ESPTOOLPY_BAUD_921600B 
+is
+ 
+nŸ
+ 
+£t
+
+
+39 #CONFIG_ESPTOOLPY_BAUD_2MB 
+is
+ 
+nŸ
+ 
+£t
+
+
+40 #CONFIG_ESPTOOLPY_BAUD_OTHER 
+is
+ 
+nŸ
+ 
+£t
+
+
+41 
+CONFIG_ESPTOOLPY_BAUD_OTHER_VAL
+=115200
+
+42 
+CONFIG_ESPTOOLPY_BAUD
+=115200
+
+43 
+CONFIG_ESPTOOLPY_COMPRESSED
+=
+y
+
+
+44 #CONFIG_ESPTOOLPY_FLASHMODE_QIO 
+is
+ 
+nŸ
+ 
+£t
+
+
+45 #CONFIG_ESPTOOLPY_FLASHMODE_QOUT 
+is
+ 
+nŸ
+ 
+£t
+
+
+46 
+CONFIG_ESPTOOLPY_FLASHMODE_DIO
+=
+y
+
+
+47 #CONFIG_ESPTOOLPY_FLASHMODE_DOUT 
+is
+ 
+nŸ
+ 
+£t
+
+
+48 
+CONFIG_ESPTOOLPY_FLASHMODE
+="dio"
+
+49 #CONFIG_ESPTOOLPY_FLASHFREQ_80M 
+is
+ 
+nŸ
+ 
+£t
+
+
+50 
+CONFIG_ESPTOOLPY_FLASHFREQ_40M
+=
+y
+
+
+51 #CONFIG_ESPTOOLPY_FLASHFREQ_26M 
+is
+ 
+nŸ
+ 
+£t
+
+
+52 #CONFIG_ESPTOOLPY_FLASHFREQ_20M 
+is
+ 
+nŸ
+ 
+£t
+
+
+53 
+CONFIG_ESPTOOLPY_FLASHFREQ
+="40m"
+
+54 #CONFIG_ESPTOOLPY_FLASHSIZE_1MB 
+is
+ 
+nŸ
+ 
+£t
+
+
+55 
+CONFIG_ESPTOOLPY_FLASHSIZE_2MB
+=
+y
+
+
+56 #CONFIG_ESPTOOLPY_FLASHSIZE_4MB 
+is
+ 
+nŸ
+ 
+£t
+
+
+57 #CONFIG_ESPTOOLPY_FLASHSIZE_8MB 
+is
+ 
+nŸ
+ 
+£t
+
+
+58 #CONFIG_ESPTOOLPY_FLASHSIZE_16MB 
+is
+ 
+nŸ
+ 
+£t
+
+
+59 
+CONFIG_ESPTOOLPY_FLASHSIZE
+="2MB"
+
+60 
+CONFIG_ESPTOOLPY_FLASHSIZE_DETECT
+=
+y
+
+
+61 
+CONFIG_ESPTOOLPY_BEFORE_RESET
+=
+y
+
+
+62 #CONFIG_ESPTOOLPY_BEFORE_NORESET 
+is
+ 
+nŸ
+ 
+£t
+
+
+63 
+CONFIG_ESPTOOLPY_BEFORE
+="default_reset"
+
+64 
+CONFIG_ESPTOOLPY_AFTER_RESET
+=
+y
+
+
+65 #CONFIG_ESPTOOLPY_AFTER_NORESET 
+is
+ 
+nŸ
+ 
+£t
+
+
+66 
+CONFIG_ESPTOOLPY_AFTER
+="hard_reset"
+
+67 #CONFIG_ESPTOOLPY_MONITOR_BAUD_9600B 
+is
+ 
+nŸ
+ 
+£t
+
+
+68 #CONFIG_ESPTOOLPY_MONITOR_BAUD_57600B 
+is
+ 
+nŸ
+ 
+£t
+
+
+69 
+CONFIG_ESPTOOLPY_MONITOR_BAUD_115200B
+=
+y
+
+
+70 #CONFIG_ESPTOOLPY_MONITOR_BAUD_230400B 
+is
+ 
+nŸ
+ 
+£t
+
+
+71 #CONFIG_ESPTOOLPY_MONITOR_BAUD_921600B 
+is
+ 
+nŸ
+ 
+£t
+
+
+72 #CONFIG_ESPTOOLPY_MONITOR_BAUD_2MB 
+is
+ 
+nŸ
+ 
+£t
+
+
+73 #CONFIG_ESPTOOLPY_MONITOR_BAUD_OTHER 
+is
+ 
+nŸ
+ 
+£t
+
+
+74 
+CONFIG_ESPTOOLPY_MONITOR_BAUD_OTHER_VAL
+=115200
+
+75 
+CONFIG_ESPTOOLPY_MONITOR_BAUD
+=115200
+
+76 #CONFIG_PARTITION_TABLE_SINGLE_APP 
+is
+ 
+nŸ
+ 
+£t
+
+
+77 #CONFIG_PARTITION_TABLE_TWO_OTA 
+is
+ 
+nŸ
+ 
+£t
+
+
+78 
+CONFIG_PARTITION_TABLE_CUSTOM
+=
+y
+
+
+79 
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME
+="partitions_example.csv"
+
+80 
+CONFIG_PARTITION_TABLE_FILENAME
+="partitions_example.csv"
+
+81 
+CONFIG_PARTITION_TABLE_OFFSET
+=0x8000
+
+82 
+CONFIG_PARTITION_TABLE_MD5
+=
+y
+
+
+83 
+CONFIG_EXAMPLE_CONNECT_WIFI
+=
+y
+
+
+84 #CONFIG_EXAMPLE_CONNECT_ETHERNET 
+is
+ 
+nŸ
+ 
+£t
+
+
+85 
+CONFIG_EXAMPLE_WIFI_SSID
+="MCShah"
+
+86 
+CONFIG_EXAMPLE_WIFI_PASSWORD
+="mcshah123"
+
+87 
+CONFIG_EXAMPLE_CONNECT_IPV6
+=
+y
+
+
+88 
+CONFIG_COMPILER_OPTIMIZATION_LEVEL_DEBUG
+=
+y
+
+
+89 #CONFIG_COMPILER_OPTIMIZATION_LEVEL_RELEASE 
+is
+ 
+nŸ
+ 
+£t
+
+
+90 
+CONFIG_COMPILER_OPTIMIZATION_ASSERTIONS_ENABLE
+=
+y
+
+
+91 #CONFIG_COMPILER_OPTIMIZATION_ASSERTIONS_SILENT 
+is
+ 
+nŸ
+ 
+£t
+
+
+92 #CONFIG_COMPILER_OPTIMIZATION_ASSERTIONS_DISABLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+93 #CONFIG_COMPILER_CXX_EXCEPTIONS 
+is
+ 
+nŸ
+ 
+£t
+
+
+94 
+CONFIG_COMPILER_STACK_CHECK_MODE_NONE
+=
+y
+
+
+95 #CONFIG_COMPILER_STACK_CHECK_MODE_NORM 
+is
+ 
+nŸ
+ 
+£t
+
+
+96 #CONFIG_COMPILER_STACK_CHECK_MODE_STRONG 
+is
+ 
+nŸ
+ 
+£t
+
+
+97 #CONFIG_COMPILER_STACK_CHECK_MODE_ALL 
+is
+ 
+nŸ
+ 
+£t
+
+
+98 #CONFIG_COMPILER_STACK_CHECK 
+is
+ 
+nŸ
+ 
+£t
+
+
+99 #CONFIG_COMPILER_WARN_WRITE_STRINGS 
+is
+ 
+nŸ
+ 
+£t
+
+
+100 #CONFIG_COMPILER_DISABLE_GCC8_WARNINGS 
+is
+ 
+nŸ
+ 
+£t
+
+
+101 #CONFIG_ESP32_APPTRACE_DEST_TRAX 
+is
+ 
+nŸ
+ 
+£t
+
+
+102 
+CONFIG_ESP32_APPTRACE_DEST_NONE
+=
+y
+
+
+103 #CONFIG_ESP32_APPTRACE_ENABLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+104 
+CONFIG_ESP32_APPTRACE_LOCK_ENABLE
+=
+y
+
+
+105 #CONFIG_BT_ENABLED 
+is
+ 
+nŸ
+ 
+£t
+
+
+106 
+CONFIG_BTDM_CTRL_BR_EDR_SCO_DATA_PATH_EFF
+=0
+
+107 
+CONFIG_BTDM_CTRL_BLE_MAX_CONN_EFF
+=0
+
+108 
+CONFIG_BTDM_CTRL_BR_EDR_MAX_ACL_CONN_EFF
+=0
+
+109 
+CONFIG_BTDM_CTRL_BR_EDR_MAX_SYNC_CONN_EFF
+=0
+
+110 
+CONFIG_BTDM_CTRL_PINNED_TO_CORE
+=0
+
+111 
+CONFIG_BTDM_BLE_SLEEP_CLOCK_ACCURACY_INDEX_EFF
+=1
+
+112 
+CONFIG_BT_RESERVE_DRAM
+=0
+
+113 #CONFIG_ADC_FORCE_XPD_FSM 
+is
+ 
+nŸ
+ 
+£t
+
+
+114 
+CONFIG_ADC_DISABLE_DAC
+=
+y
+
+
+115 #CONFIG_SPI_MASTER_IN_IRAM 
+is
+ 
+nŸ
+ 
+£t
+
+
+116 
+CONFIG_SPI_MASTER_ISR_IN_IRAM
+=
+y
+
+
+117 #CONFIG_SPI_SLAVE_IN_IRAM 
+is
+ 
+nŸ
+ 
+£t
+
+
+118 
+CONFIG_SPI_SLAVE_ISR_IN_IRAM
+=
+y
+
+
+119 #CONFIG_EFUSE_CUSTOM_TABLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+120 #CONFIG_EFUSE_VIRTUAL 
+is
+ 
+nŸ
+ 
+£t
+
+
+121 #CONFIG_EFUSE_CODE_SCHEME_COMPAT_NONE 
+is
+ 
+nŸ
+ 
+£t
+
+
+122 
+CONFIG_EFUSE_CODE_SCHEME_COMPAT_3_4
+=
+y
+
+
+123 #CONFIG_EFUSE_CODE_SCHEME_COMPAT_REPEAT 
+is
+ 
+nŸ
+ 
+£t
+
+
+124 
+CONFIG_EFUSE_MAX_BLK_LEN
+=192
+
+125 #CONFIG_ESP_TLS_SERVER 
+is
+ 
+nŸ
+ 
+£t
+
+
+126 #CONFIG_ESP32_DEFAULT_CPU_FREQ_80 
+is
+ 
+nŸ
+ 
+£t
+
+
+127 
+CONFIG_ESP32_DEFAULT_CPU_FREQ_160
+=
+y
+
+
+128 #CONFIG_ESP32_DEFAULT_CPU_FREQ_240 
+is
+ 
+nŸ
+ 
+£t
+
+
+129 
+CONFIG_ESP32_DEFAULT_CPU_FREQ_MHZ
+=160
+
+130 #CONFIG_ESP32_SPIRAM_SUPPORT 
+is
+ 
+nŸ
+ 
+£t
+
+
+131 #CONFIG_ESP32_MEMMAP_TRACEMEM 
+is
+ 
+nŸ
+ 
+£t
+
+
+132 #CONFIG_ESP32_MEMMAP_TRACEMEM_TWOBANKS 
+is
+ 
+nŸ
+ 
+£t
+
+
+133 #CONFIG_ESP32_TRAX 
+is
+ 
+nŸ
+ 
+£t
+
+
+134 
+CONFIG_ESP32_TRACEMEM_RESERVE_DRAM
+=0x0
+
+135 #CONFIG_ESP32_UNIVERSAL_MAC_ADDRESSES_TWO 
+is
+ 
+nŸ
+ 
+£t
+
+
+136 
+CONFIG_ESP32_UNIVERSAL_MAC_ADDRESSES_FOUR
+=
+y
+
+
+137 
+CONFIG_ESP32_UNIVERSAL_MAC_ADDRESSES
+=4
+
+138 #CONFIG_ESP32_ULP_COPROC_ENABLED 
+is
+ 
+nŸ
+ 
+£t
+
+
+139 
+CONFIG_ESP32_ULP_COPROC_RESERVE_MEM
+=0
+
+140 #CONFIG_ESP32_PANIC_PRINT_HALT 
+is
+ 
+nŸ
+ 
+£t
+
+
+141 
+CONFIG_ESP32_PANIC_PRINT_REBOOT
+=
+y
+
+
+142 #CONFIG_ESP32_PANIC_SILENT_REBOOT 
+is
+ 
+nŸ
+ 
+£t
+
+
+143 #CONFIG_ESP32_PANIC_GDBSTUB 
+is
+ 
+nŸ
+ 
+£t
+
+
+144 
+CONFIG_ESP32_DEBUG_OCDAWARE
+=
+y
+
+
+145 
+CONFIG_ESP32_DEBUG_STUBS_ENABLE
+=
+y
+
+
+146 
+CONFIG_ESP32_BROWNOUT_DET
+=
+y
+
+
+147 
+CONFIG_ESP32_BROWNOUT_DET_LVL_SEL_0
+=
+y
+
+
+148 #CONFIG_ESP32_BROWNOUT_DET_LVL_SEL_1 
+is
+ 
+nŸ
+ 
+£t
+
+
+149 #CONFIG_ESP32_BROWNOUT_DET_LVL_SEL_2 
+is
+ 
+nŸ
+ 
+£t
+
+
+150 #CONFIG_ESP32_BROWNOUT_DET_LVL_SEL_3 
+is
+ 
+nŸ
+ 
+£t
+
+
+151 #CONFIG_ESP32_BROWNOUT_DET_LVL_SEL_4 
+is
+ 
+nŸ
+ 
+£t
+
+
+152 #CONFIG_ESP32_BROWNOUT_DET_LVL_SEL_5 
+is
+ 
+nŸ
+ 
+£t
+
+
+153 #CONFIG_ESP32_BROWNOUT_DET_LVL_SEL_6 
+is
+ 
+nŸ
+ 
+£t
+
+
+154 #CONFIG_ESP32_BROWNOUT_DET_LVL_SEL_7 
+is
+ 
+nŸ
+ 
+£t
+
+
+155 
+CONFIG_ESP32_BROWNOUT_DET_LVL
+=0
+
+156 
+CONFIG_ESP32_REDUCE_PHY_TX_POWER
+=
+y
+
+
+157 
+CONFIG_ESP32_TIME_SYSCALL_USE_RTC_FRC1
+=
+y
+
+
+158 #CONFIG_ESP32_TIME_SYSCALL_USE_RTC 
+is
+ 
+nŸ
+ 
+£t
+
+
+159 #CONFIG_ESP32_TIME_SYSCALL_USE_FRC1 
+is
+ 
+nŸ
+ 
+£t
+
+
+160 #CONFIG_ESP32_TIME_SYSCALL_USE_NONE 
+is
+ 
+nŸ
+ 
+£t
+
+
+161 
+CONFIG_ESP32_RTC_CLK_SRC_INT_RC
+=
+y
+
+
+162 #CONFIG_ESP32_RTC_CLK_SRC_EXT_CRYS 
+is
+ 
+nŸ
+ 
+£t
+
+
+163 #CONFIG_ESP32_RTC_CLK_SRC_EXT_OSC 
+is
+ 
+nŸ
+ 
+£t
+
+
+164 #CONFIG_ESP32_RTC_CLK_SRC_INT_8MD256 
+is
+ 
+nŸ
+ 
+£t
+
+
+165 
+CONFIG_ESP32_RTC_CLK_CAL_CYCLES
+=1024
+
+166 
+CONFIG_ESP32_DEEP_SLEEP_WAKEUP_DELAY
+=2000
+
+167 
+CONFIG_ESP32_XTAL_FREQ_40
+=
+y
+
+
+168 #CONFIG_ESP32_XTAL_FREQ_26 
+is
+ 
+nŸ
+ 
+£t
+
+
+169 #CONFIG_ESP32_XTAL_FREQ_AUTO 
+is
+ 
+nŸ
+ 
+£t
+
+
+170 
+CONFIG_ESP32_XTAL_FREQ
+=40
+
+171 #CONFIG_ESP32_DISABLE_BASIC_ROM_CONSOLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+172 #CONFIG_ESP32_NO_BLOBS 
+is
+ 
+nŸ
+ 
+£t
+
+
+173 #CONFIG_ESP32_COMPATIBLE_PRE_V2_1_BOOTLOADERS 
+is
+ 
+nŸ
+ 
+£t
+
+
+174 #CONFIG_ESP32_USE_FIXED_STATIC_RAM_SIZE 
+is
+ 
+nŸ
+ 
+£t
+
+
+175 #CONFIG_PM_ENABLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+176 
+CONFIG_ADC_CAL_EFUSE_TP_ENABLE
+=
+y
+
+
+177 
+CONFIG_ADC_CAL_EFUSE_VREF_ENABLE
+=
+y
+
+
+178 
+CONFIG_ADC_CAL_LUT_ENABLE
+=
+y
+
+
+179 #CONFIG_ESP_TIMER_PROFILING 
+is
+ 
+nŸ
+ 
+£t
+
+
+180 
+CONFIG_ESP_ERR_TO_NAME_LOOKUP
+=
+y
+
+
+181 
+CONFIG_ESP_SYSTEM_EVENT_QUEUE_SIZE
+=32
+
+182 
+CONFIG_ESP_SYSTEM_EVENT_TASK_STACK_SIZE
+=2304
+
+183 
+CONFIG_ESP_MAIN_TASK_STACK_SIZE
+=3584
+
+184 
+CONFIG_ESP_IPC_TASK_STACK_SIZE
+=1024
+
+185 
+CONFIG_ESP_TIMER_TASK_STACK_SIZE
+=3584
+
+186 
+CONFIG_ESP_CONSOLE_UART_DEFAULT
+=
+y
+
+
+187 #CONFIG_ESP_CONSOLE_UART_CUSTOM 
+is
+ 
+nŸ
+ 
+£t
+
+
+188 #CONFIG_ESP_CONSOLE_UART_NONE 
+is
+ 
+nŸ
+ 
+£t
+
+
+189 
+CONFIG_ESP_CONSOLE_UART_NUM
+=0
+
+190 
+CONFIG_ESP_CONSOLE_UART_BAUDRATE
+=115200
+
+191 
+CONFIG_ESP_INT_WDT
+=
+y
+
+
+192 
+CONFIG_ESP_INT_WDT_TIMEOUT_MS
+=300
+
+193 
+CONFIG_ESP_INT_WDT_CHECK_CPU1
+=
+y
+
+
+194 
+CONFIG_ESP_TASK_WDT
+=
+y
+
+
+195 #CONFIG_ESP_TASK_WDT_PANIC 
+is
+ 
+nŸ
+ 
+£t
+
+
+196 
+CONFIG_ESP_TASK_WDT_TIMEOUT_S
+=5
+
+197 
+CONFIG_ESP_TASK_WDT_CHECK_IDLE_TASK_CPU0
+=
+y
+
+
+198 
+CONFIG_ESP_TASK_WDT_CHECK_IDLE_TASK_CPU1
+=
+y
+
+
+199 #CONFIG_ESP_EVENT_LOOP_PROFILING 
+is
+ 
+nŸ
+ 
+£t
+
+
+200 
+CONFIG_ESP_EVENT_POST_FROM_ISR
+=
+y
+
+
+201 
+CONFIG_ESP_EVENT_POST_FROM_IRAM_ISR
+=
+y
+
+
+202 
+CONFIG_ESP_HTTP_CLIENT_ENABLE_HTTPS
+=
+y
+
+
+203 #CONFIG_ESP_HTTP_CLIENT_ENABLE_BASIC_AUTH 
+is
+ 
+nŸ
+ 
+£t
+
+
+204 
+CONFIG_HTTPD_MAX_REQ_HDR_LEN
+=1024
+
+205 
+CONFIG_HTTPD_MAX_URI_LEN
+=512
+
+206 
+CONFIG_HTTPD_ERR_RESP_NO_DELAY
+=
+y
+
+
+207 
+CONFIG_HTTPD_PURGE_BUF_LEN
+=32
+
+208 #CONFIG_HTTPD_LOG_PURGE_DATA 
+is
+ 
+nŸ
+ 
+£t
+
+
+209 #CONFIG_OTA_ALLOW_HTTP 
+is
+ 
+nŸ
+ 
+£t
+
+
+210 #CONFIG_ESP_HTTPS_SERVER_ENABLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+211 
+CONFIG_ESP32_WIFI_STATIC_RX_BUFFER_NUM
+=10
+
+212 
+CONFIG_ESP32_WIFI_DYNAMIC_RX_BUFFER_NUM
+=32
+
+213 #CONFIG_ESP32_WIFI_STATIC_TX_BUFFER 
+is
+ 
+nŸ
+ 
+£t
+
+
+214 
+CONFIG_ESP32_WIFI_DYNAMIC_TX_BUFFER
+=
+y
+
+
+215 
+CONFIG_ESP32_WIFI_TX_BUFFER_TYPE
+=1
+
+216 
+CONFIG_ESP32_WIFI_DYNAMIC_TX_BUFFER_NUM
+=32
+
+217 #CONFIG_ESP32_WIFI_CSI_ENABLED 
+is
+ 
+nŸ
+ 
+£t
+
+
+218 
+CONFIG_ESP32_WIFI_AMPDU_TX_ENABLED
+=
+y
+
+
+219 
+CONFIG_ESP32_WIFI_TX_BA_WIN
+=6
+
+220 
+CONFIG_ESP32_WIFI_AMPDU_RX_ENABLED
+=
+y
+
+
+221 
+CONFIG_ESP32_WIFI_RX_BA_WIN
+=6
+
+222 
+CONFIG_ESP32_WIFI_NVS_ENABLED
+=
+y
+
+
+223 
+CONFIG_ESP32_WIFI_TASK_PINNED_TO_CORE_0
+=
+y
+
+
+224 #CONFIG_ESP32_WIFI_TASK_PINNED_TO_CORE_1 
+is
+ 
+nŸ
+ 
+£t
+
+
+225 
+CONFIG_ESP32_WIFI_SOFTAP_BEACON_MAX_LEN
+=752
+
+226 
+CONFIG_ESP32_WIFI_MGMT_SBUF_NUM
+=32
+
+227 #CONFIG_ESP32_WIFI_DEBUG_LOG_ENABLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+228 
+CONFIG_ESP32_WIFI_IRAM_OPT
+=
+y
+
+
+229 
+CONFIG_ESP32_PHY_CALIBRATION_AND_DATA_STORAGE
+=
+y
+
+
+230 #CONFIG_ESP32_PHY_INIT_DATA_IN_PARTITION 
+is
+ 
+nŸ
+ 
+£t
+
+
+231 
+CONFIG_ESP32_PHY_MAX_WIFI_TX_POWER
+=20
+
+232 
+CONFIG_ESP32_PHY_MAX_TX_POWER
+=20
+
+233 #CONFIG_ESP32_ENABLE_COREDUMP_TO_FLASH 
+is
+ 
+nŸ
+ 
+£t
+
+
+234 #CONFIG_ESP32_ENABLE_COREDUMP_TO_UART 
+is
+ 
+nŸ
+ 
+£t
+
+
+235 
+CONFIG_ESP32_ENABLE_COREDUMP_TO_NONE
+=
+y
+
+
+236 #CONFIG_ESP32_ENABLE_COREDUMP 
+is
+ 
+nŸ
+ 
+£t
+
+
+237 
+CONFIG_ETH_DMA_RX_BUF_NUM
+=10
+
+238 
+CONFIG_ETH_DMA_TX_BUF_NUM
+=10
+
+239 
+CONFIG_ETH_EMAC_L2_TO_L3_RX_BUF_MODE
+=
+y
+
+
+240 
+CONFIG_ETH_CHECK_LINK_STATUS_PERIOD_MS
+=2000
+
+241 
+CONFIG_ETH_EMAC_TASK_PRIORITY
+=20
+
+242 
+CONFIG_ETH_EMAC_TASK_STACK_SIZE
+=3072
+
+243 #CONFIG_FATFS_CODEPAGE_DYNAMIC 
+is
+ 
+nŸ
+ 
+£t
+
+
+244 
+CONFIG_FATFS_CODEPAGE_437
+=
+y
+
+
+245 #CONFIG_FATFS_CODEPAGE_720 
+is
+ 
+nŸ
+ 
+£t
+
+
+246 #CONFIG_FATFS_CODEPAGE_737 
+is
+ 
+nŸ
+ 
+£t
+
+
+247 #CONFIG_FATFS_CODEPAGE_771 
+is
+ 
+nŸ
+ 
+£t
+
+
+248 #CONFIG_FATFS_CODEPAGE_775 
+is
+ 
+nŸ
+ 
+£t
+
+
+249 #CONFIG_FATFS_CODEPAGE_850 
+is
+ 
+nŸ
+ 
+£t
+
+
+250 #CONFIG_FATFS_CODEPAGE_852 
+is
+ 
+nŸ
+ 
+£t
+
+
+251 #CONFIG_FATFS_CODEPAGE_855 
+is
+ 
+nŸ
+ 
+£t
+
+
+252 #CONFIG_FATFS_CODEPAGE_857 
+is
+ 
+nŸ
+ 
+£t
+
+
+253 #CONFIG_FATFS_CODEPAGE_860 
+is
+ 
+nŸ
+ 
+£t
+
+
+254 #CONFIG_FATFS_CODEPAGE_861 
+is
+ 
+nŸ
+ 
+£t
+
+
+255 #CONFIG_FATFS_CODEPAGE_862 
+is
+ 
+nŸ
+ 
+£t
+
+
+256 #CONFIG_FATFS_CODEPAGE_863 
+is
+ 
+nŸ
+ 
+£t
+
+
+257 #CONFIG_FATFS_CODEPAGE_864 
+is
+ 
+nŸ
+ 
+£t
+
+
+258 #CONFIG_FATFS_CODEPAGE_865 
+is
+ 
+nŸ
+ 
+£t
+
+
+259 #CONFIG_FATFS_CODEPAGE_866 
+is
+ 
+nŸ
+ 
+£t
+
+
+260 #CONFIG_FATFS_CODEPAGE_869 
+is
+ 
+nŸ
+ 
+£t
+
+
+261 #CONFIG_FATFS_CODEPAGE_932 
+is
+ 
+nŸ
+ 
+£t
+
+
+262 #CONFIG_FATFS_CODEPAGE_936 
+is
+ 
+nŸ
+ 
+£t
+
+
+263 #CONFIG_FATFS_CODEPAGE_949 
+is
+ 
+nŸ
+ 
+£t
+
+
+264 #CONFIG_FATFS_CODEPAGE_950 
+is
+ 
+nŸ
+ 
+£t
+
+
+265 
+CONFIG_FATFS_CODEPAGE
+=437
+
+266 
+CONFIG_FATFS_LFN_NONE
+=
+y
+
+
+267 #CONFIG_FATFS_LFN_HEAP 
+is
+ 
+nŸ
+ 
+£t
+
+
+268 #CONFIG_FATFS_LFN_STACK 
+is
+ 
+nŸ
+ 
+£t
+
+
+269 
+CONFIG_FATFS_FS_LOCK
+=0
+
+270 
+CONFIG_FATFS_TIMEOUT_MS
+=10000
+
+271 
+CONFIG_FATFS_PER_FILE_CACHE
+=
+y
+
+
+272 
+CONFIG_FMB_MASTER_TIMEOUT_MS_RESPOND
+=150
+
+273 
+CONFIG_FMB_MASTER_DELAY_MS_CONVERT
+=200
+
+274 
+CONFIG_FMB_QUEUE_LENGTH
+=20
+
+275 
+CONFIG_FMB_SERIAL_TASK_STACK_SIZE
+=2048
+
+276 
+CONFIG_FMB_SERIAL_BUF_SIZE
+=256
+
+277 
+CONFIG_FMB_SERIAL_TASK_PRIO
+=10
+
+278 #CONFIG_FMB_CONTROLLER_SLAVE_ID_SUPPORT 
+is
+ 
+nŸ
+ 
+£t
+
+
+279 
+CONFIG_FMB_CONTROLLER_NOTIFY_TIMEOUT
+=20
+
+280 
+CONFIG_FMB_CONTROLLER_NOTIFY_QUEUE_SIZE
+=20
+
+281 
+CONFIG_FMB_CONTROLLER_STACK_SIZE
+=4096
+
+282 
+CONFIG_FMB_EVENT_QUEUE_TIMEOUT
+=20
+
+283 
+CONFIG_FMB_TIMER_PORT_ENABLED
+=
+y
+
+
+284 
+CONFIG_FMB_TIMER_GROUP
+=0
+
+285 
+CONFIG_FMB_TIMER_INDEX
+=0
+
+286 #CONFIG_FREERTOS_UNICORE 
+is
+ 
+nŸ
+ 
+£t
+
+
+287 
+CONFIG_FREERTOS_NO_AFFINITY
+=0x7FFFFFFF
+
+288 
+CONFIG_FREERTOS_CORETIMER_0
+=
+y
+
+
+289 #CONFIG_FREERTOS_CORETIMER_1 
+is
+ 
+nŸ
+ 
+£t
+
+
+290 
+CONFIG_FREERTOS_HZ
+=100
+
+291 
+CONFIG_FREERTOS_ASSERT_ON_UNTESTED_FUNCTION
+=
+y
+
+
+292 #CONFIG_FREERTOS_CHECK_STACKOVERFLOW_NONE 
+is
+ 
+nŸ
+ 
+£t
+
+
+293 #CONFIG_FREERTOS_CHECK_STACKOVERFLOW_PTRVAL 
+is
+ 
+nŸ
+ 
+£t
+
+
+294 
+CONFIG_FREERTOS_CHECK_STACKOVERFLOW_CANARY
+=
+y
+
+
+295 #CONFIG_FREERTOS_WATCHPOINT_END_OF_STACK 
+is
+ 
+nŸ
+ 
+£t
+
+
+296 
+CONFIG_FREERTOS_INTERRUPT_BACKTRACE
+=
+y
+
+
+297 
+CONFIG_FREERTOS_THREAD_LOCAL_STORAGE_POINTERS
+=1
+
+298 
+CONFIG_FREERTOS_ASSERT_FAIL_ABORT
+=
+y
+
+
+299 #CONFIG_FREERTOS_ASSERT_FAIL_PRINT_CONTINUE 
+is
+ 
+nŸ
+ 
+£t
+
+
+300 #CONFIG_FREERTOS_ASSERT_DISABLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+301 
+CONFIG_FREERTOS_IDLE_TASK_STACKSIZE
+=1536
+
+302 
+CONFIG_FREERTOS_ISR_STACKSIZE
+=1536
+
+303 #CONFIG_FREERTOS_LEGACY_HOOKS 
+is
+ 
+nŸ
+ 
+£t
+
+
+304 
+CONFIG_FREERTOS_MAX_TASK_NAME_LEN
+=16
+
+305 #CONFIG_FREERTOS_SUPPORT_STATIC_ALLOCATION 
+is
+ 
+nŸ
+ 
+£t
+
+
+306 
+CONFIG_FREERTOS_TIMER_TASK_PRIORITY
+=1
+
+307 
+CONFIG_FREERTOS_TIMER_TASK_STACK_DEPTH
+=2048
+
+308 
+CONFIG_FREERTOS_TIMER_QUEUE_LENGTH
+=10
+
+309 
+CONFIG_FREERTOS_QUEUE_REGISTRY_SIZE
+=0
+
+310 #CONFIG_FREERTOS_USE_TRACE_FACILITY 
+is
+ 
+nŸ
+ 
+£t
+
+
+311 #CONFIG_FREERTOS_GENERATE_RUN_TIME_STATS 
+is
+ 
+nŸ
+ 
+£t
+
+
+312 #CONFIG_FREERTOS_DEBUG_INTERNALS 
+is
+ 
+nŸ
+ 
+£t
+
+
+313 
+CONFIG_FREERTOS_TASK_FUNCTION_WRAPPER
+=
+y
+
+
+314 
+CONFIG_FREERTOS_CHECK_MUTEX_GIVEN_BY_OWNER
+=
+y
+
+
+315 #CONFIG_FREERTOS_CHECK_PORT_CRITICAL_COMPLIANCE 
+is
+ 
+nŸ
+ 
+£t
+
+
+316 
+CONFIG_HEAP_POISONING_DISABLED
+=
+y
+
+
+317 #CONFIG_HEAP_POISONING_LIGHT 
+is
+ 
+nŸ
+ 
+£t
+
+
+318 #CONFIG_HEAP_POISONING_COMPREHENSIVE 
+is
+ 
+nŸ
+ 
+£t
+
+
+319 
+CONFIG_HEAP_TRACING_OFF
+=
+y
+
+
+320 #CONFIG_HEAP_TRACING_STANDALONE 
+is
+ 
+nŸ
+ 
+£t
+
+
+321 #CONFIG_HEAP_TRACING_TOHOST 
+is
+ 
+nŸ
+ 
+£t
+
+
+322 #CONFIG_HEAP_TRACING 
+is
+ 
+nŸ
+ 
+£t
+
+
+323 
+CONFIG_LIBSODIUM_USE_MBEDTLS_SHA
+=
+y
+
+
+324 #CONFIG_LOG_DEFAULT_LEVEL_NONE 
+is
+ 
+nŸ
+ 
+£t
+
+
+325 #CONFIG_LOG_DEFAULT_LEVEL_ERROR 
+is
+ 
+nŸ
+ 
+£t
+
+
+326 #CONFIG_LOG_DEFAULT_LEVEL_WARN 
+is
+ 
+nŸ
+ 
+£t
+
+
+327 
+CONFIG_LOG_DEFAULT_LEVEL_INFO
+=
+y
+
+
+328 #CONFIG_LOG_DEFAULT_LEVEL_DEBUG 
+is
+ 
+nŸ
+ 
+£t
+
+
+329 #CONFIG_LOG_DEFAULT_LEVEL_VERBOSE 
+is
+ 
+nŸ
+ 
+£t
+
+
+330 
+CONFIG_LOG_DEFAULT_LEVEL
+=3
+
+331 
+CONFIG_LOG_COLORS
+=
+y
+
+
+332 
+CONFIG_LWIP_LOCAL_HOSTNAME
+="espressif"
+
+333 #CONFIG_LWIP_L2_TO_L3_COPY 
+is
+ 
+nŸ
+ 
+£t
+
+
+334 #CONFIG_LWIP_IRAM_OPTIMIZATION 
+is
+ 
+nŸ
+ 
+£t
+
+
+335 
+CONFIG_LWIP_TIMERS_ONDEMAND
+=
+y
+
+
+336 
+CONFIG_LWIP_MAX_SOCKETS
+=10
+
+337 #CONFIG_LWIP_USE_ONLY_LWIP_SELECT 
+is
+ 
+nŸ
+ 
+£t
+
+
+338 
+CONFIG_LWIP_SO_REUSE
+=
+y
+
+
+339 
+CONFIG_LWIP_SO_REUSE_RXTOALL
+=
+y
+
+
+340 #CONFIG_LWIP_SO_RCVBUF 
+is
+ 
+nŸ
+ 
+£t
+
+
+341 #CONFIG_LWIP_IP_FRAG 
+is
+ 
+nŸ
+ 
+£t
+
+
+342 #CONFIG_LWIP_IP_REASSEMBLY 
+is
+ 
+nŸ
+ 
+£t
+
+
+343 #CONFIG_LWIP_STATS 
+is
+ 
+nŸ
+ 
+£t
+
+
+344 #CONFIG_LWIP_ETHARP_TRUST_IP_MAC 
+is
+ 
+nŸ
+ 
+£t
+
+
+345 
+CONFIG_LWIP_ESP_GRATUITOUS_ARP
+=
+y
+
+
+346 
+CONFIG_LWIP_GARP_TMR_INTERVAL
+=60
+
+347 
+CONFIG_LWIP_TCPIP_RECVMBOX_SIZE
+=32
+
+348 
+CONFIG_LWIP_DHCP_DOES_ARP_CHECK
+=
+y
+
+
+349 #CONFIG_LWIP_DHCP_RESTORE_LAST_IP 
+is
+ 
+nŸ
+ 
+£t
+
+
+350 
+CONFIG_LWIP_DHCPS_LEASE_UNIT
+=60
+
+351 
+CONFIG_LWIP_DHCPS_MAX_STATION_NUM
+=8
+
+352 #CONFIG_LWIP_AUTOIP 
+is
+ 
+nŸ
+ 
+£t
+
+
+353 
+CONFIG_LWIP_NETIF_LOOPBACK
+=
+y
+
+
+354 
+CONFIG_LWIP_LOOPBACK_MAX_PBUFS
+=8
+
+355 
+CONFIG_LWIP_MAX_ACTIVE_TCP
+=16
+
+356 
+CONFIG_LWIP_MAX_LISTENING_TCP
+=16
+
+357 
+CONFIG_LWIP_TCP_MAXRTX
+=12
+
+358 
+CONFIG_LWIP_TCP_SYNMAXRTX
+=6
+
+359 
+CONFIG_LWIP_TCP_MSS
+=1440
+
+360 
+CONFIG_LWIP_TCP_MSL
+=60000
+
+361 
+CONFIG_LWIP_TCP_SND_BUF_DEFAULT
+=5744
+
+362 
+CONFIG_LWIP_TCP_WND_DEFAULT
+=5744
+
+363 
+CONFIG_LWIP_TCP_RECVMBOX_SIZE
+=6
+
+364 
+CONFIG_LWIP_TCP_QUEUE_OOSEQ
+=
+y
+
+
+365 #CONFIG_LWIP_TCP_KEEP_CONNECTION_WHEN_IP_CHANGES 
+is
+ 
+nŸ
+ 
+£t
+
+
+366 
+CONFIG_LWIP_TCP_OVERSIZE_MSS
+=
+y
+
+
+367 #CONFIG_LWIP_TCP_OVERSIZE_QUARTER_MSS 
+is
+ 
+nŸ
+ 
+£t
+
+
+368 #CONFIG_LWIP_TCP_OVERSIZE_DISABLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+369 
+CONFIG_LWIP_MAX_UDP_PCBS
+=16
+
+370 
+CONFIG_LWIP_UDP_RECVMBOX_SIZE
+=6
+
+371 
+CONFIG_LWIP_TCPIP_TASK_STACK_SIZE
+=3072
+
+372 
+CONFIG_LWIP_TCPIP_TASK_AFFINITY_NO_AFFINITY
+=
+y
+
+
+373 #CONFIG_LWIP_TCPIP_TASK_AFFINITY_CPU0 
+is
+ 
+nŸ
+ 
+£t
+
+
+374 #CONFIG_LWIP_TCPIP_TASK_AFFINITY_CPU1 
+is
+ 
+nŸ
+ 
+£t
+
+
+375 
+CONFIG_LWIP_TCPIP_TASK_AFFINITY
+=0x7FFFFFFF
+
+376 #CONFIG_LWIP_PPP_SUPPORT 
+is
+ 
+nŸ
+ 
+£t
+
+
+377 #CONFIG_LWIP_MULTICAST_PING 
+is
+ 
+nŸ
+ 
+£t
+
+
+378 #CONFIG_LWIP_BROADCAST_PING 
+is
+ 
+nŸ
+ 
+£t
+
+
+379 
+CONFIG_LWIP_MAX_RAW_PCBS
+=16
+
+380 
+CONFIG_LWIP_DHCP_MAX_NTP_SERVERS
+=1
+
+381 
+CONFIG_LWIP_SNTP_UPDATE_DELAY
+=3600000
+
+382 
+CONFIG_MBEDTLS_INTERNAL_MEM_ALLOC
+=
+y
+
+
+383 #CONFIG_MBEDTLS_DEFAULT_MEM_ALLOC 
+is
+ 
+nŸ
+ 
+£t
+
+
+384 #CONFIG_MBEDTLS_CUSTOM_MEM_ALLOC 
+is
+ 
+nŸ
+ 
+£t
+
+
+385 
+CONFIG_MBEDTLS_SSL_MAX_CONTENT_LEN
+=16384
+
+386 #CONFIG_MBEDTLS_ASYMMETRIC_CONTENT_LEN 
+is
+ 
+nŸ
+ 
+£t
+
+
+387 #CONFIG_MBEDTLS_DEBUG 
+is
+ 
+nŸ
+ 
+£t
+
+
+388 
+CONFIG_MBEDTLS_HARDWARE_AES
+=
+y
+
+
+389 #CONFIG_MBEDTLS_HARDWARE_MPI 
+is
+ 
+nŸ
+ 
+£t
+
+
+390 #CONFIG_MBEDTLS_HARDWARE_SHA 
+is
+ 
+nŸ
+ 
+£t
+
+
+391 
+CONFIG_MBEDTLS_HAVE_TIME
+=
+y
+
+
+392 #CONFIG_MBEDTLS_HAVE_TIME_DATE 
+is
+ 
+nŸ
+ 
+£t
+
+
+393 
+CONFIG_MBEDTLS_TLS_SERVER_AND_CLIENT
+=
+y
+
+
+394 #CONFIG_MBEDTLS_TLS_SERVER_ONLY 
+is
+ 
+nŸ
+ 
+£t
+
+
+395 #CONFIG_MBEDTLS_TLS_CLIENT_ONLY 
+is
+ 
+nŸ
+ 
+£t
+
+
+396 #CONFIG_MBEDTLS_TLS_DISABLED 
+is
+ 
+nŸ
+ 
+£t
+
+
+397 
+CONFIG_MBEDTLS_TLS_SERVER
+=
+y
+
+
+398 
+CONFIG_MBEDTLS_TLS_CLIENT
+=
+y
+
+
+399 
+CONFIG_MBEDTLS_TLS_ENABLED
+=
+y
+
+
+400 #CONFIG_MBEDTLS_PSK_MODES 
+is
+ 
+nŸ
+ 
+£t
+
+
+401 
+CONFIG_MBEDTLS_KEY_EXCHANGE_RSA
+=
+y
+
+
+402 
+CONFIG_MBEDTLS_KEY_EXCHANGE_DHE_RSA
+=
+y
+
+
+403 
+CONFIG_MBEDTLS_KEY_EXCHANGE_ELLIPTIC_CURVE
+=
+y
+
+
+404 
+CONFIG_MBEDTLS_KEY_EXCHANGE_ECDHE_RSA
+=
+y
+
+
+405 
+CONFIG_MBEDTLS_KEY_EXCHANGE_ECDHE_ECDSA
+=
+y
+
+
+406 
+CONFIG_MBEDTLS_KEY_EXCHANGE_ECDH_ECDSA
+=
+y
+
+
+407 
+CONFIG_MBEDTLS_KEY_EXCHANGE_ECDH_RSA
+=
+y
+
+
+408 
+CONFIG_MBEDTLS_SSL_RENEGOTIATION
+=
+y
+
+
+409 #CONFIG_MBEDTLS_SSL_PROTO_SSL3 
+is
+ 
+nŸ
+ 
+£t
+
+
+410 
+CONFIG_MBEDTLS_SSL_PROTO_TLS1
+=
+y
+
+
+411 
+CONFIG_MBEDTLS_SSL_PROTO_TLS1_1
+=
+y
+
+
+412 
+CONFIG_MBEDTLS_SSL_PROTO_TLS1_2
+=
+y
+
+
+413 #CONFIG_MBEDTLS_SSL_PROTO_DTLS 
+is
+ 
+nŸ
+ 
+£t
+
+
+414 
+CONFIG_MBEDTLS_SSL_ALPN
+=
+y
+
+
+415 
+CONFIG_MBEDTLS_CLIENT_SSL_SESSION_TICKETS
+=
+y
+
+
+416 
+CONFIG_MBEDTLS_SERVER_SSL_SESSION_TICKETS
+=
+y
+
+
+417 
+CONFIG_MBEDTLS_AES_C
+=
+y
+
+
+418 #CONFIG_MBEDTLS_CAMELLIA_C 
+is
+ 
+nŸ
+ 
+£t
+
+
+419 #CONFIG_MBEDTLS_DES_C 
+is
+ 
+nŸ
+ 
+£t
+
+
+420 
+CONFIG_MBEDTLS_RC4_DISABLED
+=
+y
+
+
+421 #CONFIG_MBEDTLS_RC4_ENABLED_NO_DEFAULT 
+is
+ 
+nŸ
+ 
+£t
+
+
+422 #CONFIG_MBEDTLS_RC4_ENABLED 
+is
+ 
+nŸ
+ 
+£t
+
+
+423 #CONFIG_MBEDTLS_BLOWFISH_C 
+is
+ 
+nŸ
+ 
+£t
+
+
+424 #CONFIG_MBEDTLS_XTEA_C 
+is
+ 
+nŸ
+ 
+£t
+
+
+425 
+CONFIG_MBEDTLS_CCM_C
+=
+y
+
+
+426 
+CONFIG_MBEDTLS_GCM_C
+=
+y
+
+
+427 #CONFIG_MBEDTLS_RIPEMD160_C 
+is
+ 
+nŸ
+ 
+£t
+
+
+428 
+CONFIG_MBEDTLS_PEM_PARSE_C
+=
+y
+
+
+429 
+CONFIG_MBEDTLS_PEM_WRITE_C
+=
+y
+
+
+430 
+CONFIG_MBEDTLS_X509_CRL_PARSE_C
+=
+y
+
+
+431 
+CONFIG_MBEDTLS_X509_CSR_PARSE_C
+=
+y
+
+
+432 
+CONFIG_MBEDTLS_ECP_C
+=
+y
+
+
+433 
+CONFIG_MBEDTLS_ECDH_C
+=
+y
+
+
+434 
+CONFIG_MBEDTLS_ECDSA_C
+=
+y
+
+
+435 
+CONFIG_MBEDTLS_ECP_DP_SECP192R1_ENABLED
+=
+y
+
+
+436 
+CONFIG_MBEDTLS_ECP_DP_SECP224R1_ENABLED
+=
+y
+
+
+437 
+CONFIG_MBEDTLS_ECP_DP_SECP256R1_ENABLED
+=
+y
+
+
+438 
+CONFIG_MBEDTLS_ECP_DP_SECP384R1_ENABLED
+=
+y
+
+
+439 
+CONFIG_MBEDTLS_ECP_DP_SECP521R1_ENABLED
+=
+y
+
+
+440 
+CONFIG_MBEDTLS_ECP_DP_SECP192K1_ENABLED
+=
+y
+
+
+441 
+CONFIG_MBEDTLS_ECP_DP_SECP224K1_ENABLED
+=
+y
+
+
+442 
+CONFIG_MBEDTLS_ECP_DP_SECP256K1_ENABLED
+=
+y
+
+
+443 
+CONFIG_MBEDTLS_ECP_DP_BP256R1_ENABLED
+=
+y
+
+
+444 
+CONFIG_MBEDTLS_ECP_DP_BP384R1_ENABLED
+=
+y
+
+
+445 
+CONFIG_MBEDTLS_ECP_DP_BP512R1_ENABLED
+=
+y
+
+
+446 
+CONFIG_MBEDTLS_ECP_DP_CURVE25519_ENABLED
+=
+y
+
+
+447 
+CONFIG_MBEDTLS_ECP_NIST_OPTIM
+=
+y
+
+
+448 
+CONFIG_MDNS_MAX_SERVICES
+=10
+
+449 
+CONFIG_MQTT_PROTOCOL_311
+=
+y
+
+
+450 
+CONFIG_MQTT_TRANSPORT_SSL
+=
+y
+
+
+451 
+CONFIG_MQTT_TRANSPORT_WEBSOCKET
+=
+y
+
+
+452 
+CONFIG_MQTT_TRANSPORT_WEBSOCKET_SECURE
+=
+y
+
+
+453 #CONFIG_MQTT_USE_CUSTOM_CONFIG 
+is
+ 
+nŸ
+ 
+£t
+
+
+454 #CONFIG_MQTT_TASK_CORE_SELECTION_ENABLED 
+is
+ 
+nŸ
+ 
+£t
+
+
+455 #CONFIG_MQTT_CUSTOM_OUTBOX 
+is
+ 
+nŸ
+ 
+£t
+
+
+456 
+CONFIG_NEWLIB_STDOUT_LINE_ENDING_CRLF
+=
+y
+
+
+457 #CONFIG_NEWLIB_STDOUT_LINE_ENDING_LF 
+is
+ 
+nŸ
+ 
+£t
+
+
+458 #CONFIG_NEWLIB_STDOUT_LINE_ENDING_CR 
+is
+ 
+nŸ
+ 
+£t
+
+
+459 #CONFIG_NEWLIB_STDIN_LINE_ENDING_CRLF 
+is
+ 
+nŸ
+ 
+£t
+
+
+460 #CONFIG_NEWLIB_STDIN_LINE_ENDING_LF 
+is
+ 
+nŸ
+ 
+£t
+
+
+461 
+CONFIG_NEWLIB_STDIN_LINE_ENDING_CR
+=
+y
+
+
+462 #CONFIG_NEWLIB_NANO_FORMAT 
+is
+ 
+nŸ
+ 
+£t
+
+
+463 #CONFIG_OPENSSL_DEBUG 
+is
+ 
+nŸ
+ 
+£t
+
+
+464 
+CONFIG_OPENSSL_ASSERT_DO_NOTHING
+=
+y
+
+
+465 #CONFIG_OPENSSL_ASSERT_EXIT 
+is
+ 
+nŸ
+ 
+£t
+
+
+466 
+CONFIG_ESP32_PTHREAD_TASK_PRIO_DEFAULT
+=5
+
+467 
+CONFIG_ESP32_PTHREAD_TASK_STACK_SIZE_DEFAULT
+=3072
+
+468 
+CONFIG_ESP32_PTHREAD_STACK_MIN
+=768
+
+469 
+CONFIG_ESP32_DEFAULT_PTHREAD_CORE_NO_AFFINITY
+=
+y
+
+
+470 #CONFIG_ESP32_DEFAULT_PTHREAD_CORE_0 
+is
+ 
+nŸ
+ 
+£t
+
+
+471 #CONFIG_ESP32_DEFAULT_PTHREAD_CORE_1 
+is
+ 
+nŸ
+ 
+£t
+
+
+472 
+CONFIG_ESP32_PTHREAD_TASK_CORE_DEFAULT
+=-1
+
+473 
+CONFIG_ESP32_PTHREAD_TASK_NAME_DEFAULT
+="pthread"
+
+474 #CONFIG_SPI_FLASH_VERIFY_WRITE 
+is
+ 
+nŸ
+ 
+£t
+
+
+475 #CONFIG_SPI_FLASH_ENABLE_COUNTERS 
+is
+ 
+nŸ
+ 
+£t
+
+
+476 
+CONFIG_SPI_FLASH_ROM_DRIVER_PATCH
+=
+y
+
+
+477 
+CONFIG_SPI_FLASH_DANGEROUS_WRITE_ABORTS
+=
+y
+
+
+478 #CONFIG_SPI_FLASH_DANGEROUS_WRITE_FAILS 
+is
+ 
+nŸ
+ 
+£t
+
+
+479 #CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED 
+is
+ 
+nŸ
+ 
+£t
+
+
+480 #CONFIG_SPI_FLASH_USE_LEGACY_IMPL 
+is
+ 
+nŸ
+ 
+£t
+
+
+481 
+CONFIG_SPI_FLASH_SUPPORT_ISSI_CHIP
+=
+y
+
+
+482 
+CONFIG_SPIFFS_MAX_PARTITIONS
+=3
+
+483 
+CONFIG_SPIFFS_CACHE
+=
+y
+
+
+484 
+CONFIG_SPIFFS_CACHE_WR
+=
+y
+
+
+485 #CONFIG_SPIFFS_CACHE_STATS 
+is
+ 
+nŸ
+ 
+£t
+
+
+486 
+CONFIG_SPIFFS_PAGE_CHECK
+=
+y
+
+
+487 
+CONFIG_SPIFFS_GC_MAX_RUNS
+=10
+
+488 #CONFIG_SPIFFS_GC_STATS 
+is
+ 
+nŸ
+ 
+£t
+
+
+489 
+CONFIG_SPIFFS_PAGE_SIZE
+=256
+
+490 
+CONFIG_SPIFFS_OBJ_NAME_LEN
+=32
+
+491 
+CONFIG_SPIFFS_USE_MAGIC
+=
+y
+
+
+492 
+CONFIG_SPIFFS_USE_MAGIC_LENGTH
+=
+y
+
+
+493 
+CONFIG_SPIFFS_META_LENGTH
+=4
+
+494 
+CONFIG_SPIFFS_USE_MTIME
+=
+y
+
+
+495 #CONFIG_SPIFFS_DBG 
+is
+ 
+nŸ
+ 
+£t
+
+
+496 #CONFIG_SPIFFS_API_DBG 
+is
+ 
+nŸ
+ 
+£t
+
+
+497 #CONFIG_SPIFFS_GC_DBG 
+is
+ 
+nŸ
+ 
+£t
+
+
+498 #CONFIG_SPIFFS_CACHE_DBG 
+is
+ 
+nŸ
+ 
+£t
+
+
+499 #CONFIG_SPIFFS_CHECK_DBG 
+is
+ 
+nŸ
+ 
+£t
+
+
+500 #CONFIG_SPIFFS_TEST_VISUALISATION 
+is
+ 
+nŸ
+ 
+£t
+
+
+501 
+CONFIG_NETIF_IP_LOST_TIMER_INTERVAL
+=120
+
+502 
+CONFIG_TCPIP_LWIP
+=
+y
+
+
+503 
+CONFIG_UNITY_ENABLE_FLOAT
+=
+y
+
+
+504 
+CONFIG_UNITY_ENABLE_DOUBLE
+=
+y
+
+
+505 #CONFIG_UNITY_ENABLE_COLOR 
+is
+ 
+nŸ
+ 
+£t
+
+
+506 
+CONFIG_UNITY_ENABLE_IDF_TEST_RUNNER
+=
+y
+
+
+507 #CONFIG_UNITY_ENABLE_FIXTURE 
+is
+ 
+nŸ
+ 
+£t
+
+
+508 #CONFIG_UNITY_ENABLE_BACKTRACE_ON_FAIL 
+is
+ 
+nŸ
+ 
+£t
+
+
+509 
+CONFIG_SUPPRESS_SELECT_DEBUG_OUTPUT
+=
+y
+
+
+510 
+CONFIG_SUPPORT_TERMIOS
+=
+y
+
+
+511 
+CONFIG_SEMIHOSTFS_MAX_MOUNT_POINTS
+=1
+
+512 
+CONFIG_SEMIHOSTFS_HOST_PATH_MAX_LEN
+=128
+
+513 #CONFIG_WL_SECTOR_SIZE_512 
+is
+ 
+nŸ
+ 
+£t
+
+
+514 
+CONFIG_WL_SECTOR_SIZE_4096
+=
+y
+
+
+515 
+CONFIG_WL_SECTOR_SIZE
+=4096
+
+516 
+CONFIG_WIFI_PROV_SCAN_MAX_ENTRIES
+=16
+
+517 #CONFIG_LEGACY_INCLUDE_COMMON_HEADERS 
+is
+ 
+nŸ
+ 
+£t
+
+
+519 #Dïªˇãd 
+›ti⁄s
+ 
+backw¨d
+ 
+com∑tibûôy
+
+
+520 
+CONFIG_TOOLPREFIX
+="xtensa-esp32-elf-"
+
+521 
+CONFIG_PYTHON
+="python"
+
+522 
+CONFIG_MAKE_WARN_UNDEFINED_VARIABLES
+=
+y
+
+
+523 #CONFIG_LOG_BOOTLOADER_LEVEL_NONE 
+is
+ 
+nŸ
+ 
+£t
+
+
+524 #CONFIG_LOG_BOOTLOADER_LEVEL_ERROR 
+is
+ 
+nŸ
+ 
+£t
+
+
+525 #CONFIG_LOG_BOOTLOADER_LEVEL_WARN 
+is
+ 
+nŸ
+ 
+£t
+
+
+526 
+CONFIG_LOG_BOOTLOADER_LEVEL_INFO
+=
+y
+
+
+527 #CONFIG_LOG_BOOTLOADER_LEVEL_DEBUG 
+is
+ 
+nŸ
+ 
+£t
+
+
+528 #CONFIG_LOG_BOOTLOADER_LEVEL_VERBOSE 
+is
+ 
+nŸ
+ 
+£t
+
+
+529 
+CONFIG_LOG_BOOTLOADER_LEVEL
+=3
+
+530 #CONFIG_APP_ROLLBACK_ENABLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+531 #CONFIG_FLASH_ENCRYPTION_ENABLED 
+is
+ 
+nŸ
+ 
+£t
+
+
+532 #CONFIG_FLASHMODE_QIO 
+is
+ 
+nŸ
+ 
+£t
+
+
+533 #CONFIG_FLASHMODE_QOUT 
+is
+ 
+nŸ
+ 
+£t
+
+
+534 
+CONFIG_FLASHMODE_DIO
+=
+y
+
+
+535 #CONFIG_FLASHMODE_DOUT 
+is
+ 
+nŸ
+ 
+£t
+
+
+536 #CONFIG_MONITOR_BAUD_9600B 
+is
+ 
+nŸ
+ 
+£t
+
+
+537 #CONFIG_MONITOR_BAUD_57600B 
+is
+ 
+nŸ
+ 
+£t
+
+
+538 
+CONFIG_MONITOR_BAUD_115200B
+=
+y
+
+
+539 #CONFIG_MONITOR_BAUD_230400B 
+is
+ 
+nŸ
+ 
+£t
+
+
+540 #CONFIG_MONITOR_BAUD_921600B 
+is
+ 
+nŸ
+ 
+£t
+
+
+541 #CONFIG_MONITOR_BAUD_2MB 
+is
+ 
+nŸ
+ 
+£t
+
+
+542 #CONFIG_MONITOR_BAUD_OTHER 
+is
+ 
+nŸ
+ 
+£t
+
+
+543 
+CONFIG_MONITOR_BAUD_OTHER_VAL
+=115200
+
+544 
+CONFIG_MONITOR_BAUD
+=115200
+
+545 
+CONFIG_OPTIMIZATION_LEVEL_DEBUG
+=
+y
+
+
+546 #CONFIG_OPTIMIZATION_LEVEL_RELEASE 
+is
+ 
+nŸ
+ 
+£t
+
+
+547 
+CONFIG_OPTIMIZATION_ASSERTIONS_ENABLED
+=
+y
+
+
+548 #CONFIG_OPTIMIZATION_ASSERTIONS_SILENT 
+is
+ 
+nŸ
+ 
+£t
+
+
+549 #CONFIG_OPTIMIZATION_ASSERTIONS_DISABLED 
+is
+ 
+nŸ
+ 
+£t
+
+
+550 #CONFIG_CXX_EXCEPTIONS 
+is
+ 
+nŸ
+ 
+£t
+
+
+551 
+CONFIG_STACK_CHECK_NONE
+=
+y
+
+
+552 #CONFIG_STACK_CHECK_NORM 
+is
+ 
+nŸ
+ 
+£t
+
+
+553 #CONFIG_STACK_CHECK_STRONG 
+is
+ 
+nŸ
+ 
+£t
+
+
+554 #CONFIG_STACK_CHECK_ALL 
+is
+ 
+nŸ
+ 
+£t
+
+
+555 #CONFIG_STACK_CHECK 
+is
+ 
+nŸ
+ 
+£t
+
+
+556 #CONFIG_WARN_WRITE_STRINGS 
+is
+ 
+nŸ
+ 
+£t
+
+
+557 #CONFIG_DISABLE_GCC8_WARNINGS 
+is
+ 
+nŸ
+ 
+£t
+
+
+558 
+CONFIG_BTDM_CONTROLLER_BLE_MAX_CONN_EFF
+=0
+
+559 
+CONFIG_BTDM_CONTROLLER_BR_EDR_MAX_ACL_CONN_EFF
+=0
+
+560 
+CONFIG_BTDM_CONTROLLER_BR_EDR_MAX_SYNC_CONN_EFF
+=0
+
+561 
+CONFIG_BTDM_CONTROLLER_PINNED_TO_CORE
+=0
+
+562 
+CONFIG_ADC2_DISABLE_DAC
+=
+y
+
+
+563 #CONFIG_SPIRAM_SUPPORT 
+is
+ 
+nŸ
+ 
+£t
+
+
+564 #CONFIG_MEMMAP_TRACEMEM 
+is
+ 
+nŸ
+ 
+£t
+
+
+565 #CONFIG_MEMMAP_TRACEMEM_TWOBANKS 
+is
+ 
+nŸ
+ 
+£t
+
+
+566 
+CONFIG_TRACEMEM_RESERVE_DRAM
+=0x0
+
+567 #CONFIG_TWO_UNIVERSAL_MAC_ADDRESS 
+is
+ 
+nŸ
+ 
+£t
+
+
+568 
+CONFIG_FOUR_UNIVERSAL_MAC_ADDRESS
+=
+y
+
+
+569 
+CONFIG_NUMBER_OF_UNIVERSAL_MAC_ADDRESS
+=4
+
+570 #CONFIG_ULP_COPROC_ENABLED 
+is
+ 
+nŸ
+ 
+£t
+
+
+571 
+CONFIG_ULP_COPROC_RESERVE_MEM
+=0
+
+572 
+CONFIG_BROWNOUT_DET
+=
+y
+
+
+573 
+CONFIG_BROWNOUT_DET_LVL_SEL_0
+=
+y
+
+
+574 #CONFIG_BROWNOUT_DET_LVL_SEL_1 
+is
+ 
+nŸ
+ 
+£t
+
+
+575 #CONFIG_BROWNOUT_DET_LVL_SEL_2 
+is
+ 
+nŸ
+ 
+£t
+
+
+576 #CONFIG_BROWNOUT_DET_LVL_SEL_3 
+is
+ 
+nŸ
+ 
+£t
+
+
+577 #CONFIG_BROWNOUT_DET_LVL_SEL_4 
+is
+ 
+nŸ
+ 
+£t
+
+
+578 #CONFIG_BROWNOUT_DET_LVL_SEL_5 
+is
+ 
+nŸ
+ 
+£t
+
+
+579 #CONFIG_BROWNOUT_DET_LVL_SEL_6 
+is
+ 
+nŸ
+ 
+£t
+
+
+580 #CONFIG_BROWNOUT_DET_LVL_SEL_7 
+is
+ 
+nŸ
+ 
+£t
+
+
+581 
+CONFIG_BROWNOUT_DET_LVL
+=0
+
+582 
+CONFIG_REDUCE_PHY_TX_POWER
+=
+y
+
+
+583 
+CONFIG_ESP32_RTC_CLOCK_SOURCE_INTERNAL_RC
+=
+y
+
+
+584 #CONFIG_ESP32_RTC_CLOCK_SOURCE_EXTERNAL_CRYSTAL 
+is
+ 
+nŸ
+ 
+£t
+
+
+585 #CONFIG_ESP32_RTC_CLOCK_SOURCE_EXTERNAL_OSC 
+is
+ 
+nŸ
+ 
+£t
+
+
+586 #CONFIG_ESP32_RTC_CLOCK_SOURCE_INTERNAL_8MD256 
+is
+ 
+nŸ
+ 
+£t
+
+
+587 #CONFIG_DISABLE_BASIC_ROM_CONSOLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+588 #CONFIG_NO_BLOBS 
+is
+ 
+nŸ
+ 
+£t
+
+
+589 #CONFIG_COMPATIBLE_PRE_V2_1_BOOTLOADERS 
+is
+ 
+nŸ
+ 
+£t
+
+
+590 
+CONFIG_SYSTEM_EVENT_QUEUE_SIZE
+=32
+
+591 
+CONFIG_SYSTEM_EVENT_TASK_STACK_SIZE
+=2304
+
+592 
+CONFIG_MAIN_TASK_STACK_SIZE
+=3584
+
+593 
+CONFIG_IPC_TASK_STACK_SIZE
+=1024
+
+594 
+CONFIG_TIMER_TASK_STACK_SIZE
+=3584
+
+595 
+CONFIG_CONSOLE_UART_DEFAULT
+=
+y
+
+
+596 #CONFIG_CONSOLE_UART_CUSTOM 
+is
+ 
+nŸ
+ 
+£t
+
+
+597 #CONFIG_CONSOLE_UART_NONE 
+is
+ 
+nŸ
+ 
+£t
+
+
+598 
+CONFIG_CONSOLE_UART_NUM
+=0
+
+599 
+CONFIG_CONSOLE_UART_BAUDRATE
+=115200
+
+600 
+CONFIG_INT_WDT
+=
+y
+
+
+601 
+CONFIG_INT_WDT_TIMEOUT_MS
+=300
+
+602 
+CONFIG_INT_WDT_CHECK_CPU1
+=
+y
+
+
+603 
+CONFIG_TASK_WDT
+=
+y
+
+
+604 #CONFIG_TASK_WDT_PANIC 
+is
+ 
+nŸ
+ 
+£t
+
+
+605 
+CONFIG_TASK_WDT_TIMEOUT_S
+=5
+
+606 
+CONFIG_TASK_WDT_CHECK_IDLE_TASK_CPU0
+=
+y
+
+
+607 
+CONFIG_TASK_WDT_CHECK_IDLE_TASK_CPU1
+=
+y
+
+
+608 #CONFIG_EVENT_LOOP_PROFILING 
+is
+ 
+nŸ
+ 
+£t
+
+
+609 
+CONFIG_POST_EVENTS_FROM_ISR
+=
+y
+
+
+610 
+CONFIG_POST_EVENTS_FROM_IRAM_ISR
+=
+y
+
+
+611 
+CONFIG_DMA_RX_BUF_NUM
+=10
+
+612 
+CONFIG_DMA_TX_BUF_NUM
+=10
+
+613 
+CONFIG_EMAC_L2_TO_L3_RX_BUF_MODE
+=
+y
+
+
+614 
+CONFIG_EMAC_CHECK_LINK_PERIOD_MS
+=2000
+
+615 
+CONFIG_EMAC_TASK_PRIORITY
+=20
+
+616 
+CONFIG_EMAC_TASK_STACK_SIZE
+=3072
+
+617 
+CONFIG_MB_MASTER_TIMEOUT_MS_RESPOND
+=150
+
+618 
+CONFIG_MB_MASTER_DELAY_MS_CONVERT
+=200
+
+619 
+CONFIG_MB_QUEUE_LENGTH
+=20
+
+620 
+CONFIG_MB_SERIAL_TASK_STACK_SIZE
+=2048
+
+621 
+CONFIG_MB_SERIAL_BUF_SIZE
+=256
+
+622 
+CONFIG_MB_SERIAL_TASK_PRIO
+=10
+
+623 #CONFIG_MB_CONTROLLER_SLAVE_ID_SUPPORT 
+is
+ 
+nŸ
+ 
+£t
+
+
+624 
+CONFIG_MB_CONTROLLER_NOTIFY_TIMEOUT
+=20
+
+625 
+CONFIG_MB_CONTROLLER_NOTIFY_QUEUE_SIZE
+=20
+
+626 
+CONFIG_MB_CONTROLLER_STACK_SIZE
+=4096
+
+627 
+CONFIG_MB_EVENT_QUEUE_TIMEOUT
+=20
+
+628 
+CONFIG_MB_TIMER_PORT_ENABLED
+=
+y
+
+
+629 
+CONFIG_MB_TIMER_GROUP
+=0
+
+630 
+CONFIG_MB_TIMER_INDEX
+=0
+
+631 #CONFIG_SUPPORT_STATIC_ALLOCATION 
+is
+ 
+nŸ
+ 
+£t
+
+
+632 
+CONFIG_TIMER_TASK_PRIORITY
+=1
+
+633 
+CONFIG_TIMER_TASK_STACK_DEPTH
+=2048
+
+634 
+CONFIG_TIMER_QUEUE_LENGTH
+=10
+
+635 #CONFIG_L2_TO_L3_COPY 
+is
+ 
+nŸ
+ 
+£t
+
+
+636 #CONFIG_USE_ONLY_LWIP_SELECT 
+is
+ 
+nŸ
+ 
+£t
+
+
+637 
+CONFIG_ESP_GRATUITOUS_ARP
+=
+y
+
+
+638 
+CONFIG_GARP_TMR_INTERVAL
+=60
+
+639 
+CONFIG_TCPIP_RECVMBOX_SIZE
+=32
+
+640 
+CONFIG_TCP_MAXRTX
+=12
+
+641 
+CONFIG_TCP_SYNMAXRTX
+=6
+
+642 
+CONFIG_TCP_MSS
+=1440
+
+643 
+CONFIG_TCP_MSL
+=60000
+
+644 
+CONFIG_TCP_SND_BUF_DEFAULT
+=5744
+
+645 
+CONFIG_TCP_WND_DEFAULT
+=5744
+
+646 
+CONFIG_TCP_RECVMBOX_SIZE
+=6
+
+647 
+CONFIG_TCP_QUEUE_OOSEQ
+=
+y
+
+
+648 #CONFIG_ESP_TCP_KEEP_CONNECTION_WHEN_IP_CHANGES 
+is
+ 
+nŸ
+ 
+£t
+
+
+649 
+CONFIG_TCP_OVERSIZE_MSS
+=
+y
+
+
+650 #CONFIG_TCP_OVERSIZE_QUARTER_MSS 
+is
+ 
+nŸ
+ 
+£t
+
+
+651 #CONFIG_TCP_OVERSIZE_DISABLE 
+is
+ 
+nŸ
+ 
+£t
+
+
+652 
+CONFIG_UDP_RECVMBOX_SIZE
+=6
+
+653 
+CONFIG_TCPIP_TASK_STACK_SIZE
+=3072
+
+654 
+CONFIG_TCPIP_TASK_AFFINITY_NO_AFFINITY
+=
+y
+
+
+655 #CONFIG_TCPIP_TASK_AFFINITY_CPU0 
+is
+ 
+nŸ
+ 
+£t
+
+
+656 #CONFIG_TCPIP_TASK_AFFINITY_CPU1 
+is
+ 
+nŸ
+ 
+£t
+
+
+657 
+CONFIG_TCPIP_TASK_AFFINITY
+=0x7FFFFFFF
+
+658 #CONFIG_PPP_SUPPORT 
+is
+ 
+nŸ
+ 
+£t
+
+
+659 
+CONFIG_PTHREAD_STACK_MIN
+=768
+
+660 
+CONFIG_SPI_FLASH_WRITING_DANGEROUS_REGIONS_ABORTS
+=
+y
+
+
+661 #CONFIG_SPI_FLASH_WRITING_DANGEROUS_REGIONS_FAILS 
+is
+ 
+nŸ
+ 
+£t
+
+
+662 #CONFIG_SPI_FLASH_WRITING_DANGEROUS_REGIONS_ALLOWED 
+is
+ 
+nŸ
+ 
+£t
+
+
+663 
+CONFIG_IP_LOST_TIMER_INTERVAL
+=120
+
+664 #End 
+of
+ 
+dïªˇãd
+ 
+›ti⁄s
+
+
+	@tags
+
+1 !
+	g_TAG_FILE_FORMAT
+ 2 /
+exãnded
+ 
+	gf‹m©
+; --f‹m©=1 
+wûl
+ 
+nŸ
+ 
+≠≥nd
+ ;"ÅoÜines/
+
+2 !
+	g_TAG_FILE_SORTED
+ 1 /0=
+uns‹ãd
+, 1=
+s‹ãd
+, 2=
+fﬁdˇ£
+/
+
+3 !
+_TAG_PROGRAM_AUTHOR
+ 
+D¨ªn
+ 
+Hõbît
+ /
+dhõbît
+@
+u£rs
+.
+sour˚f‹ge
+.
+√t
+/
+
+4 !
+_TAG_PROGRAM_NAME
+ 
+Exubî™t
+ 
+Cègs
+
+
+5 !
+_TAG_PROGRAM_URL
+ 
+hâp
+:
+
+6 !
+_TAG_PROGRAM_VERSION
+ 5.9~
+svn20110310
+
+
+7 
+COMPONENT_EMBED_FILES
+ 
+maö
+/
+comp⁄ít
+.
+mk
+ /^COMPONENT_EMBED_FILES :
+Ávic⁄
+.
+ico$
+/;" m
+
+8 
+CONFIG_A2DP_ENABLE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 294;" d
+
+9 
+CONFIG_A2DP_SINK_TASK_STACK_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 298;" d
+
+10 
+CONFIG_A2DP_SOURCE_TASK_STACK_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 302;" d
+
+11 
+CONFIG_A2D_INITIAL_TRACE_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 306;" d
+
+12 
+CONFIG_A2D_TRACE_LEVEL_API
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 310;" d
+
+13 
+CONFIG_A2D_TRACE_LEVEL_DEBUG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 314;" d
+
+14 
+CONFIG_A2D_TRACE_LEVEL_ERROR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 318;" d
+
+15 
+CONFIG_A2D_TRACE_LEVEL_EVENT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 322;" d
+
+16 
+CONFIG_A2D_TRACE_LEVEL_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 326;" d
+
+17 
+CONFIG_A2D_TRACE_LEVEL_VERBOSE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 330;" d
+
+18 
+CONFIG_A2D_TRACE_LEVEL_WARNING
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 334;" d
+
+19 
+CONFIG_ADC2_DISABLE_DAC
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 338;" d
+
+20 
+CONFIG_ADC_CAL_EFUSE_TP_ENABLE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 81;" d
+
+21 
+CONFIG_ADC_CAL_EFUSE_VREF_ENABLE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 82;" d
+
+22 
+CONFIG_ADC_CAL_LUT_ENABLE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 83;" d
+
+23 
+CONFIG_ADC_DISABLE_DAC
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 57;" d
+
+24 
+CONFIG_APPL_INITIAL_TRACE_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 342;" d
+
+25 
+CONFIG_APPL_TRACE_LEVEL_API
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 346;" d
+
+26 
+CONFIG_APPL_TRACE_LEVEL_DEBUG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 350;" d
+
+27 
+CONFIG_APPL_TRACE_LEVEL_ERROR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 354;" d
+
+28 
+CONFIG_APPL_TRACE_LEVEL_EVENT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 358;" d
+
+29 
+CONFIG_APPL_TRACE_LEVEL_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 362;" d
+
+30 
+CONFIG_APPL_TRACE_LEVEL_VERBOSE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 366;" d
+
+31 
+CONFIG_APPL_TRACE_LEVEL_WARNING
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 370;" d
+
+32 
+CONFIG_APP_ANTI_ROLLBACK
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 374;" d
+
+33 
+CONFIG_APP_COMPILE_TIME_DATE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 11;" d
+
+34 
+CONFIG_APP_ROLLBACK_ENABLE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 378;" d
+
+35 
+CONFIG_APP_SECURE_VERSION
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 382;" d
+
+36 
+CONFIG_APP_SECURE_VERSION_SIZE_EFUSE_FIELD
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 386;" d
+
+37 
+CONFIG_AVCT_INITIAL_TRACE_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 390;" d
+
+38 
+CONFIG_AVCT_TRACE_LEVEL_API
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 394;" d
+
+39 
+CONFIG_AVCT_TRACE_LEVEL_DEBUG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 398;" d
+
+40 
+CONFIG_AVCT_TRACE_LEVEL_ERROR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 402;" d
+
+41 
+CONFIG_AVCT_TRACE_LEVEL_EVENT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 406;" d
+
+42 
+CONFIG_AVCT_TRACE_LEVEL_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 410;" d
+
+43 
+CONFIG_AVCT_TRACE_LEVEL_VERBOSE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 414;" d
+
+44 
+CONFIG_AVCT_TRACE_LEVEL_WARNING
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 418;" d
+
+45 
+CONFIG_AVDT_INITIAL_TRACE_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 422;" d
+
+46 
+CONFIG_AVDT_TRACE_LEVEL_API
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 426;" d
+
+47 
+CONFIG_AVDT_TRACE_LEVEL_DEBUG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 430;" d
+
+48 
+CONFIG_AVDT_TRACE_LEVEL_ERROR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 434;" d
+
+49 
+CONFIG_AVDT_TRACE_LEVEL_EVENT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 438;" d
+
+50 
+CONFIG_AVDT_TRACE_LEVEL_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 442;" d
+
+51 
+CONFIG_AVDT_TRACE_LEVEL_VERBOSE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 446;" d
+
+52 
+CONFIG_AVDT_TRACE_LEVEL_WARNING
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 450;" d
+
+53 
+CONFIG_AVRC_INITIAL_TRACE_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 454;" d
+
+54 
+CONFIG_AVRC_TRACE_LEVEL_API
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 458;" d
+
+55 
+CONFIG_AVRC_TRACE_LEVEL_DEBUG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 462;" d
+
+56 
+CONFIG_AVRC_TRACE_LEVEL_ERROR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 466;" d
+
+57 
+CONFIG_AVRC_TRACE_LEVEL_EVENT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 470;" d
+
+58 
+CONFIG_AVRC_TRACE_LEVEL_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 474;" d
+
+59 
+CONFIG_AVRC_TRACE_LEVEL_VERBOSE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 478;" d
+
+60 
+CONFIG_AVRC_TRACE_LEVEL_WARNING
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 482;" d
+
+61 
+CONFIG_BLE_ACTIVE_SCAN_REPORT_ADV_SCAN_RSP_INDIVIDUALLY
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 486;" d
+
+62 
+CONFIG_BLE_ADV_REPORT_DISCARD_THRSHOLD
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 490;" d
+
+63 
+CONFIG_BLE_ADV_REPORT_FLOW_CONTROL_NUM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 494;" d
+
+64 
+CONFIG_BLE_ADV_REPORT_FLOW_CONTROL_SUPPORTED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 498;" d
+
+65 
+CONFIG_BLE_ESTABLISH_LINK_CONNECTION_TIMEOUT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 502;" d
+
+66 
+CONFIG_BLE_HOST_QUEUE_CONGESTION_CHECK
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 506;" d
+
+67 
+CONFIG_BLE_MESH_SCAN_DUPLICATE_EN
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 510;" d
+
+68 
+CONFIG_BLE_SCAN_DUPLICATE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 514;" d
+
+69 
+CONFIG_BLE_SMP_ENABLE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 518;" d
+
+70 
+CONFIG_BLUEDROID_ENABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 522;" d
+
+71 
+CONFIG_BLUEDROID_MEM_DEBUG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 526;" d
+
+72 
+CONFIG_BLUEDROID_PINNED_TO_CORE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 530;" d
+
+73 
+CONFIG_BLUEDROID_PINNED_TO_CORE_0
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 534;" d
+
+74 
+CONFIG_BLUEDROID_PINNED_TO_CORE_1
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 538;" d
+
+75 
+CONFIG_BLUEDROID_PINNED_TO_CORE_CHOICE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 542;" d
+
+76 
+CONFIG_BLUFI_INITIAL_TRACE_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 546;" d
+
+77 
+CONFIG_BLUFI_TRACE_LEVEL_API
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 550;" d
+
+78 
+CONFIG_BLUFI_TRACE_LEVEL_DEBUG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 554;" d
+
+79 
+CONFIG_BLUFI_TRACE_LEVEL_ERROR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 558;" d
+
+80 
+CONFIG_BLUFI_TRACE_LEVEL_EVENT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 562;" d
+
+81 
+CONFIG_BLUFI_TRACE_LEVEL_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 566;" d
+
+82 
+CONFIG_BLUFI_TRACE_LEVEL_VERBOSE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 570;" d
+
+83 
+CONFIG_BLUFI_TRACE_LEVEL_WARNING
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 574;" d
+
+84 
+CONFIG_BNEP_INITIAL_TRACE_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 578;" d
+
+85 
+CONFIG_BOOTLOADER_LOG_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 13;" d
+
+86 
+CONFIG_BOOTLOADER_LOG_LEVEL_INFO
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 12;" d
+
+87 
+CONFIG_BOOTLOADER_VDDSDIO_BOOST_1_9V
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 14;" d
+
+88 
+CONFIG_BOOTLOADER_WDT_ENABLE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 15;" d
+
+89 
+CONFIG_BOOTLOADER_WDT_TIME_MS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 16;" d
+
+90 
+CONFIG_BROWNOUT_DET
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 582;" d
+
+91 
+CONFIG_BROWNOUT_DET_LVL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 586;" d
+
+92 
+CONFIG_BROWNOUT_DET_LVL_SEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 590;" d
+
+93 
+CONFIG_BROWNOUT_DET_LVL_SEL_0
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 594;" d
+
+94 
+CONFIG_BROWNOUT_DET_LVL_SEL_1
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 598;" d
+
+95 
+CONFIG_BROWNOUT_DET_LVL_SEL_2
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 602;" d
+
+96 
+CONFIG_BROWNOUT_DET_LVL_SEL_3
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 606;" d
+
+97 
+CONFIG_BROWNOUT_DET_LVL_SEL_4
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 610;" d
+
+98 
+CONFIG_BROWNOUT_DET_LVL_SEL_5
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 614;" d
+
+99 
+CONFIG_BROWNOUT_DET_LVL_SEL_6
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 618;" d
+
+100 
+CONFIG_BROWNOUT_DET_LVL_SEL_7
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 622;" d
+
+101 
+CONFIG_BTC_INITIAL_TRACE_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 626;" d
+
+102 
+CONFIG_BTC_TASK_STACK_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 630;" d
+
+103 
+CONFIG_BTC_TRACE_LEVEL_API
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 634;" d
+
+104 
+CONFIG_BTC_TRACE_LEVEL_DEBUG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 638;" d
+
+105 
+CONFIG_BTC_TRACE_LEVEL_ERROR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 642;" d
+
+106 
+CONFIG_BTC_TRACE_LEVEL_EVENT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 646;" d
+
+107 
+CONFIG_BTC_TRACE_LEVEL_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 650;" d
+
+108 
+CONFIG_BTC_TRACE_LEVEL_VERBOSE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 654;" d
+
+109 
+CONFIG_BTC_TRACE_LEVEL_WARNING
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 658;" d
+
+110 
+CONFIG_BTDM_BLE_SLEEP_CLOCK_ACCURACY_INDEX_EFF
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 55;" d
+
+111 
+CONFIG_BTDM_CONTROLLER_BLE_MAX_CONN
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 662;" d
+
+112 
+CONFIG_BTDM_CONTROLLER_BLE_MAX_CONN_EFF
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 666;" d
+
+113 
+CONFIG_BTDM_CONTROLLER_BR_EDR_MAX_ACL_CONN
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 670;" d
+
+114 
+CONFIG_BTDM_CONTROLLER_BR_EDR_MAX_ACL_CONN_EFF
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 674;" d
+
+115 
+CONFIG_BTDM_CONTROLLER_BR_EDR_MAX_SYNC_CONN
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 678;" d
+
+116 
+CONFIG_BTDM_CONTROLLER_BR_EDR_MAX_SYNC_CONN_EFF
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 682;" d
+
+117 
+CONFIG_BTDM_CONTROLLER_FULL_SCAN_SUPPORTED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 686;" d
+
+118 
+CONFIG_BTDM_CONTROLLER_HCI_MODE_CHOICE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 690;" d
+
+119 
+CONFIG_BTDM_CONTROLLER_HCI_MODE_UART_H4
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 694;" d
+
+120 
+CONFIG_BTDM_CONTROLLER_HCI_MODE_VHCI
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 698;" d
+
+121 
+CONFIG_BTDM_CONTROLLER_MODE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 702;" d
+
+122 
+CONFIG_BTDM_CONTROLLER_MODEM_SLEEP
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 706;" d
+
+123 
+CONFIG_BTDM_CONTROLLER_MODE_BLE_ONLY
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 710;" d
+
+124 
+CONFIG_BTDM_CONTROLLER_MODE_BR_EDR_ONLY
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 714;" d
+
+125 
+CONFIG_BTDM_CONTROLLER_MODE_BTDM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 718;" d
+
+126 
+CONFIG_BTDM_CONTROLLER_PINNED_TO_CORE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 722;" d
+
+127 
+CONFIG_BTDM_CONTROLLER_PINNED_TO_CORE_CHOICE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 726;" d
+
+128 
+CONFIG_BTDM_CTRL_BLE_MAX_CONN_EFF
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 51;" d
+
+129 
+CONFIG_BTDM_CTRL_BR_EDR_MAX_ACL_CONN_EFF
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 52;" d
+
+130 
+CONFIG_BTDM_CTRL_BR_EDR_MAX_SYNC_CONN_EFF
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 53;" d
+
+131 
+CONFIG_BTDM_CTRL_BR_EDR_SCO_DATA_PATH_EFF
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 50;" d
+
+132 
+CONFIG_BTDM_CTRL_PINNED_TO_CORE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 54;" d
+
+133 
+CONFIG_BTH_LOG_SDP_INITIAL_TRACE_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 730;" d
+
+134 
+CONFIG_BTIF_INITIAL_TRACE_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 734;" d
+
+135 
+CONFIG_BTIF_TRACE_LEVEL_API
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 738;" d
+
+136 
+CONFIG_BTIF_TRACE_LEVEL_DEBUG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 742;" d
+
+137 
+CONFIG_BTIF_TRACE_LEVEL_ERROR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 746;" d
+
+138 
+CONFIG_BTIF_TRACE_LEVEL_EVENT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 750;" d
+
+139 
+CONFIG_BTIF_TRACE_LEVEL_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 754;" d
+
+140 
+CONFIG_BTIF_TRACE_LEVEL_VERBOSE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 758;" d
+
+141 
+CONFIG_BTIF_TRACE_LEVEL_WARNING
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 762;" d
+
+142 
+CONFIG_BTM_INITIAL_TRACE_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 766;" d
+
+143 
+CONFIG_BTM_TRACE_LEVEL_API
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 770;" d
+
+144 
+CONFIG_BTM_TRACE_LEVEL_DEBUG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 774;" d
+
+145 
+CONFIG_BTM_TRACE_LEVEL_ERROR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 778;" d
+
+146 
+CONFIG_BTM_TRACE_LEVEL_EVENT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 782;" d
+
+147 
+CONFIG_BTM_TRACE_LEVEL_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 786;" d
+
+148 
+CONFIG_BTM_TRACE_LEVEL_VERBOSE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 790;" d
+
+149 
+CONFIG_BTM_TRACE_LEVEL_WARNING
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 794;" d
+
+150 
+CONFIG_BTU_TASK_STACK_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 798;" d
+
+151 
+CONFIG_BT_RESERVE_DRAM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 56;" d
+
+152 
+CONFIG_CLASSIC_BT_ENABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 802;" d
+
+153 
+CONFIG_COMPATIBLE_PRE_V2_1_BOOTLOADERS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 806;" d
+
+154 
+CONFIG_COMPILER_OPTIMIZATION_ASSERTIONS_ENABLE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 46;" d
+
+155 
+CONFIG_COMPILER_OPTIMIZATION_LEVEL_DEBUG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 45;" d
+
+156 
+CONFIG_COMPILER_STACK_CHECK_MODE_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 47;" d
+
+157 
+CONFIG_CONSOLE_UART
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 810;" d
+
+158 
+CONFIG_CONSOLE_UART_BAUDRATE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 814;" d
+
+159 
+CONFIG_CONSOLE_UART_CUSTOM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 818;" d
+
+160 
+CONFIG_CONSOLE_UART_CUSTOM_NUM_0
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 822;" d
+
+161 
+CONFIG_CONSOLE_UART_CUSTOM_NUM_1
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 826;" d
+
+162 
+CONFIG_CONSOLE_UART_DEFAULT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 830;" d
+
+163 
+CONFIG_CONSOLE_UART_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 834;" d
+
+164 
+CONFIG_CONSOLE_UART_NUM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 838;" d
+
+165 
+CONFIG_CONSOLE_UART_RX_GPIO
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 842;" d
+
+166 
+CONFIG_CONSOLE_UART_TX_GPIO
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 846;" d
+
+167 
+CONFIG_CXX_EXCEPTIONS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 850;" d
+
+168 
+CONFIG_CXX_EXCEPTIONS_EMG_POOL_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 854;" d
+
+169 
+CONFIG_DISABLE_BASIC_ROM_CONSOLE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 858;" d
+
+170 
+CONFIG_DISABLE_GCC8_WARNINGS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 862;" d
+
+171 
+CONFIG_DMA_RX_BUF_NUM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 866;" d
+
+172 
+CONFIG_DMA_TX_BUF_NUM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 870;" d
+
+173 
+CONFIG_DUPLICATE_SCAN_CACHE_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 874;" d
+
+174 
+CONFIG_EFUSE_CODE_SCHEME_COMPAT_3_4
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 60;" d
+
+175 
+CONFIG_EFUSE_MAX_BLK_LEN
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 61;" d
+
+176 
+CONFIG_EFUSE_SECURE_VERSION_EMULATE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 878;" d
+
+177 
+CONFIG_EMAC_CHECK_LINK_PERIOD_MS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 882;" d
+
+178 
+CONFIG_EMAC_L2_TO_L3_RX_BUF_MODE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 886;" d
+
+179 
+CONFIG_EMAC_TASK_PRIORITY
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 890;" d
+
+180 
+CONFIG_EMAC_TASK_STACK_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 894;" d
+
+181 
+CONFIG_ENABLE_STATIC_TASK_CLEAN_UP_HOOK
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 898;" d
+
+182 
+CONFIG_ESP32_APPTRACE_DEST_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 48;" d
+
+183 
+CONFIG_ESP32_APPTRACE_LOCK_ENABLE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 49;" d
+
+184 
+CONFIG_ESP32_APPTRACE_POSTMORTEM_FLUSH_TRAX_THRESH
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 902;" d
+
+185 
+CONFIG_ESP32_BROWNOUT_DET
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 71;" d
+
+186 
+CONFIG_ESP32_BROWNOUT_DET_LVL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 73;" d
+
+187 
+CONFIG_ESP32_BROWNOUT_DET_LVL_SEL_0
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 72;" d
+
+188 
+CONFIG_ESP32_DEBUG_OCDAWARE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 69;" d
+
+189 
+CONFIG_ESP32_DEBUG_STUBS_ENABLE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 70;" d
+
+190 
+CONFIG_ESP32_DEEP_SLEEP_WAKEUP_DELAY
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 78;" d
+
+191 
+CONFIG_ESP32_DEFAULT_CPU_FREQ_160
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 62;" d
+
+192 
+CONFIG_ESP32_DEFAULT_CPU_FREQ_MHZ
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 63;" d
+
+193 
+CONFIG_ESP32_DEFAULT_PTHREAD_CORE_NO_AFFINITY
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 262;" d
+
+194 
+CONFIG_ESP32_ENABLE_COREDUMP_TO_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 124;" d
+
+195 
+CONFIG_ESP32_PANIC_PRINT_REBOOT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 68;" d
+
+196 
+CONFIG_ESP32_PHY_CALIBRATION_AND_DATA_STORAGE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 121;" d
+
+197 
+CONFIG_ESP32_PHY_MAX_TX_POWER
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 123;" d
+
+198 
+CONFIG_ESP32_PHY_MAX_WIFI_TX_POWER
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 122;" d
+
+199 
+CONFIG_ESP32_PTHREAD_STACK_MIN
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 261;" d
+
+200 
+CONFIG_ESP32_PTHREAD_TASK_CORE_DEFAULT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 263;" d
+
+201 
+CONFIG_ESP32_PTHREAD_TASK_NAME_DEFAULT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 264;" d
+
+202 
+CONFIG_ESP32_PTHREAD_TASK_PRIO_DEFAULT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 259;" d
+
+203 
+CONFIG_ESP32_PTHREAD_TASK_STACK_SIZE_DEFAULT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 260;" d
+
+204 
+CONFIG_ESP32_REDUCE_PHY_TX_POWER
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 74;" d
+
+205 
+CONFIG_ESP32_RTC_CLK_CAL_CYCLES
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 77;" d
+
+206 
+CONFIG_ESP32_RTC_CLK_SRC_INT_RC
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 76;" d
+
+207 
+CONFIG_ESP32_RTC_CLOCK_SOURCE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 906;" d
+
+208 
+CONFIG_ESP32_RTC_CLOCK_SOURCE_EXTERNAL_CRYSTAL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 910;" d
+
+209 
+CONFIG_ESP32_RTC_CLOCK_SOURCE_EXTERNAL_OSC
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 914;" d
+
+210 
+CONFIG_ESP32_RTC_CLOCK_SOURCE_INTERNAL_8MD256
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 918;" d
+
+211 
+CONFIG_ESP32_RTC_CLOCK_SOURCE_INTERNAL_RC
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 922;" d
+
+212 
+CONFIG_ESP32_RTC_EXTERNAL_CRYSTAL_ADDITIONAL_CURRENT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 926;" d
+
+213 
+CONFIG_ESP32_TIME_SYSCALL_USE_RTC_FRC1
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 75;" d
+
+214 
+CONFIG_ESP32_TRACEMEM_RESERVE_DRAM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 64;" d
+
+215 
+CONFIG_ESP32_ULP_COPROC_RESERVE_MEM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 67;" d
+
+216 
+CONFIG_ESP32_UNIVERSAL_MAC_ADDRESSES
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 66;" d
+
+217 
+CONFIG_ESP32_UNIVERSAL_MAC_ADDRESSES_FOUR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 65;" d
+
+218 
+CONFIG_ESP32_WIFI_AMPDU_RX_ENABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 114;" d
+
+219 
+CONFIG_ESP32_WIFI_AMPDU_TX_ENABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 112;" d
+
+220 
+CONFIG_ESP32_WIFI_DYNAMIC_RX_BUFFER_NUM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 108;" d
+
+221 
+CONFIG_ESP32_WIFI_DYNAMIC_TX_BUFFER
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 109;" d
+
+222 
+CONFIG_ESP32_WIFI_DYNAMIC_TX_BUFFER_NUM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 111;" d
+
+223 
+CONFIG_ESP32_WIFI_IRAM_OPT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 120;" d
+
+224 
+CONFIG_ESP32_WIFI_MGMT_SBUF_NUM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 119;" d
+
+225 
+CONFIG_ESP32_WIFI_NVS_ENABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 116;" d
+
+226 
+CONFIG_ESP32_WIFI_RX_BA_WIN
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 115;" d
+
+227 
+CONFIG_ESP32_WIFI_SOFTAP_BEACON_MAX_LEN
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 118;" d
+
+228 
+CONFIG_ESP32_WIFI_STATIC_RX_BUFFER_NUM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 107;" d
+
+229 
+CONFIG_ESP32_WIFI_TASK_PINNED_TO_CORE_0
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 117;" d
+
+230 
+CONFIG_ESP32_WIFI_TX_BA_WIN
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 113;" d
+
+231 
+CONFIG_ESP32_WIFI_TX_BUFFER_TYPE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 110;" d
+
+232 
+CONFIG_ESP32_XTAL_FREQ
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 80;" d
+
+233 
+CONFIG_ESP32_XTAL_FREQ_40
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 79;" d
+
+234 
+CONFIG_ESPTOOLPY_AFTER
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 32;" d
+
+235 
+CONFIG_ESPTOOLPY_AFTER_RESET
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 31;" d
+
+236 
+CONFIG_ESPTOOLPY_BAUD
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 20;" d
+
+237 
+CONFIG_ESPTOOLPY_BAUD_115200B
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 18;" d
+
+238 
+CONFIG_ESPTOOLPY_BAUD_OTHER_VAL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 19;" d
+
+239 
+CONFIG_ESPTOOLPY_BEFORE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 30;" d
+
+240 
+CONFIG_ESPTOOLPY_BEFORE_RESET
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 29;" d
+
+241 
+CONFIG_ESPTOOLPY_COMPRESSED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 21;" d
+
+242 
+CONFIG_ESPTOOLPY_FLASHFREQ
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 25;" d
+
+243 
+CONFIG_ESPTOOLPY_FLASHFREQ_40M
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 24;" d
+
+244 
+CONFIG_ESPTOOLPY_FLASHMODE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 23;" d
+
+245 
+CONFIG_ESPTOOLPY_FLASHMODE_DIO
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 22;" d
+
+246 
+CONFIG_ESPTOOLPY_FLASHSIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 27;" d
+
+247 
+CONFIG_ESPTOOLPY_FLASHSIZE_2MB
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 26;" d
+
+248 
+CONFIG_ESPTOOLPY_FLASHSIZE_DETECT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 28;" d
+
+249 
+CONFIG_ESPTOOLPY_MONITOR_BAUD
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 35;" d
+
+250 
+CONFIG_ESPTOOLPY_MONITOR_BAUD_115200B
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 33;" d
+
+251 
+CONFIG_ESPTOOLPY_MONITOR_BAUD_OTHER_VAL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 34;" d
+
+252 
+CONFIG_ESPTOOLPY_PORT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 17;" d
+
+253 
+CONFIG_ESP_CONSOLE_UART_BAUDRATE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 92;" d
+
+254 
+CONFIG_ESP_CONSOLE_UART_DEFAULT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 90;" d
+
+255 
+CONFIG_ESP_CONSOLE_UART_NUM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 91;" d
+
+256 
+CONFIG_ESP_ERR_TO_NAME_LOOKUP
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 84;" d
+
+257 
+CONFIG_ESP_EVENT_POST_FROM_IRAM_ISR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 101;" d
+
+258 
+CONFIG_ESP_EVENT_POST_FROM_ISR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 100;" d
+
+259 
+CONFIG_ESP_GRATUITOUS_ARP
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 930;" d
+
+260 
+CONFIG_ESP_HTTP_CLIENT_ENABLE_HTTPS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 102;" d
+
+261 
+CONFIG_ESP_INT_WDT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 93;" d
+
+262 
+CONFIG_ESP_INT_WDT_CHECK_CPU1
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 95;" d
+
+263 
+CONFIG_ESP_INT_WDT_TIMEOUT_MS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 94;" d
+
+264 
+CONFIG_ESP_IPC_TASK_STACK_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 88;" d
+
+265 
+CONFIG_ESP_MAIN_TASK_STACK_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 87;" d
+
+266 
+CONFIG_ESP_SYSTEM_EVENT_QUEUE_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 85;" d
+
+267 
+CONFIG_ESP_SYSTEM_EVENT_TASK_STACK_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 86;" d
+
+268 
+CONFIG_ESP_TASK_WDT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 96;" d
+
+269 
+CONFIG_ESP_TASK_WDT_CHECK_IDLE_TASK_CPU0
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 98;" d
+
+270 
+CONFIG_ESP_TASK_WDT_CHECK_IDLE_TASK_CPU1
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 99;" d
+
+271 
+CONFIG_ESP_TASK_WDT_TIMEOUT_S
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 97;" d
+
+272 
+CONFIG_ESP_TCP_KEEP_CONNECTION_WHEN_IP_CHANGES
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 934;" d
+
+273 
+CONFIG_ESP_TIMER_TASK_STACK_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 89;" d
+
+274 
+CONFIG_ETH_CHECK_LINK_STATUS_PERIOD_MS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 128;" d
+
+275 
+CONFIG_ETH_DMA_RX_BUF_NUM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 125;" d
+
+276 
+CONFIG_ETH_DMA_TX_BUF_NUM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 126;" d
+
+277 
+CONFIG_ETH_EMAC_L2_TO_L3_RX_BUF_MODE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 127;" d
+
+278 
+CONFIG_ETH_EMAC_TASK_PRIORITY
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 129;" d
+
+279 
+CONFIG_ETH_EMAC_TASK_STACK_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 130;" d
+
+280 
+CONFIG_EVENT_LOOP_PROFILING
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 938;" d
+
+281 
+CONFIG_EXAMPLE_CONNECT_IPV6
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 44;" d
+
+282 
+CONFIG_EXAMPLE_CONNECT_WIFI
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 41;" d
+
+283 
+CONFIG_EXAMPLE_WIFI_PASSWORD
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 43;" d
+
+284 
+CONFIG_EXAMPLE_WIFI_SSID
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 42;" d
+
+285 
+CONFIG_FATFS_CODEPAGE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 132;" d
+
+286 
+CONFIG_FATFS_CODEPAGE_437
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 131;" d
+
+287 
+CONFIG_FATFS_FS_LOCK
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 134;" d
+
+288 
+CONFIG_FATFS_LFN_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 133;" d
+
+289 
+CONFIG_FATFS_PER_FILE_CACHE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 136;" d
+
+290 
+CONFIG_FATFS_TIMEOUT_MS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 135;" d
+
+291 
+CONFIG_FLASHMODE_DIO
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 942;" d
+
+292 
+CONFIG_FLASHMODE_DOUT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 946;" d
+
+293 
+CONFIG_FLASHMODE_QIO
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 950;" d
+
+294 
+CONFIG_FLASHMODE_QOUT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 954;" d
+
+295 
+CONFIG_FLASH_ENCRYPTION_ENABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 958;" d
+
+296 
+CONFIG_FLASH_ENCRYPTION_INSECURE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 962;" d
+
+297 
+CONFIG_FLASH_ENCRYPTION_UART_BOOTLOADER_ALLOW_CACHE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 966;" d
+
+298 
+CONFIG_FLASH_ENCRYPTION_UART_BOOTLOADER_ALLOW_DECRYPT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 970;" d
+
+299 
+CONFIG_FLASH_ENCRYPTION_UART_BOOTLOADER_ALLOW_ENCRYPT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 974;" d
+
+300 
+CONFIG_FMB_CONTROLLER_NOTIFY_QUEUE_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 144;" d
+
+301 
+CONFIG_FMB_CONTROLLER_NOTIFY_TIMEOUT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 143;" d
+
+302 
+CONFIG_FMB_CONTROLLER_STACK_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 145;" d
+
+303 
+CONFIG_FMB_EVENT_QUEUE_TIMEOUT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 146;" d
+
+304 
+CONFIG_FMB_MASTER_DELAY_MS_CONVERT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 138;" d
+
+305 
+CONFIG_FMB_MASTER_TIMEOUT_MS_RESPOND
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 137;" d
+
+306 
+CONFIG_FMB_QUEUE_LENGTH
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 139;" d
+
+307 
+CONFIG_FMB_SERIAL_BUF_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 141;" d
+
+308 
+CONFIG_FMB_SERIAL_TASK_PRIO
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 142;" d
+
+309 
+CONFIG_FMB_SERIAL_TASK_STACK_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 140;" d
+
+310 
+CONFIG_FMB_TIMER_GROUP
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 148;" d
+
+311 
+CONFIG_FMB_TIMER_INDEX
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 149;" d
+
+312 
+CONFIG_FMB_TIMER_PORT_ENABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 147;" d
+
+313 
+CONFIG_FOUR_UNIVERSAL_MAC_ADDRESS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 978;" d
+
+314 
+CONFIG_FREERTOS_ASSERT_FAIL_ABORT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 157;" d
+
+315 
+CONFIG_FREERTOS_ASSERT_ON_UNTESTED_FUNCTION
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 153;" d
+
+316 
+CONFIG_FREERTOS_CHECK_MUTEX_GIVEN_BY_OWNER
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 166;" d
+
+317 
+CONFIG_FREERTOS_CHECK_STACKOVERFLOW_CANARY
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 154;" d
+
+318 
+CONFIG_FREERTOS_CORETIMER_0
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 151;" d
+
+319 
+CONFIG_FREERTOS_HZ
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 152;" d
+
+320 
+CONFIG_FREERTOS_IDLE_TASK_STACKSIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 158;" d
+
+321 
+CONFIG_FREERTOS_INTERRUPT_BACKTRACE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 155;" d
+
+322 
+CONFIG_FREERTOS_ISR_STACKSIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 159;" d
+
+323 
+CONFIG_FREERTOS_MAX_TASK_NAME_LEN
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 160;" d
+
+324 
+CONFIG_FREERTOS_NO_AFFINITY
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 150;" d
+
+325 
+CONFIG_FREERTOS_QUEUE_REGISTRY_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 164;" d
+
+326 
+CONFIG_FREERTOS_TASK_FUNCTION_WRAPPER
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 165;" d
+
+327 
+CONFIG_FREERTOS_THREAD_LOCAL_STORAGE_POINTERS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 156;" d
+
+328 
+CONFIG_FREERTOS_TIMER_QUEUE_LENGTH
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 163;" d
+
+329 
+CONFIG_FREERTOS_TIMER_TASK_PRIORITY
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 161;" d
+
+330 
+CONFIG_FREERTOS_TIMER_TASK_STACK_DEPTH
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 162;" d
+
+331 
+CONFIG_GAP_INITIAL_TRACE_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 982;" d
+
+332 
+CONFIG_GAP_TRACE_LEVEL_API
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 986;" d
+
+333 
+CONFIG_GAP_TRACE_LEVEL_DEBUG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 990;" d
+
+334 
+CONFIG_GAP_TRACE_LEVEL_ERROR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 994;" d
+
+335 
+CONFIG_GAP_TRACE_LEVEL_EVENT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 998;" d
+
+336 
+CONFIG_GAP_TRACE_LEVEL_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1002;" d
+
+337 
+CONFIG_GAP_TRACE_LEVEL_VERBOSE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1006;" d
+
+338 
+CONFIG_GAP_TRACE_LEVEL_WARNING
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1010;" d
+
+339 
+CONFIG_GARP_TMR_INTERVAL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1014;" d
+
+340 
+CONFIG_GATTC_CACHE_NVS_FLASH
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1018;" d
+
+341 
+CONFIG_GATTC_ENABLE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1022;" d
+
+342 
+CONFIG_GATTS_ENABLE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1026;" d
+
+343 
+CONFIG_GATTS_SEND_SERVICE_CHANGE_AUTO
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1030;" d
+
+344 
+CONFIG_GATTS_SEND_SERVICE_CHANGE_MANUAL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1034;" d
+
+345 
+CONFIG_GATTS_SEND_SERVICE_CHANGE_MODE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1038;" d
+
+346 
+CONFIG_GATT_INITIAL_TRACE_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1042;" d
+
+347 
+CONFIG_GATT_TRACE_LEVEL_API
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1046;" d
+
+348 
+CONFIG_GATT_TRACE_LEVEL_DEBUG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1050;" d
+
+349 
+CONFIG_GATT_TRACE_LEVEL_ERROR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1054;" d
+
+350 
+CONFIG_GATT_TRACE_LEVEL_EVENT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1058;" d
+
+351 
+CONFIG_GATT_TRACE_LEVEL_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1062;" d
+
+352 
+CONFIG_GATT_TRACE_LEVEL_VERBOSE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1066;" d
+
+353 
+CONFIG_GATT_TRACE_LEVEL_WARNING
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1070;" d
+
+354 
+CONFIG_GDBSTUB_MAX_TASKS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1074;" d
+
+355 
+CONFIG_GDBSTUB_SUPPORT_TASKS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1078;" d
+
+356 
+CONFIG_HCI_INITIAL_TRACE_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1082;" d
+
+357 
+CONFIG_HCI_TRACE_LEVEL_API
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1086;" d
+
+358 
+CONFIG_HCI_TRACE_LEVEL_DEBUG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1090;" d
+
+359 
+CONFIG_HCI_TRACE_LEVEL_ERROR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1094;" d
+
+360 
+CONFIG_HCI_TRACE_LEVEL_EVENT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1098;" d
+
+361 
+CONFIG_HCI_TRACE_LEVEL_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1102;" d
+
+362 
+CONFIG_HCI_TRACE_LEVEL_VERBOSE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1106;" d
+
+363 
+CONFIG_HCI_TRACE_LEVEL_WARNING
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1110;" d
+
+364 
+CONFIG_HEAP_POISONING_DISABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 167;" d
+
+365 
+CONFIG_HEAP_TRACING_OFF
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 168;" d
+
+366 
+CONFIG_HFP_AUDIO_DATA_PATH
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1114;" d
+
+367 
+CONFIG_HFP_AUDIO_DATA_PATH_HCI
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1118;" d
+
+368 
+CONFIG_HFP_AUDIO_DATA_PATH_PCM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1122;" d
+
+369 
+CONFIG_HFP_CLIENT_ENABLE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1126;" d
+
+370 
+CONFIG_HFP_ENABLE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1130;" d
+
+371 
+CONFIG_HFP_ROLE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1134;" d
+
+372 
+CONFIG_HID_INITIAL_TRACE_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1138;" d
+
+373 
+CONFIG_HID_TRACE_LEVEL_API
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1142;" d
+
+374 
+CONFIG_HID_TRACE_LEVEL_DEBUG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1146;" d
+
+375 
+CONFIG_HID_TRACE_LEVEL_ERROR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1150;" d
+
+376 
+CONFIG_HID_TRACE_LEVEL_EVENT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1154;" d
+
+377 
+CONFIG_HID_TRACE_LEVEL_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1158;" d
+
+378 
+CONFIG_HID_TRACE_LEVEL_VERBOSE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1162;" d
+
+379 
+CONFIG_HID_TRACE_LEVEL_WARNING
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1166;" d
+
+380 
+CONFIG_HTTPD_ERR_RESP_NO_DELAY
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 105;" d
+
+381 
+CONFIG_HTTPD_MAX_REQ_HDR_LEN
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 103;" d
+
+382 
+CONFIG_HTTPD_MAX_URI_LEN
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 104;" d
+
+383 
+CONFIG_HTTPD_PURGE_BUF_LEN
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 106;" d
+
+384 
+CONFIG_IDF_TARGET
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 7;" d
+
+385 
+CONFIG_IDF_TARGET_ESP32
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 6;" d
+
+386 
+CONFIG_INT_WDT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1170;" d
+
+387 
+CONFIG_INT_WDT_CHECK_CPU1
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1174;" d
+
+388 
+CONFIG_INT_WDT_TIMEOUT_MS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1178;" d
+
+389 
+CONFIG_IPC_TASK_STACK_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1182;" d
+
+390 
+CONFIG_IP_LOST_TIMER_INTERVAL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1186;" d
+
+391 
+CONFIG_L2CAP_INITIAL_TRACE_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1190;" d
+
+392 
+CONFIG_L2CAP_TRACE_LEVEL_API
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1194;" d
+
+393 
+CONFIG_L2CAP_TRACE_LEVEL_DEBUG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1198;" d
+
+394 
+CONFIG_L2CAP_TRACE_LEVEL_ERROR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1202;" d
+
+395 
+CONFIG_L2CAP_TRACE_LEVEL_EVENT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1206;" d
+
+396 
+CONFIG_L2CAP_TRACE_LEVEL_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1210;" d
+
+397 
+CONFIG_L2CAP_TRACE_LEVEL_VERBOSE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1214;" d
+
+398 
+CONFIG_L2CAP_TRACE_LEVEL_WARNING
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1218;" d
+
+399 
+CONFIG_L2_TO_L3_COPY
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1222;" d
+
+400 
+CONFIG_LIBSODIUM_USE_MBEDTLS_SHA
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 169;" d
+
+401 
+CONFIG_LOG_BOOTLOADER_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1226;" d
+
+402 
+CONFIG_LOG_BOOTLOADER_LEVEL_DEBUG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1230;" d
+
+403 
+CONFIG_LOG_BOOTLOADER_LEVEL_ERROR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1234;" d
+
+404 
+CONFIG_LOG_BOOTLOADER_LEVEL_INFO
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1238;" d
+
+405 
+CONFIG_LOG_BOOTLOADER_LEVEL_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1242;" d
+
+406 
+CONFIG_LOG_BOOTLOADER_LEVEL_VERBOSE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1246;" d
+
+407 
+CONFIG_LOG_BOOTLOADER_LEVEL_WARN
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1250;" d
+
+408 
+CONFIG_LOG_COLORS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 172;" d
+
+409 
+CONFIG_LOG_DEFAULT_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 171;" d
+
+410 
+CONFIG_LOG_DEFAULT_LEVEL_INFO
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 170;" d
+
+411 
+CONFIG_LWIP_DHCPS_LEASE_UNIT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 182;" d
+
+412 
+CONFIG_LWIP_DHCPS_MAX_STATION_NUM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 183;" d
+
+413 
+CONFIG_LWIP_DHCP_DOES_ARP_CHECK
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 181;" d
+
+414 
+CONFIG_LWIP_DHCP_MAX_NTP_SERVERS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 203;" d
+
+415 
+CONFIG_LWIP_ESP_GRATUITOUS_ARP
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 178;" d
+
+416 
+CONFIG_LWIP_GARP_TMR_INTERVAL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 179;" d
+
+417 
+CONFIG_LWIP_LOCAL_HOSTNAME
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 173;" d
+
+418 
+CONFIG_LWIP_LOOPBACK_MAX_PBUFS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 185;" d
+
+419 
+CONFIG_LWIP_MAX_ACTIVE_TCP
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 186;" d
+
+420 
+CONFIG_LWIP_MAX_LISTENING_TCP
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 187;" d
+
+421 
+CONFIG_LWIP_MAX_RAW_PCBS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 202;" d
+
+422 
+CONFIG_LWIP_MAX_SOCKETS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 175;" d
+
+423 
+CONFIG_LWIP_MAX_UDP_PCBS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 197;" d
+
+424 
+CONFIG_LWIP_NETIF_LOOPBACK
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 184;" d
+
+425 
+CONFIG_LWIP_SNTP_UPDATE_DELAY
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 204;" d
+
+426 
+CONFIG_LWIP_SO_REUSE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 176;" d
+
+427 
+CONFIG_LWIP_SO_REUSE_RXTOALL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 177;" d
+
+428 
+CONFIG_LWIP_TCPIP_RECVMBOX_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 180;" d
+
+429 
+CONFIG_LWIP_TCPIP_TASK_AFFINITY
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 201;" d
+
+430 
+CONFIG_LWIP_TCPIP_TASK_AFFINITY_NO_AFFINITY
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 200;" d
+
+431 
+CONFIG_LWIP_TCPIP_TASK_STACK_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 199;" d
+
+432 
+CONFIG_LWIP_TCP_MAXRTX
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 188;" d
+
+433 
+CONFIG_LWIP_TCP_MSL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 191;" d
+
+434 
+CONFIG_LWIP_TCP_MSS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 190;" d
+
+435 
+CONFIG_LWIP_TCP_OVERSIZE_MSS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 196;" d
+
+436 
+CONFIG_LWIP_TCP_QUEUE_OOSEQ
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 195;" d
+
+437 
+CONFIG_LWIP_TCP_RECVMBOX_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 194;" d
+
+438 
+CONFIG_LWIP_TCP_SND_BUF_DEFAULT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 192;" d
+
+439 
+CONFIG_LWIP_TCP_SYNMAXRTX
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 189;" d
+
+440 
+CONFIG_LWIP_TCP_WND_DEFAULT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 193;" d
+
+441 
+CONFIG_LWIP_TIMERS_ONDEMAND
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 174;" d
+
+442 
+CONFIG_LWIP_UDP_RECVMBOX_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 198;" d
+
+443 
+CONFIG_MAIN_TASK_STACK_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1254;" d
+
+444 
+CONFIG_MAKE_WARN_UNDEFINED_VARIABLES
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1258;" d
+
+445 
+CONFIG_MBEDTLS_AES_C
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 227;" d
+
+446 
+CONFIG_MBEDTLS_CCM_C
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 229;" d
+
+447 
+CONFIG_MBEDTLS_CLIENT_SSL_SESSION_TICKETS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 225;" d
+
+448 
+CONFIG_MBEDTLS_ECDH_C
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 236;" d
+
+449 
+CONFIG_MBEDTLS_ECDSA_C
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 237;" d
+
+450 
+CONFIG_MBEDTLS_ECP_C
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 235;" d
+
+451 
+CONFIG_MBEDTLS_ECP_DP_BP256R1_ENABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 246;" d
+
+452 
+CONFIG_MBEDTLS_ECP_DP_BP384R1_ENABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 247;" d
+
+453 
+CONFIG_MBEDTLS_ECP_DP_BP512R1_ENABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 248;" d
+
+454 
+CONFIG_MBEDTLS_ECP_DP_CURVE25519_ENABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 249;" d
+
+455 
+CONFIG_MBEDTLS_ECP_DP_SECP192K1_ENABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 243;" d
+
+456 
+CONFIG_MBEDTLS_ECP_DP_SECP192R1_ENABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 238;" d
+
+457 
+CONFIG_MBEDTLS_ECP_DP_SECP224K1_ENABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 244;" d
+
+458 
+CONFIG_MBEDTLS_ECP_DP_SECP224R1_ENABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 239;" d
+
+459 
+CONFIG_MBEDTLS_ECP_DP_SECP256K1_ENABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 245;" d
+
+460 
+CONFIG_MBEDTLS_ECP_DP_SECP256R1_ENABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 240;" d
+
+461 
+CONFIG_MBEDTLS_ECP_DP_SECP384R1_ENABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 241;" d
+
+462 
+CONFIG_MBEDTLS_ECP_DP_SECP521R1_ENABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 242;" d
+
+463 
+CONFIG_MBEDTLS_ECP_NIST_OPTIM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 250;" d
+
+464 
+CONFIG_MBEDTLS_GCM_C
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 230;" d
+
+465 
+CONFIG_MBEDTLS_HARDWARE_AES
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 207;" d
+
+466 
+CONFIG_MBEDTLS_HAVE_TIME
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 208;" d
+
+467 
+CONFIG_MBEDTLS_INTERNAL_MEM_ALLOC
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 205;" d
+
+468 
+CONFIG_MBEDTLS_KEY_EXCHANGE_DHE_RSA
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 214;" d
+
+469 
+CONFIG_MBEDTLS_KEY_EXCHANGE_ECDHE_ECDSA
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 217;" d
+
+470 
+CONFIG_MBEDTLS_KEY_EXCHANGE_ECDHE_RSA
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 216;" d
+
+471 
+CONFIG_MBEDTLS_KEY_EXCHANGE_ECDH_ECDSA
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 218;" d
+
+472 
+CONFIG_MBEDTLS_KEY_EXCHANGE_ECDH_RSA
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 219;" d
+
+473 
+CONFIG_MBEDTLS_KEY_EXCHANGE_ELLIPTIC_CURVE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 215;" d
+
+474 
+CONFIG_MBEDTLS_KEY_EXCHANGE_RSA
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 213;" d
+
+475 
+CONFIG_MBEDTLS_PEM_PARSE_C
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 231;" d
+
+476 
+CONFIG_MBEDTLS_PEM_WRITE_C
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 232;" d
+
+477 
+CONFIG_MBEDTLS_RC4_DISABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 228;" d
+
+478 
+CONFIG_MBEDTLS_SERVER_SSL_SESSION_TICKETS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 226;" d
+
+479 
+CONFIG_MBEDTLS_SSL_ALPN
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 224;" d
+
+480 
+CONFIG_MBEDTLS_SSL_MAX_CONTENT_LEN
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 206;" d
+
+481 
+CONFIG_MBEDTLS_SSL_PROTO_TLS1
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 221;" d
+
+482 
+CONFIG_MBEDTLS_SSL_PROTO_TLS1_1
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 222;" d
+
+483 
+CONFIG_MBEDTLS_SSL_PROTO_TLS1_2
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 223;" d
+
+484 
+CONFIG_MBEDTLS_SSL_RENEGOTIATION
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 220;" d
+
+485 
+CONFIG_MBEDTLS_TLS_CLIENT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 211;" d
+
+486 
+CONFIG_MBEDTLS_TLS_ENABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 212;" d
+
+487 
+CONFIG_MBEDTLS_TLS_SERVER
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 210;" d
+
+488 
+CONFIG_MBEDTLS_TLS_SERVER_AND_CLIENT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 209;" d
+
+489 
+CONFIG_MBEDTLS_X509_CRL_PARSE_C
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 233;" d
+
+490 
+CONFIG_MBEDTLS_X509_CSR_PARSE_C
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 234;" d
+
+491 
+CONFIG_MB_CONTROLLER_NOTIFY_QUEUE_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1262;" d
+
+492 
+CONFIG_MB_CONTROLLER_NOTIFY_TIMEOUT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1266;" d
+
+493 
+CONFIG_MB_CONTROLLER_SLAVE_ID
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1270;" d
+
+494 
+CONFIG_MB_CONTROLLER_SLAVE_ID_SUPPORT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1274;" d
+
+495 
+CONFIG_MB_CONTROLLER_STACK_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1278;" d
+
+496 
+CONFIG_MB_EVENT_QUEUE_TIMEOUT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1282;" d
+
+497 
+CONFIG_MB_MASTER_DELAY_MS_CONVERT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1286;" d
+
+498 
+CONFIG_MB_MASTER_TIMEOUT_MS_RESPOND
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1290;" d
+
+499 
+CONFIG_MB_QUEUE_LENGTH
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1294;" d
+
+500 
+CONFIG_MB_SERIAL_BUF_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1298;" d
+
+501 
+CONFIG_MB_SERIAL_TASK_PRIO
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1302;" d
+
+502 
+CONFIG_MB_SERIAL_TASK_STACK_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1306;" d
+
+503 
+CONFIG_MB_TIMER_GROUP
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1310;" d
+
+504 
+CONFIG_MB_TIMER_INDEX
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1314;" d
+
+505 
+CONFIG_MB_TIMER_PORT_ENABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1318;" d
+
+506 
+CONFIG_MCA_INITIAL_TRACE_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1322;" d
+
+507 
+CONFIG_MCA_TRACE_LEVEL_API
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1326;" d
+
+508 
+CONFIG_MCA_TRACE_LEVEL_DEBUG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1330;" d
+
+509 
+CONFIG_MCA_TRACE_LEVEL_ERROR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1334;" d
+
+510 
+CONFIG_MCA_TRACE_LEVEL_EVENT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1338;" d
+
+511 
+CONFIG_MCA_TRACE_LEVEL_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1342;" d
+
+512 
+CONFIG_MCA_TRACE_LEVEL_VERBOSE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1346;" d
+
+513 
+CONFIG_MCA_TRACE_LEVEL_WARNING
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1350;" d
+
+514 
+CONFIG_MDNS_MAX_SERVICES
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 251;" d
+
+515 
+CONFIG_MEMMAP_TRACEMEM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1354;" d
+
+516 
+CONFIG_MEMMAP_TRACEMEM_TWOBANKS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1358;" d
+
+517 
+CONFIG_MESH_DUPLICATE_SCAN_CACHE_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1362;" d
+
+518 
+CONFIG_MONITOR_BAUD
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1366;" d
+
+519 
+CONFIG_MONITOR_BAUD_115200B
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1370;" d
+
+520 
+CONFIG_MONITOR_BAUD_230400B
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1374;" d
+
+521 
+CONFIG_MONITOR_BAUD_2MB
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1378;" d
+
+522 
+CONFIG_MONITOR_BAUD_57600B
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1382;" d
+
+523 
+CONFIG_MONITOR_BAUD_921600B
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1386;" d
+
+524 
+CONFIG_MONITOR_BAUD_9600B
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1390;" d
+
+525 
+CONFIG_MONITOR_BAUD_OTHER
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1394;" d
+
+526 
+CONFIG_MONITOR_BAUD_OTHER_VAL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1398;" d
+
+527 
+CONFIG_MQTT_PROTOCOL_311
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 252;" d
+
+528 
+CONFIG_MQTT_TRANSPORT_SSL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 253;" d
+
+529 
+CONFIG_MQTT_TRANSPORT_WEBSOCKET
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 254;" d
+
+530 
+CONFIG_MQTT_TRANSPORT_WEBSOCKET_SECURE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 255;" d
+
+531 
+CONFIG_NETIF_IP_LOST_TIMER_INTERVAL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 279;" d
+
+532 
+CONFIG_NEWLIB_STDIN_LINE_ENDING_CR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 257;" d
+
+533 
+CONFIG_NEWLIB_STDOUT_LINE_ENDING_CRLF
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 256;" d
+
+534 
+CONFIG_NO_BLOBS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1402;" d
+
+535 
+CONFIG_NUMBER_OF_UNIVERSAL_MAC_ADDRESS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1406;" d
+
+536 
+CONFIG_OPENSSL_ASSERT_DO_NOTHING
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 258;" d
+
+537 
+CONFIG_OPTIMIZATION_ASSERTIONS_DISABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1410;" d
+
+538 
+CONFIG_OPTIMIZATION_ASSERTIONS_ENABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1414;" d
+
+539 
+CONFIG_OPTIMIZATION_ASSERTIONS_SILENT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1418;" d
+
+540 
+CONFIG_OPTIMIZATION_ASSERTION_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1422;" d
+
+541 
+CONFIG_OPTIMIZATION_COMPILER
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1426;" d
+
+542 
+CONFIG_OPTIMIZATION_LEVEL_DEBUG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1430;" d
+
+543 
+CONFIG_OPTIMIZATION_LEVEL_RELEASE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1434;" d
+
+544 
+CONFIG_OSI_INITIAL_TRACE_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1438;" d
+
+545 
+CONFIG_OSI_TRACE_LEVEL_API
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1442;" d
+
+546 
+CONFIG_OSI_TRACE_LEVEL_DEBUG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1446;" d
+
+547 
+CONFIG_OSI_TRACE_LEVEL_ERROR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1450;" d
+
+548 
+CONFIG_OSI_TRACE_LEVEL_EVENT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1454;" d
+
+549 
+CONFIG_OSI_TRACE_LEVEL_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1458;" d
+
+550 
+CONFIG_OSI_TRACE_LEVEL_VERBOSE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1462;" d
+
+551 
+CONFIG_OSI_TRACE_LEVEL_WARNING
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1466;" d
+
+552 
+CONFIG_PAN_INITIAL_TRACE_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1470;" d
+
+553 
+CONFIG_PAN_TRACE_LEVEL_API
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1474;" d
+
+554 
+CONFIG_PAN_TRACE_LEVEL_DEBUG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1478;" d
+
+555 
+CONFIG_PAN_TRACE_LEVEL_ERROR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1482;" d
+
+556 
+CONFIG_PAN_TRACE_LEVEL_EVENT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1486;" d
+
+557 
+CONFIG_PAN_TRACE_LEVEL_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1490;" d
+
+558 
+CONFIG_PAN_TRACE_LEVEL_VERBOSE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1494;" d
+
+559 
+CONFIG_PAN_TRACE_LEVEL_WARNING
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1498;" d
+
+560 
+CONFIG_PARTITION_TABLE_CUSTOM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 36;" d
+
+561 
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 37;" d
+
+562 
+CONFIG_PARTITION_TABLE_FILENAME
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 38;" d
+
+563 
+CONFIG_PARTITION_TABLE_MD5
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 40;" d
+
+564 
+CONFIG_PARTITION_TABLE_OFFSET
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 39;" d
+
+565 
+CONFIG_POST_EVENTS_FROM_IRAM_ISR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1502;" d
+
+566 
+CONFIG_POST_EVENTS_FROM_ISR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1506;" d
+
+567 
+CONFIG_PPP_CHAP_SUPPORT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1510;" d
+
+568 
+CONFIG_PPP_DEBUG_ON
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1514;" d
+
+569 
+CONFIG_PPP_MPPE_SUPPORT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1518;" d
+
+570 
+CONFIG_PPP_MSCHAP_SUPPORT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1522;" d
+
+571 
+CONFIG_PPP_NOTIFY_PHASE_SUPPORT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1526;" d
+
+572 
+CONFIG_PPP_PAP_SUPPORT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1530;" d
+
+573 
+CONFIG_PPP_SUPPORT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1534;" d
+
+574 
+CONFIG_PTHREAD_STACK_MIN
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1538;" d
+
+575 
+CONFIG_PYTHON
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1542;" d
+
+576 
+CONFIG_REDUCE_PHY_TX_POWER
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1546;" d
+
+577 
+CONFIG_RFCOMM_INITIAL_TRACE_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1550;" d
+
+578 
+CONFIG_RFCOMM_TRACE_LEVEL_API
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1554;" d
+
+579 
+CONFIG_RFCOMM_TRACE_LEVEL_DEBUG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1558;" d
+
+580 
+CONFIG_RFCOMM_TRACE_LEVEL_ERROR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1562;" d
+
+581 
+CONFIG_RFCOMM_TRACE_LEVEL_EVENT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1566;" d
+
+582 
+CONFIG_RFCOMM_TRACE_LEVEL_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1570;" d
+
+583 
+CONFIG_RFCOMM_TRACE_LEVEL_VERBOSE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1574;" d
+
+584 
+CONFIG_RFCOMM_TRACE_LEVEL_WARNING
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1578;" d
+
+585 
+CONFIG_SCAN_DUPLICATE_BY_ADV_DATA
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1582;" d
+
+586 
+CONFIG_SCAN_DUPLICATE_BY_ADV_DATA_AND_DEVICE_ADDR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1586;" d
+
+587 
+CONFIG_SCAN_DUPLICATE_BY_DEVICE_ADDR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1590;" d
+
+588 
+CONFIG_SCAN_DUPLICATE_TYPE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1594;" d
+
+589 
+CONFIG_SDK_MAKE_WARN_UNDEFINED_VARIABLES
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 10;" d
+
+590 
+CONFIG_SDK_PYTHON
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 9;" d
+
+591 
+CONFIG_SDK_TOOLPREFIX
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 8;" d
+
+592 
+CONFIG_SDP_TRACE_LEVEL_API
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1598;" d
+
+593 
+CONFIG_SDP_TRACE_LEVEL_DEBUG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1602;" d
+
+594 
+CONFIG_SDP_TRACE_LEVEL_ERROR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1606;" d
+
+595 
+CONFIG_SDP_TRACE_LEVEL_EVENT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1610;" d
+
+596 
+CONFIG_SDP_TRACE_LEVEL_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1614;" d
+
+597 
+CONFIG_SDP_TRACE_LEVEL_VERBOSE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1618;" d
+
+598 
+CONFIG_SDP_TRACE_LEVEL_WARNING
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1622;" d
+
+599 
+CONFIG_SEMIHOSTFS_HOST_PATH_MAX_LEN
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 287;" d
+
+600 
+CONFIG_SEMIHOSTFS_MAX_MOUNT_POINTS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 286;" d
+
+601 
+CONFIG_SMP_ENABLE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1626;" d
+
+602 
+CONFIG_SMP_INITIAL_TRACE_LEVEL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1630;" d
+
+603 
+CONFIG_SMP_SLAVE_CON_PARAMS_UPD_ENABLE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1634;" d
+
+604 
+CONFIG_SMP_TRACE_LEVEL_API
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1638;" d
+
+605 
+CONFIG_SMP_TRACE_LEVEL_DEBUG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1642;" d
+
+606 
+CONFIG_SMP_TRACE_LEVEL_ERROR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1646;" d
+
+607 
+CONFIG_SMP_TRACE_LEVEL_EVENT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1650;" d
+
+608 
+CONFIG_SMP_TRACE_LEVEL_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1654;" d
+
+609 
+CONFIG_SMP_TRACE_LEVEL_VERBOSE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1658;" d
+
+610 
+CONFIG_SMP_TRACE_LEVEL_WARNING
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1662;" d
+
+611 
+CONFIG_SPIFFS_CACHE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 269;" d
+
+612 
+CONFIG_SPIFFS_CACHE_WR
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 270;" d
+
+613 
+CONFIG_SPIFFS_GC_MAX_RUNS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 272;" d
+
+614 
+CONFIG_SPIFFS_MAX_PARTITIONS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 268;" d
+
+615 
+CONFIG_SPIFFS_META_LENGTH
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 277;" d
+
+616 
+CONFIG_SPIFFS_OBJ_NAME_LEN
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 274;" d
+
+617 
+CONFIG_SPIFFS_PAGE_CHECK
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 271;" d
+
+618 
+CONFIG_SPIFFS_PAGE_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 273;" d
+
+619 
+CONFIG_SPIFFS_USE_MAGIC
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 275;" d
+
+620 
+CONFIG_SPIFFS_USE_MAGIC_LENGTH
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 276;" d
+
+621 
+CONFIG_SPIFFS_USE_MTIME
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 278;" d
+
+622 
+CONFIG_SPIRAM_SUPPORT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1666;" d
+
+623 
+CONFIG_SPI_FLASH_DANGEROUS_WRITE_ABORTS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 266;" d
+
+624 
+CONFIG_SPI_FLASH_ROM_DRIVER_PATCH
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 265;" d
+
+625 
+CONFIG_SPI_FLASH_SUPPORT_ISSI_CHIP
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 267;" d
+
+626 
+CONFIG_SPI_FLASH_WRITING_DANGEROUS_REGIONS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1670;" d
+
+627 
+CONFIG_SPI_FLASH_WRITING_DANGEROUS_REGIONS_ABORTS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1674;" d
+
+628 
+CONFIG_SPI_FLASH_WRITING_DANGEROUS_REGIONS_ALLOWED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1678;" d
+
+629 
+CONFIG_SPI_FLASH_WRITING_DANGEROUS_REGIONS_FAILS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1682;" d
+
+630 
+CONFIG_SPI_MASTER_ISR_IN_IRAM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 58;" d
+
+631 
+CONFIG_SPI_SLAVE_ISR_IN_IRAM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 59;" d
+
+632 
+CONFIG_STACK_CHECK
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1686;" d
+
+633 
+CONFIG_STACK_CHECK_ALL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1690;" d
+
+634 
+CONFIG_STACK_CHECK_MODE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1694;" d
+
+635 
+CONFIG_STACK_CHECK_NONE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1698;" d
+
+636 
+CONFIG_STACK_CHECK_NORM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1702;" d
+
+637 
+CONFIG_STACK_CHECK_STRONG
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1706;" d
+
+638 
+CONFIG_SUPPORT_STATIC_ALLOCATION
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1710;" d
+
+639 
+CONFIG_SUPPORT_TERMIOS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 285;" d
+
+640 
+CONFIG_SUPPRESS_SELECT_DEBUG_OUTPUT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 284;" d
+
+641 
+CONFIG_SW_COEXIST_ENABLE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1714;" d
+
+642 
+CONFIG_SW_COEXIST_PREFERENCE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1718;" d
+
+643 
+CONFIG_SW_COEXIST_PREFERENCE_BALANCE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1722;" d
+
+644 
+CONFIG_SW_COEXIST_PREFERENCE_BT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1726;" d
+
+645 
+CONFIG_SW_COEXIST_PREFERENCE_VALUE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1730;" d
+
+646 
+CONFIG_SW_COEXIST_PREFERENCE_WIFI
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1734;" d
+
+647 
+CONFIG_SYSTEM_EVENT_QUEUE_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1738;" d
+
+648 
+CONFIG_SYSTEM_EVENT_TASK_STACK_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1742;" d
+
+649 
+CONFIG_TASK_WDT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1746;" d
+
+650 
+CONFIG_TASK_WDT_CHECK_IDLE_TASK_CPU0
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1750;" d
+
+651 
+CONFIG_TASK_WDT_CHECK_IDLE_TASK_CPU1
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1754;" d
+
+652 
+CONFIG_TASK_WDT_PANIC
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1758;" d
+
+653 
+CONFIG_TASK_WDT_TIMEOUT_S
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1762;" d
+
+654 
+CONFIG_TCPIP_LWIP
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 280;" d
+
+655 
+CONFIG_TCPIP_RECVMBOX_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1766;" d
+
+656 
+CONFIG_TCPIP_TASK_AFFINITY
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1770;" d
+
+657 
+CONFIG_TCPIP_TASK_AFFINITY_CPU0
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1774;" d
+
+658 
+CONFIG_TCPIP_TASK_AFFINITY_CPU1
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1778;" d
+
+659 
+CONFIG_TCPIP_TASK_AFFINITY_NO_AFFINITY
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1782;" d
+
+660 
+CONFIG_TCPIP_TASK_STACK_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1786;" d
+
+661 
+CONFIG_TCP_MAXRTX
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1790;" d
+
+662 
+CONFIG_TCP_MSL
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1794;" d
+
+663 
+CONFIG_TCP_MSS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1798;" d
+
+664 
+CONFIG_TCP_OVERSIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1802;" d
+
+665 
+CONFIG_TCP_OVERSIZE_DISABLE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1806;" d
+
+666 
+CONFIG_TCP_OVERSIZE_MSS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1810;" d
+
+667 
+CONFIG_TCP_OVERSIZE_QUARTER_MSS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1814;" d
+
+668 
+CONFIG_TCP_QUEUE_OOSEQ
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1818;" d
+
+669 
+CONFIG_TCP_RECVMBOX_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1822;" d
+
+670 
+CONFIG_TCP_SND_BUF_DEFAULT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1826;" d
+
+671 
+CONFIG_TCP_SYNMAXRTX
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1830;" d
+
+672 
+CONFIG_TCP_WND_DEFAULT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1834;" d
+
+673 
+CONFIG_TIMER_QUEUE_LENGTH
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1838;" d
+
+674 
+CONFIG_TIMER_TASK_PRIORITY
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1842;" d
+
+675 
+CONFIG_TIMER_TASK_STACK_DEPTH
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1846;" d
+
+676 
+CONFIG_TIMER_TASK_STACK_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1850;" d
+
+677 
+CONFIG_TOOLPREFIX
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1854;" d
+
+678 
+CONFIG_TRACEMEM_RESERVE_DRAM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1858;" d
+
+679 
+CONFIG_TWO_UNIVERSAL_MAC_ADDRESS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1862;" d
+
+680 
+CONFIG_UDP_RECVMBOX_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1866;" d
+
+681 
+CONFIG_ULP_COPROC_ENABLED
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1870;" d
+
+682 
+CONFIG_ULP_COPROC_RESERVE_MEM
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1874;" d
+
+683 
+CONFIG_UNITY_ENABLE_DOUBLE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 282;" d
+
+684 
+CONFIG_UNITY_ENABLE_FLOAT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 281;" d
+
+685 
+CONFIG_UNITY_ENABLE_IDF_TEST_RUNNER
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 283;" d
+
+686 
+CONFIG_USE_ONLY_LWIP_SELECT
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1878;" d
+
+687 
+CONFIG_USE_TCPIP_STACK_LIB
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1882;" d
+
+688 
+CONFIG_WARN_WRITE_STRINGS
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1886;" d
+
+689 
+CONFIG_WIFI_LWIP_ALLOCATION_FROM_SPIRAM_FIRST
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 1890;" d
+
+690 
+CONFIG_WIFI_PROV_SCAN_MAX_ENTRIES
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 290;" d
+
+691 
+CONFIG_WL_SECTOR_SIZE
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 289;" d
+
+692 
+CONFIG_WL_SECTOR_SIZE_4096
+ 
+	gbuûd
+/
+	gö˛ude
+/
+	gsdkc⁄fig
+.
+	gh
+ 288;" d
+
+693 
+EXTRA_COMPONENT_DIRS
+ 
+	gMakefûe
+ /^
+	gEXTRA_COMPONENT_DIRS
+ = 
+$
+(
+IDF_PATH
+)\/
+exam∂es
+\/
+comm⁄_comp⁄íts
+\/
+¥Ÿocﬁ_exam∂es_comm⁄$
+/;" m
+
+694 
+FILE_PATH_MAX
+ 
+	gmaö
+/
+	gfûe_£rvî
+.
+	gc
+ 25;" d file:
+
+695 
+IS_FILE_EXT
+ 
+	gmaö
+/
+	gfûe_£rvî
+.
+	gc
+ 171;" d file:
+
+696 
+MAX_FILE_SIZE
+ 
+	gmaö
+/
+	gfûe_£rvî
+.
+	gc
+ 29;" d file:
+
+697 
+MAX_FILE_SIZE_STR
+ 
+	gmaö
+/
+	gfûe_£rvî
+.
+	gc
+ 30;" d file:
+
+698 
+PROJECT_NAME
+ 
+	gMakefûe
+ /^
+	gPROJECT_NAME
+ :
+fûe_£rvî$
+/;" m
+
+699 
+SCRATCH_BUFSIZE
+ 
+	gmaö
+/
+	gfûe_£rvî
+.
+	gc
+ 33;" d file:
+
+700 
+TAG
+ 
+	gmaö
+/
+	gfûe_£rvî
+.
+	gc
+ /^c⁄° *
+	gTAG
+ = "fûe_£rvî";
+	g$
+/;" v file:
+
+701 
+TAG
+ 
+	gmaö
+/maö.
+	gc
+ /^c⁄° *
+	gTAG
+="exam∂e";
+	g$
+/;" v file:
+
+702 
+≠p_maö
+ 
+	gmaö
+/maö.
+	gc
+ /^≠p_maö()
+	g$
+/;" f
+
+703 
+ba£_∑th
+ 
+	gmaö
+/
+	gfûe_£rvî
+.
+	gc
+ /^ 
+	gba£_∑th
+[
+ESP_VFS_PATH_MAX
+ + 1];
+	g$
+/;" m struct:file_server_data file:
+
+704 
+dow∆ﬂd_gë_h™dÀr
+ 
+	gmaö
+/
+	gfûe_£rvî
+.
+	gc
+ /^
+e•_îr_t
+ dow∆ﬂd_gë_h™dÀr(
+hâpd_ªq_t
+ *
+ªq
+Ë
+	g$
+/;" f file:
+
+705 
+Ávic⁄_ico_gë_h™dÀr
+ 
+	gmaö
+/
+	gfûe_£rvî
+.
+	gc
+ /^
+e•_îr_t
+ favic⁄_ico_gë_h™dÀr(
+hâpd_ªq_t
+ *
+ªq
+)
+	g$
+/;" f file:
+
+706 
+fûe1_gë_h™dÀr
+ 
+	gmaö
+/
+	gfûe_£rvî
+.
+	gc
+ /^
+e•_îr_t
+ fûe1_gë_h™dÀr(
+hâpd_ªq_t
+ *
+ªq
+)
+	g$
+/;" f file:
+
+707 
+fûe_£rvî_d©a
+ 
+	gmaö
+/
+	gfûe_£rvî
+.
+	gc
+ /^
+	sfûe_£rvî_d©a
+ {
+	m$
+/;" s file:
+
+708 
+gë_∑th_‰om_uri
+ 
+	mmaö
+/
+	mfûe_£rvî
+.
+	mc
+ /^c⁄° * gë_∑th_‰om_uri(*
+de°
+, c⁄° *
+ba£_∑th
+, c⁄° *
+uri
+, 
+size_t
+ 
+de°size
+Ë
+	m$
+/;" f file:
+
+709 
+hâp_ª•_dú_html
+ 
+	mmaö
+/
+	mfûe_£rvî
+.
+	mc
+ /^
+e•_îr_t
+ hâp_ª•_dú_html(
+hâpd_ªq_t
+ *
+ªq
+, c⁄° *
+dú∑th
+)
+	m$
+/;" f file:
+
+710 
+ödex_html_gë_h™dÀr
+ 
+	mmaö
+/
+	mfûe_£rvî
+.
+	mc
+ /^
+e•_îr_t
+ index_html_gë_h™dÀr(
+hâpd_ªq_t
+ *
+ªq
+)
+	m$
+/;" f file:
+
+711 
+öô_•iffs
+ 
+	mmaö
+/maö.
+	mc
+ /^
+e•_îr_t
+ inô_•iffs()
+	m$
+/;" f file:
+
+712 
+s¸©ch
+ 
+	mmaö
+/
+	mfûe_£rvî
+.
+	mc
+ /^ 
+	ms¸©ch
+[
+SCRATCH_BUFSIZE
+];
+	m$
+/;" m struct:file_server_data file:
+
+713 
+£t_c⁄ã¡_ty≥_‰om_fûe
+ 
+	mmaö
+/
+	mfûe_£rvî
+.
+	mc
+ /^
+e•_îr_t
+ së_c⁄ã¡_ty≥_‰om_fûe(
+hâpd_ªq_t
+ *
+ªq
+, c⁄° *
+fûíame
+Ë
+	m$
+/;" f file:
+
+714 
+£ç©h
+ 
+	mbuûd
+/
+	mmaö
+/
+	membed_bö
+/
+	mu∂ﬂd_s¸ùt
+.
+	mhtml
+ /^
+fun˘i⁄
+ së∑th(Ë{
+	m$
+/;" f
+
+715 
+£ç©h
+ 
+	mmaö
+/
+	mu∂ﬂd_s¸ùt
+.
+	mhtml
+ /^
+fun˘i⁄
+ së∑th(Ë{
+	m$
+/;" f
+
+716 
+°¨t_fûe_£rvî
+ 
+	mmaö
+/
+	mfûe_£rvî
+.
+	mc
+ /^
+e•_îr_t
+ sèπ_fûe_£rvî(c⁄° *
+ba£_∑th
+)
+	m$
+/;" f
+
+717 
+u∂ﬂd
+ 
+	mbuûd
+/
+	mmaö
+/
+	membed_bö
+/
+	mu∂ﬂd_s¸ùt
+.
+	mhtml
+ /^
+fun˘i⁄
+ u∂ﬂd(Ë{
+	m$
+/;" f
+
+718 
+u∂ﬂd
+ 
+	mmaö
+/
+	mu∂ﬂd_s¸ùt
+.
+	mhtml
+ /^
+fun˘i⁄
+ u∂ﬂd(Ë{
+	m$
+/;" f
+
+719 
+u∂ﬂd_po°_h™dÀr
+ 
+	mmaö
+/
+	mfûe_£rvî
+.
+	mc
+ /^
+e•_îr_t
+ u∂ﬂd_po°_h™dÀr(
+hâpd_ªq_t
+ *
+ªq
+Ë
+	m$
+/;" f file:
+
+	@
+1
+.
+1
+/usr/include
+8
+105
+CMakeLists.txt
+Makefile
+README.md
+partitions_example.csv
+sdkconfig
+sdkconfig.defaults
+sdkconfig.old
+tags
